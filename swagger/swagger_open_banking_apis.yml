@@ -570,7 +570,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ResponseCreditCardAccountsIdentification'
+                $ref: '#/components/schemas/ResponseCreditCardAccounts'
         '400':
           $ref: '#/paths/~1accounts~1v1~1accounts/get/responses/400'
         '401':
