@@ -8059,6 +8059,7 @@ OpenId ( Scopes: openId accounts )
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"avaiableAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"blockedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"automaticallyInvestedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="w">
@@ -8406,12 +8407,12 @@ OpenId ( Scopes: openId accounts )
     </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transferência"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">500.54</span><span class="p">,</span><span class="w">
     </span><span class="nl">"transactionDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01-07"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerPersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerBranchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94088392"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerCheckDigit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeeCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67890854360"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeePersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeeCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
@@ -8583,7 +8584,7 @@ OpenId ( Scopes: openId accounts )
 
 <h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-16'>Visão de alto de nível das estruturas de dados</h3>
 
-<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/accounts/TLD_Accounts_OverdraftLimits.v1.png"/></p>
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/accounts/TLD_Accounts_OverdraftLimits.v1-7a1d1486.png"/></p>
 
 <h3 id='der-diagramas-de-entidade-e-relacionamento-16'>DER - Diagramas de Entidade e Relacionamento</h3>
 
@@ -8704,7 +8705,7 @@ OpenId ( Scopes: openId accounts )
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"overdraftLimits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
@@ -8823,7 +8824,7 @@ OpenId ( Scopes: openId accounts )
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contract/string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contracts/string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -8845,13 +8846,13 @@ OpenId ( Scopes: openId accounts )
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contract/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contracts/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contract/string"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contracts/string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -8861,7 +8862,7 @@ OpenId ( Scopes: openId accounts )
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /loans/v1/contract/{contractId}</code></p>
+<p><code>GET /loans/v1/contracts/{contractId}</code></p>
 
 <table><thead>
 <tr>
@@ -9130,7 +9131,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contract/string/warranties</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contracts/string/warranties</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -9152,13 +9153,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contract/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contracts/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contract/string/warranties"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contracts/string/warranties"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -9168,7 +9169,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /loans/v1/contract/{contractId}/warranties</code></p>
+<p><code>GET /loans/v1/contracts/{contractId}/warranties</code></p>
 
 <table><thead>
 <tr>
@@ -9412,7 +9413,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contract/string/payments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contracts/string/payments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -9434,13 +9435,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contract/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contracts/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contract/string/payments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contracts/string/payments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -9450,7 +9451,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /loans/v1/contract/{contractId}/payments</code></p>
+<p><code>GET /loans/v1/contracts/{contractId}/payments</code></p>
 
 <table><thead>
 <tr>
@@ -9713,7 +9714,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contract/string/instalments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/loans/v1/contracts/string/instalments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -9735,13 +9736,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contract/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/loans/v1/contracts/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contract/string/instalments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/loans/v1/contracts/string/instalments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -9751,7 +9752,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /loans/v1/contract/{contractId}/instalments</code></p>
+<p><code>GET /loans/v1/contracts/{contractId}/instalments</code></p>
 
 <table><thead>
 <tr>
@@ -10001,7 +10002,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contract/string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contracts/string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -10023,13 +10024,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contract/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contracts/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contract/string"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contracts/string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -10039,7 +10040,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /financings/v1/contract/{contractId}</code></p>
+<p><code>GET /financings/v1/contracts/{contractId}</code></p>
 
 <table><thead>
 <tr>
@@ -10307,7 +10308,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contract/string/warranties</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contracts/string/warranties</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -10329,13 +10330,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contract/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contracts/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contract/string/warranties"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contracts/string/warranties"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -10345,7 +10346,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /financings/v1/contract/{contractId}/warranties</code></p>
+<p><code>GET /financings/v1/contracts/{contractId}/warranties</code></p>
 
 <table><thead>
 <tr>
@@ -10589,7 +10590,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contract/string/payments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contracts/string/payments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -10611,13 +10612,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contract/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contracts/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contract/string/payments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contracts/string/payments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -10627,7 +10628,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /financings/v1/contract/{contractId}/payments</code></p>
+<p><code>GET /financings/v1/contracts/{contractId}/payments</code></p>
 
 <table><thead>
 <tr>
@@ -10890,7 +10891,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contract/string/instalments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/financings/v1/contracts/string/instalments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -10912,13 +10913,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contract/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contracts/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contract/string/instalments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/financings/v1/contracts/string/instalments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -10928,7 +10929,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /financings/v1/contract/{contractId}/instalments</code></p>
+<p><code>GET /financings/v1/contracts/{contractId}/instalments</code></p>
 
 <table><thead>
 <tr>
@@ -11178,7 +11179,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -11200,13 +11201,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contract/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contracts/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -11216,7 +11217,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /unarranged-accounts-overdraft/v1/contract/{contractId}</code></p>
+<p><code>GET /unarranged-accounts-overdraft/v1/contracts/{contractId}</code></p>
 
 <table><thead>
 <tr>
@@ -11484,7 +11485,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string/warranties</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string/warranties</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -11506,13 +11507,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contract/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contracts/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string/warranties"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string/warranties"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -11522,7 +11523,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /unarranged-accounts-overdraft/v1/contract/{contractId}/warranties</code></p>
+<p><code>GET /unarranged-accounts-overdraft/v1/contracts/{contractId}/warranties</code></p>
 
 <table><thead>
 <tr>
@@ -11766,7 +11767,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string/payments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string/payments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -11788,13 +11789,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contract/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contracts/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string/payments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string/payments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -11804,7 +11805,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /unarranged-accounts-overdraft/v1/contract/{contractId}/payments</code></p>
+<p><code>GET /unarranged-accounts-overdraft/v1/contracts/{contractId}/payments</code></p>
 
 <table><thead>
 <tr>
@@ -12067,7 +12068,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string/instalments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string/instalments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -12089,13 +12090,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contract/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/unarranged-accounts-overdraft/v1/contracts/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contract/string/instalments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/unarranged-accounts-overdraft/v1/contracts/string/instalments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -12105,7 +12106,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /unarranged-accounts-overdraft/v1/contract/{contractId}/instalments</code></p>
+<p><code>GET /unarranged-accounts-overdraft/v1/contracts/{contractId}/instalments</code></p>
 
 <table><thead>
 <tr>
@@ -12355,7 +12356,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -12377,13 +12378,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contract/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contracts/string"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -12393,7 +12394,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /invoice-financings/v1/contract/{contractId}</code></p>
+<p><code>GET /invoice-financings/v1/contracts/{contractId}</code></p>
 
 <table><thead>
 <tr>
@@ -12661,7 +12662,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string/warranties</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string/warranties</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -12683,13 +12684,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contract/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contracts/string/warranties"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string/warranties"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string/warranties"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -12699,7 +12700,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /invoice-financings/v1/contract/{contractId}/warranties</code></p>
+<p><code>GET /invoice-financings/v1/contracts/{contractId}/warranties</code></p>
 
 <table><thead>
 <tr>
@@ -12943,7 +12944,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string/payments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string/payments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -12965,13 +12966,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contract/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contracts/string/payments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string/payments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string/payments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -12981,7 +12982,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /invoice-financings/v1/contract/{contractId}/payments</code></p>
+<p><code>GET /invoice-financings/v1/contracts/{contractId}/payments</code></p>
 
 <table><thead>
 <tr>
@@ -13244,7 +13245,7 @@ This operation does not require authentication
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string/instalments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string/instalments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -13266,13 +13267,13 @@ This operation does not require authentication
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contract/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contracts/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contract/string/instalments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"http://api.banco.com.br/open-banking/invoice-financings/v1/contracts/string/instalments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -13282,7 +13283,7 @@ This operation does not require authentication
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /invoice-financings/v1/contract/{contractId}/instalments</code></p>
+<p><code>GET /invoice-financings/v1/contracts/{contractId}/instalments</code></p>
 
 <table><thead>
 <tr>
@@ -13586,6 +13587,7 @@ This operation does not require authentication
   </span><span class="nl">"balances"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"avaiableAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"blockedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"automaticallyInvestedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="w">
@@ -13625,6 +13627,7 @@ This operation does not require authentication
   </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"avaiableAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"blockedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"automaticallyInvestedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="w">
@@ -13955,12 +13958,12 @@ This operation does not require authentication
     </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transferência"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">500.54</span><span class="p">,</span><span class="w">
     </span><span class="nl">"transactionDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01-07"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerPersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerBranchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94088392"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerCheckDigit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeeCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67890854360"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeePersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeeCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
@@ -14031,12 +14034,12 @@ This operation does not require authentication
       </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transferência"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">500.54</span><span class="p">,</span><span class="w">
       </span><span class="nl">"transactionDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01-07"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payerPersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payerCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payerBranchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payerNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94088392"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payerCheckDigit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payeeCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67890854360"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payeePersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"payeeCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
@@ -14073,6 +14076,7 @@ This operation does not require authentication
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"avaiableAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
   </span><span class="nl">"blockedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
   </span><span class="nl">"automaticallyInvestedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="w">
@@ -14096,13 +14100,19 @@ This operation does not require authentication
 <td>accountId</td>
 <td>string</td>
 <td>true</td>
-<td>Um identificador único e imutável usado para identificar o recurso do contrato da operação de crédito. Este identificador não tem significado para oproprietário da conta</td>
+<td>Um identificador único e imutável usado para identificar o recurso da conta (de depósito à vista, poupança ou de pagamento pré-paga). Este identificador não tem significado para o proprietário da conta.</td>
 </tr>
 <tr>
 <td>requestDateTime</td>
 <td>string</td>
 <td>true</td>
 <td>Data e hora da consulta, conforme especificação RFC-3339, formato UTC.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string(CurrencyString)</td>
+<td>false</td>
+<td>Moeda referente ao valor da garantia, segundo modelo ISO-4217. p.ex. &#39;BRL&#39; Todos os valores monetários informados estão representados com a moeda vigente do Brasil</td>
 </tr>
 <tr>
 <td>avaiableAmount</td>
@@ -16842,7 +16852,10 @@ Conta conjunta não solidária - onde as movimentações financeiras só podem s
 
 </span></code></pre></div>
 
-<p>| Tipos de contas ofertadas para pessoa natural ou jurídica, p.ex. &#39;CONTA_DEPOSITO_A_VISTA&#39;. Conta de depósito à vista ou Conta corrente - é o tipo mais comum. Nela, o dinheiro fica à sua disposição para ser sacado a qualquer momento. Essa conta não gera rendimentos para o depositante Conta poupança - foi criada para estimular as pessoas a pouparem. O dinheiro que ficar na conta por trinta dias passa a gerar rendimentos, com isenção de imposto de renda para quem declara. Ou seja, o dinheiro “cresce” (rende) enquanto ficar guardado na conta. Cada depósito terá rendimentos de mês em mês, sempre no dia do mês em que o dinheiro tiver sido depositado Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#39;destinada à execução de transações de pagamento em moeda eletrônica realizadas com base em fundos denominados em reais previamente aportados&#39;</p>
+<p>Tipos de contas ofertadas para pessoa natural ou jurídica, p.ex. &#39;CONTA_DEPOSITO_A_VISTA&#39;.
+Conta de depósito à vista ou Conta corrente - é o tipo mais comum. Nela, o dinheiro fica à sua disposição para ser sacado a qualquer momento. Essa conta não gera rendimentos para o depositante
+Conta poupança - foi criada para estimular as pessoas a pouparem. O dinheiro que ficar na conta por trinta dias passa a gerar rendimentos, com isenção de imposto de renda para quem declara. Ou seja, o dinheiro “cresce” (rende) enquanto ficar guardado na conta. Cada depósito terá rendimentos de mês em mês, sempre no dia do mês em que o dinheiro tiver sido depositado
+Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#39;destinada à execução de transações de pagamento em moeda eletrônica realizadas com base em fundos denominados em reais previamente aportados&#39;</p>
 
 <h3 id='propriedades-53'>Propriedades</h3>
 
@@ -16858,7 +16871,7 @@ Conta conjunta não solidária - onde as movimentações financeiras só podem s
 <td>**</td>
 <td>string</td>
 <td>false</td>
-<td></td>
+<td>Tipos de contas ofertadas para pessoa natural ou jurídica, p.ex. &#39;CONTA_DEPOSITO_A_VISTA&#39;.<br>Conta de depósito à vista ou Conta corrente - é o tipo mais comum. Nela, o dinheiro fica à sua disposição para ser sacado a qualquer momento. Essa conta não gera rendimentos para o depositante<br>Conta poupança - foi criada para estimular as pessoas a pouparem. O dinheiro que ficar na conta por trinta dias passa a gerar rendimentos, com isenção de imposto de renda para quem declara. Ou seja, o dinheiro “cresce” (rende) enquanto ficar guardado na conta. Cada depósito terá rendimentos de mês em mês, sempre no dia do mês em que o dinheiro tiver sido depositado<br>Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#39;destinada à execução de transações de pagamento em moeda eletrônica realizadas com base em fundos denominados em reais previamente aportados&#39;</td>
 </tr>
 </tbody></table>
 
@@ -23257,7 +23270,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>accountId</td>
 <td>string</td>
 <td>true</td>
-<td>Um identificador único e imutável usado para identificar o recurso do contrato da operação de crédito. Este identificador não tem significado para oproprietário da conta</td>
+<td>Um identificador único e imutável usado para identificar o recurso da conta (de depósito à vista, poupança ou de pagamento pré-paga). Este identificador não tem significado para o proprietário da conta.</td>
 </tr>
 <tr>
 <td>compeCode</td>
@@ -23305,7 +23318,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>type</td>
 <td><a href="#schemaenumaccounttype">EnumAccountType</a></td>
 <td>true</td>
-<td></td>
+<td>Tipos de contas ofertadas para pessoa natural ou jurídica, p.ex. &#39;CONTA_DEPOSITO_A_VISTA&#39;.<br>Conta de depósito à vista ou Conta corrente - é o tipo mais comum. Nela, o dinheiro fica à sua disposição para ser sacado a qualquer momento. Essa conta não gera rendimentos para o depositante<br>Conta poupança - foi criada para estimular as pessoas a pouparem. O dinheiro que ficar na conta por trinta dias passa a gerar rendimentos, com isenção de imposto de renda para quem declara. Ou seja, o dinheiro “cresce” (rende) enquanto ficar guardado na conta. Cada depósito terá rendimentos de mês em mês, sempre no dia do mês em que o dinheiro tiver sido depositado<br>Conta de pagamento pré-paga: segundo CIRCULAR Nº 3.680, BCB de  2013, é a &#39;destinada à execução de transações de pagamento em moeda eletrônica realizadas com base em fundos denominados em reais previamente aportados&#39;</td>
 </tr>
 <tr>
 <td>subtype</td>
@@ -26770,7 +26783,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>accountId</td>
 <td>string</td>
 <td>true</td>
-<td>Um identificador único e imutável usado para identificar o recurso do contrato da operação de crédito. Este identificador não tem significado para oproprietário da conta</td>
+<td>Um identificador único e imutável usado para identificar o recurso da conta (de depósito à vista, poupança ou de pagamento pré-paga). Este identificador não tem significado para o proprietário da conta.</td>
 </tr>
 <tr>
 <td>requestDateTime</td>
@@ -28298,6 +28311,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"avaiableAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"blockedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w">
     </span><span class="nl">"automaticallyInvestedAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="w">
@@ -28413,7 +28427,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocsresponseaccountoverdraftlimits"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"account"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"overdraftLimits"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
@@ -28450,9 +28464,9 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </thead><tbody>
 <tr>
 <td>data</td>
-<td><a href="#schemaaccountoverdraftlimitsdata">AccountOverdraftLimitsData</a></td>
+<td><a href="#schemaaccountoverdraftlimits">AccountOverdraftLimits</a></td>
 <td>true</td>
-<td></td>
+<td>Conjunto de informações da Conta de: depósito à vista</td>
 </tr>
 <tr>
 <td>links</td>
@@ -28484,12 +28498,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
     </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transferência"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">500.54</span><span class="p">,</span><span class="w">
     </span><span class="nl">"transactionDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01-07"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerPersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerBranchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94088392"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payerCheckDigit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeeCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67890854360"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeePersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"payeeCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
@@ -30917,12 +30931,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transferência"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">500.54</span><span class="p">,</span><span class="w">
   </span><span class="nl">"transactionDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-01-07"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payerPersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payerCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payerBranchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payerNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94088392"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payerCheckDigit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"payerCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43908445778"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payeeCnpjCpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"67890854360"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payeePersonType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PESSOA_NATURAL"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"payeeCompeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
@@ -30949,7 +30963,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>accountID</td>
 <td>string</td>
 <td>true</td>
-<td>Um identificador único e imutável usado para identificar o recurso da conta (depósito à vista, poupapança e de pagamento pré-paga). Este identificador não tem significado para o proprietário da conta</td>
+<td>Um identificador único e imutável usado para identificar o recurso da conta (de depósito à vista, poupança ou de pagamento pré-paga). Este identificador não tem significado para o proprietário da conta.</td>
 </tr>
 <tr>
 <td>completedAuthorisedPaymentType</td>
@@ -30994,6 +31008,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>Se indicador de transação:<br> TRANSACAO_EFETIVADA - corresponde a data de lançamento da transação<br> LANCAMENTO_FUTURO - corresponde a data prevista de efetivação da transação</td>
 </tr>
 <tr>
+<td>payerCnpjCpf</td>
+<td>string</td>
+<td>true</td>
+<td>Identificação do Pagador da transação. Número do cadastro nas Receita Federal (Preencher com CPF ou CNPJ sem formatação)</td>
+</tr>
+<tr>
 <td>payerPersonType</td>
 <td><a href="#schemaenumpayerpersontype">EnumPayerPersonType</a></td>
 <td>true</td>
@@ -31022,12 +31042,6 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>string</td>
 <td>true</td>
 <td>Dígito da conta</td>
-</tr>
-<tr>
-<td>payerCnpjCpf</td>
-<td>string</td>
-<td>true</td>
-<td>Identificação do Pagador da transação. Número do cadastro nas Receita Federal (Preencher com CPF ou CNPJ sem formatação)</td>
 </tr>
 <tr>
 <td>payeeCnpjCpf</td>
