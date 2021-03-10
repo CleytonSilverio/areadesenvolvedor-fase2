@@ -316,13 +316,6 @@ components:
           items:
             $ref: '#/components/schemas/Account'
           minItems: 1
-    AccountOverdraftLimitsData:
-      type: object
-      required:
-        - account
-      properties:
-        account:
-          $ref: '#/components/schemas/OverdraftLimits'
     Balances:
       type: object
       description: |
@@ -434,7 +427,7 @@ components:
     EnumPayerPersonType:
       type: string
       description: Identificação do Tipo de Pessoa do Pagador da transação
-      maxLegnth: 14
+      maxLength: 14
       enum:
         - PESSOA_NATURAL
         - PESSOA_JURIDICA

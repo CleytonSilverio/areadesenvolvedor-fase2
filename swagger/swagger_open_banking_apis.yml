@@ -2687,13 +2687,6 @@ components:
       properties:
         overdraftLimits:
           $ref: '#/components/schemas/OverdraftLimits'
-    AccountOverdraftLimitsData:
-      type: object
-      required:
-        - account
-      properties:
-        account:
-          $ref: '#/components/schemas/OverdraftLimits'
     AccountsIdentification:
       type: object
       description: 'Conjunto de informações das Contas de: depósito à vista, poupança e de pagamento pré-paga'
@@ -4518,7 +4511,7 @@ components:
     EnumPayerPersonType:
       type: string
       description: Identificação do Tipo de Pessoa do Pagador da transação
-      maxLegnth: 14
+      maxLength: 14
       enum:
         - PESSOA_NATURAL
         - PESSOA_JURIDICA
