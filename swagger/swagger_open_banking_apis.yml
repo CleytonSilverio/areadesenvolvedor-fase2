@@ -556,7 +556,7 @@ paths:
         ### Especificação em OAS 3.0
 
         <a href="swagger/swagger_credit_cards_apis.yaml">Download da Especificação (OAS 3.0)</a>
-      operationId: getAccountsCreditCardAccountId
+      operationId: getAccountsCreditCard
       parameters:
         - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/xFapiAuthDate'
