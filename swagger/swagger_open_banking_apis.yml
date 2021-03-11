@@ -2710,7 +2710,7 @@ components:
         - limitType
         - limitAmount
         - avaiableAmount
-        - usededAmount
+        - usedAmount
       properties:
         creditLineLimitType:
           $ref: '#/components/schemas/EnumCreditCardAccountsLineLimitType'
@@ -2736,7 +2736,7 @@ components:
           description: Valor disponível do limite informado.  Expresso em valor monetário com 4 casas decimais
           maxLength: 19
           example: 2000
-        usededAmount:
+        usedAmount:
           type: number
           nullable: true
           description: Valor utilizado do limite informado Expresso em valor monetário com 4 casas decimais
