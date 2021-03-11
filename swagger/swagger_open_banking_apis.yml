@@ -2771,6 +2771,7 @@ components:
         - accountId
         - transactions
         - requestDateTime
+        - transactions
       properties:
         accountId:
           type: string
