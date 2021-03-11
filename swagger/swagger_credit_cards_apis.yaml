@@ -509,7 +509,7 @@ components:
         - feeType
         - otherCreditsType
         - chargeIdentificator
-        - charge
+        - chargeNumber
         - brazilianAmount
         - brazilianCurrency
         - transactionDate
@@ -550,7 +550,7 @@ components:
           description: Identificador da parcela que está sendo informada. Campo de livre preenchimento
           maxLength: 50
           pattern: \w*\W*
-        charge:
+        chargeNumber:
           type: number
           description: Quantidade de parcelas
           maxLength: 2
@@ -591,7 +591,7 @@ components:
         - requestDateTime
         - brandName
         - companyCnpj
-        - statementCreditCardAccounts
+        - transactions
       properties:
         creditCardAccountId:
           type: string
@@ -604,34 +604,8 @@ components:
           description: 'Data e hora da consulta, conforme especificação RFC-3339, formato UTC.'
           maxLength: 20
           example: '2020-07-21T08:30:00Z'
-        brandName:
-          type: string
-          pattern: \w*\W*
-          description: 'Nome da Marca reportada pelo participante do Open Banking. O conceito a que se refere a ''marca'' é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes.'
-          maxLength: 80
-          example: Organização A
-        companyCnpj:
-          type: string
-          pattern: '\d{14}|^NA$'
-          description: 'Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara.'
-          maxLength: 14
-          example: '21128159000166'
-        statementCreditCardAccounts:
-          $ref: '#/components/schemas/CreditCardAccountStatementTransaction'
-    CreditCardaccountsTransactionsBrand:
-      type: object
-      required:
-        - creditCardAccount
-      properties:
-        creditCardAccount:
-          $ref: '#/components/schemas/CreditCardTransactionAccount'
-    CreditCardTransactionAccount:
-      type: object
-      required:
-        - transactions
-      properties:
         transactions:
-          $ref: '#/components/schemas/CreditCardAccountsTransactions'
+          $ref: '#/components/schemas/CreditCardAccountStatementTransaction'
     EnumCreditCardAccountFee:
       type: string
       description: Traz os tipos de Tarifas
@@ -993,7 +967,7 @@ components:
         - meta
       properties:
         data:
-          $ref: '#/components/schemas/CreditCardaccountsTransactionsBrand'
+          $ref: '#/components/schemas/CreditCardAccountsTransactions'
         links:
           $ref: '#/components/schemas/Links'
         meta:
