@@ -3496,7 +3496,7 @@ components:
       properties:
         creditCardAccountId:
           type: string
-          description: 'Identificador para conta pagamento pós-paga é o creditCardAccountId, chave artificial que permite identificar a conta pagamento pós-paga especifica.'
+          description: Um identificador único e imutável usado para identificar o recurso da conta de pagamento pós paga. Este identificador não tem significado para o proprietário da conta
           maxLength: 40
           example: XXZTR3459087
         requestDateTime:
@@ -3511,6 +3511,12 @@ components:
           description: 'Nome da Marca reportada pelo participante do Open Banking. O conceito a que se refere a ''marca'' é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes.'
           maxLength: 80
           example: Organização A
+        companyCnpj:
+          type: string
+          pattern: '\d{14}|^NA$'
+          description: 'Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara.'
+          maxLength: 14
+          example: '21128159000166'
         name:
           type: string
           pattern: \w*\W*
@@ -3518,12 +3524,6 @@ components:
             Denominação/Identificação do nome da conta de pagamento pós-paga (cartão). Conforme CIRCULAR Nº 3.680,BCB, 2013: 'conta de pagamento pós-paga: destinada à execução de transações de pagamento que independem do aporte prévio de recursos'.
           maxLength: 50
           example: Cartão Universitário
-        companyCnpj:
-          type: string
-          pattern: '\d{14}|^NA$'
-          description: 'Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara.'
-          maxLength: 14
-          example: '21128159000166'
         productType:
           $ref: '#/components/schemas/EnumCreditCardAccountsProductType'
         productAdditionalInfo:
@@ -4357,6 +4357,7 @@ components:
       description: |
         Categoria de Bandeiras de Cartões de Crédito (Instituidor do arranjo de pagamento).
         Bandeira é a detentora de todos os direitos e deveres da utilização da marca estampada no cartão, inclusive as bandeiras pertencentes aos emissores.
+      maxLength: 17
       enum:
         - VISA
         - MASTERCARD
@@ -4480,6 +4481,7 @@ components:
     EnumCreditCardAccountsProductType:
       type: string
       description: 'Categoria atribuída a um cartão de pagamento, sob uma certa denominação, que lhe agrega um conjunto de vantagens, diferenciando-o de acordo com o perfil do portador.'
+      maxLength: 26
       enum:
         - CLASSIC_NACIONAL
         - CLASSIC_INTERNACIONAL
@@ -4501,6 +4503,11 @@ components:
         - CORPORATIVO
         - EMPRESARIAL
         - COMPRAS
+        - BASICO_NACIONAL
+        - BASICO_INTERNACIONAL
+        - NANQUIM
+        - GRAFITE
+        - MAIS
         - OUTROS
       example: CLASSIC_NACIONAL
     EnumCreditCardTransactionType:
