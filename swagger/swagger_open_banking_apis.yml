@@ -8,7 +8,7 @@ info:
     email: gt-interfaces@openbankingbr.org
     url: 'https://openbanking-brasil.github.io/areadesenvolvedor/'
 servers:
-  - url: 'http://api.banco.com.br/open-banking'
+  - url: 'https://api.banco.com.br/open-banking'
     description: Servidor de Produção
   - url: 'https://apih.banco.com.br/open-banking'
     description: Servidor de Homologação
@@ -2995,7 +2995,7 @@ components:
         transactions:
           $ref: '#/components/schemas/Transaction'
       additionalProperties: false
-    BusinessFinancialRelation:
+    BusinessFinancialRelationData:
       type: object
       description: 'Objeto que reúne as informações relativas ao relacionamento do cliente junto à Instituição. Considera-se relacionamento as informações que permitam conhecer desde quando a pessoa consultada é cliente da instituição, bem como um indicador dos produtos e serviços que ela consome atualmente e seus representantes'
       required:
@@ -3027,7 +3027,7 @@ components:
           items:
             $ref: '#/components/schemas/EnumProductServiceType'
           minItems: 1
-          maxItems: 14
+          maxItems: 24
           description: Lista de produtos e serviços com contratos vigentes
         procurators:
           type: array
@@ -3035,67 +3035,7 @@ components:
             $ref: '#/components/schemas/BusinessProcurator'
           minItems: 1
           description: Lista dos representantes. De preenchimento obrigatório se houver representante.
-      additionalProperties: false
-    BusinessFinancialRelationBrand:
-      type: object
-      description: Objeto que define a Organização controladora do grupo de instituições financeiras
-      required:
-        - name
-        - companies
-      properties:
-        name:
-          type: string
-          pattern: \w*\W*
-          maxLength: 80
-          description: 'Nome da Marca reportada pelo participante do Open Banking. O conceito a que se refere a ''marca'' é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes'
-          example: Organização A
-        companies:
-          type: array
-          items:
-            $ref: '#/components/schemas/BusinessFinancialRelationCompany'
-          minItems: 1
-          description: Companies traz uma lista de todas as instituições da Marca
-      additionalProperties: false
-    BusinessFinancialRelationCompany:
-      type: object
-      required:
-        - name
-        - cnpjNumber
-        - businessCustomers
-      properties:
-        name:
-          type: string
-          maxLength: 80
-          pattern: \w*\W*
-          description: Nome da marca selecionada pela Organização
-          example: Organização A
-        cnpjNumber:
-          type: string
-          maxLength: 14
-          pattern: '\d{14}|^NA$'
-          description: Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica.
-          example: '00000000000100'
-        businessCustomers:
-          $ref: '#/components/schemas/BusinessFinancialRelationCustomers'
-      additionalProperties: false
-    BusinessFinancialRelationCustomers:
-      type: object
-      description: Conjunto de informações cadastrais do Cliente pessoa jurídica.
-      required:
-        - financialRelation
-      properties:
-        financialRelation:
-          $ref: '#/components/schemas/BusinessFinancialRelation'
-      additionalProperties: false
-    BusinessFinancialRelationData:
-      type: object
-      required:
-        - business
-      properties:
-        business:
-          $ref: '#/components/schemas/BusinessFinancialRelationBrand'
-      additionalProperties: false
-    BusinessIdentification:
+    BusinessIdentificationData:
       type: object
       description: Conjunto de informações relativas a Identificação ou seja a ação e o efeito de identificar de forma única a pessoa jurídica através de seus dados cadastrais
       required:
@@ -3185,44 +3125,6 @@ components:
             Lista relativa às informações das partes envolvidas, como: sócio e /ou administrador
         contacts:
           $ref: '#/components/schemas/CustomerContacts'
-      additionalProperties: false
-    BusinessIdentificationData:
-      type: object
-      required:
-        - business
-      properties:
-        business:
-          $ref: '#/components/schemas/BusinessIdentification'
-      additionalProperties: false
-    BusinessInformedPatrimony:
-      type: object
-      description: Objeto que agrupa informações relativas ao patrimônio da empresa
-      required:
-        - amount
-        - year
-      properties:
-        amount:
-          type: string
-          description: |
-            Valor do patrimônio informado. Expresso em valor monetário com 2 casas decimais.
-            "Patrimônio é o conjunto de bens vinculado a uma pessoa ou a uma entidade".
-          maxLength: 12
-          pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-          example: '200000.00'
-        currency:
-          type: string
-          pattern: '^(\w{3}){1}$'
-          maxLength: 3
-          format: CurrencyString
-          description: 'Moeda referente ao valor do patrimônio, segundo modelo ISO-4217.'
-          example: BRL
-        year:
-          type: string
-          pattern: '^\d{4}$'
-          maxLength: 4
-          description: 'Ano do Patrimônio, conforme especificação RFC-3339.'
-          example: '2014'
-      additionalProperties: false
     BusinessOtherDocument:
       type: object
       properties:
@@ -3280,15 +3182,21 @@ components:
           maxLength: 70
           example: NA
       additionalProperties: false
-    BusinessQualification:
+    BusinessQualificationData:
       type: object
       description: 'Objeto que reúne as informações relativas ao processo de qualificação. Considera-se qualificação as informações que permitam as instituições apreciar, avaliar, caracterizar e classificar o cliente com a finalidade de conhecer o seu perfil de risco e sua capacidade econômico-financeira'
       required:
         - requestDateTime
         - updateDateTime
+        - businessId
         - economicActivities
-        - informedRevenue
-        - informedPatrimony
+        - informedRevenueFrequency
+        - informedRevenueAmount
+        - informedRevenueCurrency
+        - informedRevenueYear
+        - informedPatrimonyAmount
+        - informedPatrimonyCurrency
+        - informedPatrimoneYear
       properties:
         requestDateTime:
           type: string
@@ -3302,76 +3210,60 @@ components:
           description: 'Data e hora da atualização do bloco, conforme especificação RFC-3339'
           maxLength: 20
           example: '2020-07-21T08:30:00Z'
+        businessId:
+          type: string
+          pattern: \w*\W*
+          description: Um identificador único e imutável usado para identificar o recurso cliente pessoa jurídica. Este identificador não tem significado para o cliente que deu o consentimento
+          maxLength: 100
+          example: 578-psd-71md6971kjh-2d414
         economicActivities:
           type: array
           items:
             $ref: '#/components/schemas/EconomicActivity'
           minItems: 1
           description: 'Lista dos demais códigos relativos às demais atividades econômicas da empresa, segundo padrão CNAE (Classificação Nacional de Atividades Econômicas). De preenchimento obrigatório, se houver'
-        informedRevenue:
-          $ref: '#/components/schemas/InformedRevenue'
-        informedPatrimony:
-          $ref: '#/components/schemas/BusinessInformedPatrimony'
-      additionalProperties: false
-    BusinessQualificationBrand:
-      type: object
-      description: Objeto que define a Organização controladora do grupo de instituições financeiras
-      required:
-        - name
-        - companies
-      properties:
-        name:
+        informedRevenueFrequency:
+          $ref: '#/components/schemas/EnumInformedRevenueFrequency'
+        informedRevenueAmount:
+          type: number
+          nullable: true
+          description: |
+            Valor do faturamento informado. Expresso em valor monetário com 2 casas decimais. 
+            "O faturamento corresponde à soma das vendas de produtos e/ou serviços em determinado período. Ou seja, é todo o dinheiro que entra no caixa da empresa, a partir da venda de produtos, mercadorias e serviços". 
+          maxLength: 19
+          example: 2500
+        informedRevenueCurrency:
           type: string
-          pattern: \w*\W*
-          maxLength: 80
-          description: 'Nome da Marca reportada pelo participante do Open Banking. O conceito a que se refere a ''marca'' é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes'
-          example: Organização A
-        companies:
-          type: array
-          items:
-            $ref: '#/components/schemas/BusinessQualificationCompany'
-          minItems: 1
-          description: Companies traz uma lista de todas as instituições da Marca
-      additionalProperties: false
-    BusinessQualificationCompany:
-      type: object
-      required:
-        - name
-        - cnpjNumber
-        - businessCustomers
-      properties:
-        name:
-          description: 'Nome da Instituição, pertencente à Marca, responsável pelo Cadastro.'
+          pattern: '^(\w{3}){1}$'
+          maxLength: 3
+          format: CurrencyString
+          description: 'Moeda referente ao valor da faturamento, segundo modelo ISO-4217.'
+          example: BRL
+        informedRevenueYear:
+          type: number
+          description: 'Ano de referência do Faturamento, conforme especificação RFC-3339'
+          maxLength: 4
+          example: 2014
+        informedPatrimonyAmount:
+          type: number
+          nullable: true
+          description: |
+            Valor do patrimônio informado. Expresso em valor monetário com 4 casas decimais.  
+            "Patrimônio é o conjunto de bens vinculado a uma pessoa ou a uma entidade"
+          maxLength: 19
+          example: 200000
+        informedPatrimonyCurrency:
           type: string
-          pattern: \w*\W*
-          maxLength: 80
-          example: Empresa da Organização A
-        cnpjNumber:
-          description: 'Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara'
-          type: string
-          pattern: '\d{14}|^NA$'
-          maxLength: 14
-          example: '50685362000135'
-        businessCustomers:
-          $ref: '#/components/schemas/BusinessQualificationCustomers'
-      additionalProperties: false
-    BusinessQualificationCustomers:
-      type: object
-      description: Objeto que agrupa as informações Cadastrais do Cliente Pessoa jurídica
-      required:
-        - qualification
-      properties:
-        qualification:
-          $ref: '#/components/schemas/BusinessQualification'
-      additionalProperties: false
-    BusinessQualificationData:
-      type: object
-      required:
-        - business
-      properties:
-        business:
-          $ref: '#/components/schemas/BusinessQualificationBrand'
-      additionalProperties: false
+          pattern: '^(\w{3}){1}$'
+          maxLength: 3
+          format: CurrencyString
+          description: 'Moeda referente ao valor do patrimônio, segundo modelo ISO-4217.'
+          example: BRL
+        informedPatrimoneYear:
+          type: number
+          maxLength: 4
+          description: 'Ano do Patrimônio, conforme especificação RFC-3339'
+          example: 2014
     CreditCardAccountBalances:
       type: object
       required:
@@ -3960,17 +3852,16 @@ components:
         - isMain
       properties:
         code:
-          type: string
+          type: number
           pattern: '^\d{7}$|^NA$'
           maxLength: 7
           description: |
             Traz o código do ramo da atividade principal da empresa consultada, segundo padrão CNAE (Classificação Nacional de Atividades Econômicas)
-          example: '8599604'
+          example: 8599604
         isMain:
           type: boolean
           description: Informa se é o principal ramo de atividade
           example: true
-      additionalProperties: false
     EnumAccountSubType:
       type: string
       enum:
@@ -4842,7 +4733,6 @@ components:
       enum:
         - REPRESENTANTE_LOCAL
         - PROCURADOR
-        - NÃO_POSSUI
       description: |
         Tipo de representante.
         Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
@@ -5528,37 +5418,6 @@ components:
           pattern: '^-?\d{1,3}\.\d{1,8}$'
           maxLength: 13
           example: '-180.836519'
-      additionalProperties: false
-    InformedRevenue:
-      type: object
-      description: Objeto que agrupa informações relativas ao faturamento da empresa informado
-      required:
-        - frequency
-        - year
-      properties:
-        frequency:
-          $ref: '#/components/schemas/EnumInformedRevenueFrequency'
-        amount:
-          type: string
-          description: |
-            Valor do faturamento informado. Expresso em valor monetário com 2 casas decimais. 
-            "O faturamento corresponde à soma das vendas de produtos e/ou serviços em determinado período. Ou seja, é todo o dinheiro que entra no caixa da empresa, a partir da venda de produtos, mercadorias e serviços". 
-          maxLength: 12
-          pattern: '^((\d{1,9}\.\d{2}){1}|NA)$'
-          example: '500.00'
-        currency:
-          type: string
-          pattern: '^(\w{3}){1}$'
-          maxLength: 3
-          format: CurrencyString
-          description: 'Moeda referente ao valor da faturamento, segundo modelo ISO-4217.'
-          example: BRL
-        year:
-          type: string
-          pattern: '^\d{4}$'
-          maxLength: 4
-          description: 'Ano de referência do Faturamento, conforme especificação RFC-3339.'
-          example: '2014'
       additionalProperties: false
     InvoiceFinancingsBalloonInstalments:
       type: object
