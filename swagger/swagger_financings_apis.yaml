@@ -1024,24 +1024,29 @@ components:
           format: URIString
           description: URI completo que gerou a resposta atual.
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+          maxLength: 2048
         first:
           type: string
           format: URIString
           description: URI da primeira página que originou essa lista de resultados. Restrição - Obrigatório quando não for a primeira página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+          maxLength: 2048
         prev:
           type: string
           format: URIString
           description: "URI da página anterior dessa lista de resultados. Restrição - \tObrigatório quando não for a primeira página da resposta"
+          maxLength: 2048
         next:
           type: string
           format: URIString
           description: URI da próxima página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
+          maxLength: 2048
         last:
           type: string
           format: URIString
           description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+          maxLength: 2048
       additionalProperties: false
     Meta:
       type: object
@@ -1052,10 +1057,12 @@ components:
       properties:
         totalRecords:
           type: integer
+          format: int32
           description: Número total de registros no resultado
           example: 1
         totalPages:
           type: integer
+          format: int32
           description: Número total de páginas no resultado
           example: 1
       additionalProperties: false
@@ -1066,6 +1073,8 @@ components:
       properties:
         errors:
           type: array
+          minItems: 1
+          maxItems: 13
           items:
             type: object
             required:
@@ -1076,12 +1085,18 @@ components:
               code:
                 description: Código de erro específico do endpoint
                 type: string
+                pattern: \w*\W*
+                maxLength: 255
               title:
                 description: Título legível por humanos do erro deste erro específico
                 type: string
+                pattern: \w*\W*
+                maxLength: 255
               detail:
                 description: Descrição legível por humanos deste erro específico
                 type: string
+                pattern: \w*\W*
+                maxLength: 2048
             additionalProperties: false
         meta:
           $ref: '#/components/schemas/Meta'
@@ -1160,6 +1175,7 @@ components:
       schema:
         type: string
         pattern: '^[a-zA-Z0-9][a-zA-Z0-9-]{0,99}$'
+        maxLength: 40
     page:
       name: page
       in: query
@@ -1168,6 +1184,7 @@ components:
         type: integer
         default: 1
         minimum: 1
+        format: int32
     pageSize:
       name: page-size
       in: query
@@ -1176,6 +1193,7 @@ components:
         type: integer
         default: 25
         minimum: 1
+        format: int32
     xCustomerUserAgent:
       name: x-customer-user-agent
       in: header
@@ -1193,6 +1211,7 @@ components:
       schema:
         type: string
         pattern: '^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\d{4} \d{2}:\d{2}:\d{2}  (GMT|UTC)$'
+        maxLength: 2048
     xFapiCustomerIpAddress:
       name: x-fapi-customer-ip-address
       in: header
