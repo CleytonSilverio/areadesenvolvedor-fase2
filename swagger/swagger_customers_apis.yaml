@@ -315,6 +315,7 @@ components:
             $ref: '#/components/schemas/BusinessProcurator'
           minItems: 1
           description: Lista dos representantes. De preenchimento obrigatório se houver representante.
+      additionalProperties: false
     BusinessFinancialRelationBrand:
       type: object
       description: Objeto que define a Organização controladora do grupo de instituições financeiras
@@ -334,6 +335,7 @@ components:
             $ref: '#/components/schemas/BusinessFinancialRelationCompany'
           minItems: 1
           description: Companies traz uma lista de todas as instituições da Marca
+      additionalProperties: false
     BusinessFinancialRelationCompany:
       type: object
       required:
@@ -355,6 +357,7 @@ components:
           example: '00000000000100'
         businessCustomers:
           $ref: '#/components/schemas/BusinessFinancialRelationCustomers'
+      additionalProperties: false
     BusinessFinancialRelationCustomers:
       type: object
       description: Conjunto de informações cadastrais do Cliente pessoa jurídica.
@@ -363,6 +366,7 @@ components:
       properties:
         financialRelation:
           $ref: '#/components/schemas/BusinessFinancialRelation'
+      additionalProperties: false
     BusinessFinancialRelationData:
       type: object
       required:
@@ -370,6 +374,7 @@ components:
       properties:
         business:
           $ref: '#/components/schemas/BusinessFinancialRelationBrand'
+      additionalProperties: false
     BusinessIdentification:
       type: object
       description: Conjunto de informações relativas a Identificação ou seja a ação e o efeito de identificar de forma única a pessoa jurídica através de seus dados cadastrais
@@ -460,6 +465,7 @@ components:
             Lista relativa às informações das partes envolvidas, como: sócio e /ou administrador
         contacts:
           $ref: '#/components/schemas/CustomerContacts'
+      additionalProperties: false
     BusinessIdentificationData:
       type: object
       required:
@@ -467,6 +473,7 @@ components:
       properties:
         business:
           $ref: '#/components/schemas/BusinessIdentification'
+      additionalProperties: false
     BusinessInformedPatrimony:
       type: object
       description: Objeto que agrupa informações relativas ao patrimônio da empresa
@@ -494,6 +501,7 @@ components:
           maxLength: 4
           description: 'Ano do Patrimônio, conforme especificação RFC-3339.'
           example: '2014'
+      additionalProperties: false
     BusinessProcurator:
       type: object
       required:
@@ -522,6 +530,7 @@ components:
           description: 'Nome social da pessoa natural, se houver. (aquele pelo qual travestis e transexuais se reconhecem, bem como são identificados por sua comunidade e em seu meio social, conforme Decreto Nº 51.180, de 14 de janeiro de 2010)'
           maxLength: 70
           example: NA
+      additionalProperties: false
     BusinessQualification:
       type: object
       description: 'Objeto que reúne as informações relativas ao processo de qualificação. Considera-se qualificação as informações que permitam as instituições apreciar, avaliar, caracterizar e classificar o cliente com a finalidade de conhecer o seu perfil de risco e sua capacidade econômico-financeira'
@@ -554,6 +563,7 @@ components:
           $ref: '#/components/schemas/InformedRevenue'
         informedPatrimony:
           $ref: '#/components/schemas/BusinessInformedPatrimony'
+      additionalProperties: false
     BusinessQualificationBrand:
       type: object
       description: Objeto que define a Organização controladora do grupo de instituições financeiras
@@ -573,6 +583,7 @@ components:
             $ref: '#/components/schemas/BusinessQualificationCompany'
           minItems: 1
           description: Companies traz uma lista de todas as instituições da Marca
+      additionalProperties: false
     BusinessQualificationCompany:
       type: object
       required:
@@ -594,6 +605,7 @@ components:
           example: '50685362000135'
         businessCustomers:
           $ref: '#/components/schemas/BusinessQualificationCustomers'
+      additionalProperties: false
     BusinessQualificationCustomers:
       type: object
       description: Objeto que agrupa as informações Cadastrais do Cliente Pessoa jurídica
@@ -602,6 +614,7 @@ components:
       properties:
         qualification:
           $ref: '#/components/schemas/BusinessQualification'
+      additionalProperties: false
     BusinessQualificationData:
       type: object
       required:
@@ -609,6 +622,7 @@ components:
       properties:
         business:
           $ref: '#/components/schemas/BusinessQualificationBrand'
+      additionalProperties: false
     BusinessOtherDocument:
       type: object
       properties:
@@ -636,6 +650,7 @@ components:
           maxLength: 10
           description: 'Data vigência do tipo de  documento informado, conforme especificação RFC-3339'
           example: '2014-03-19'
+      additionalProperties: false
     CustomerContacts:
       type: object
       description: Conjunto de informações referentes às formas para contatar o cliente.
@@ -662,6 +677,7 @@ components:
             $ref: '#/components/schemas/CustomerEmail'
           minItems: 1
           description: Lista e-mails de contato
+      additionalProperties: false
     CustomerEmail:
       type: object
       required:
@@ -678,6 +694,7 @@ components:
           maxLength: 320
           pattern: \w*\W*
           example: karinafernandes-81@br.inter.net
+      additionalProperties: false
     CustomerPhone:
       type: object
       required:
@@ -720,6 +737,7 @@ components:
           pattern: '^\d{1,5}$|^NA$'
           description: Número do ramal. De preenchimento obrigatório se fizer parte da identificação do número do telefone informado
           example: '932'
+      additionalProperties: false
     CustomerPostalAddress:
       type: object
       required:
@@ -792,6 +810,7 @@ components:
           example: BRA
         geographicCoordinates:
           $ref: '#/components/schemas/GeographicCoordinates'
+      additionalProperties: false
     EconomicActivity:
       type: object
       required:
@@ -807,6 +826,7 @@ components:
         isMain:
           type: boolean
           description: Informa se é o principal ramo de atividade
+      additionalProperties: false
     EnumAreaCode:
       type: string
       example: '19'
@@ -1054,6 +1074,7 @@ components:
           pattern: '^-?\d{1,3}\.\d{1,8}$'
           maxLength: 13
           example: '-180.836519'
+      additionalProperties: false
     InformedRevenue:
       type: object
       description: Objeto que agrupa informações relativas ao faturamento da empresa informado
@@ -1083,6 +1104,7 @@ components:
           maxLength: 4
           description: 'Ano de referência do Faturamento, conforme especificação RFC-3339.'
           example: '2014'
+      additionalProperties: false
     Links:
       type: object
       description: Referências para outros recusos da API requisitada.
@@ -1112,9 +1134,13 @@ components:
           format: URIString
           description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+      additionalProperties: false
     Meta:
       type: object
       description: Meta informações referente a API requisitada.
+      required:
+        - totalRecords
+        - totalPages
       properties:
         totalRecords:
           type: integer
@@ -1124,9 +1150,7 @@ components:
           type: integer
           description: Número total de páginas no resultado
           example: 1
-      required:
-        - totalRecords
-        - totalPages
+      additionalProperties: false
     Nationality:
       type: object
       description: Objeto que agrupa informações relativas à nacionalidade da Pessoa Natural
@@ -1139,6 +1163,7 @@ components:
           example: false
         otherNationality:
           $ref: '#/components/schemas/NationalityOther'
+      additionalProperties: false
     NationalityOther:
       type: object
       description: Conjunto de informações específicas para cliente que possue nacionalidade diferente da brasileira
@@ -1154,6 +1179,7 @@ components:
           description: Lista que traz relação de documentos complementares de pessoas com nacionalidade diferente de brasileira
           items:
             $ref: '#/components/schemas/NationalityOtherDocument'
+      additionalProperties: false
     NationalityOtherDocument:
       type: object
       required:
@@ -1180,6 +1206,7 @@ components:
           maxLength: 10
           description: 'Data de validade do documento informado, conforme especificação RFC-3339.'
           example: '2014-03-19'
+      additionalProperties: false
     PartiesParticipation:
       type: object
       description: |
@@ -1253,6 +1280,7 @@ components:
           maxLength: 10
           description: 'Data de validade do documento informado, conforme especificação RFC-3339.'
           example: '2014-03-19'
+      additionalProperties: false
     PersonalDocument:
       type: object
       description: Objeto agrupador de informações relativas a Documentos da pessoa natural
@@ -1283,6 +1311,7 @@ components:
           description: 'Data vigência do Passaporte, conforme especificação RFC-3339.'
           format: DateString
           example: '2014-03-19'
+      additionalProperties: false
     PersonalFinancialRelationData:
       type: object
       description: 'Objeto que reúne as informações relativas ao relacionamento do cliente junto à Instituição. Considera-se relacionamento as informações que permitam conhecer desde quando a pessoa consultada é cliente da instituição, bem como um indicador dos produtos e serviços que ela consome atualmente e seus representantes'
@@ -1331,6 +1360,7 @@ components:
             $ref: '#/components/schemas/PersonalProcurator'
           minItems: 1
           description: Lista dos representantes. De preenchimento obrigatório se houver representante.
+      additionalProperties: false
     PersonalIdentificationData:
       type: object
       description: Conjunto de informações relativas a Identificação ou seja a ação e o efeito de identificar de forma única a pessoa natural através de seus dados cadastrais.
@@ -1438,6 +1468,7 @@ components:
           $ref: '#/components/schemas/EnumSex'
         contacts:
           $ref: '#/components/schemas/CustomerContacts'
+      additionalProperties: false
     PersonalOtherDocument:
       type: object
       required:
@@ -1482,6 +1513,7 @@ components:
           maxLength: 10
           description: 'Data de validade do documento informado, conforme especificação RFC-3339.'
           example: '2014-03-19'
+      additionalProperties: false
     PersonalProcurator:
       type: object
       required:
@@ -1510,6 +1542,7 @@ components:
           description: 'Nome social da pessoa natural, se houver. (aquele pelo qual travestis e transexuais se reconhecem, bem como são identificados por sua comunidade e em seu meio social, conforme Decreto Nº 51.180, de 14 de janeiro de 2010)'
           maxLength: 70
           example: NA
+      additionalProperties: false
     PersonalQualificationData:
       type: object
       description: 'Conjunto de informações relativas ao processo de qualificação. Considera-se qualificação as informações que permitam as instituições apreciar, avaliar, caracterizar e classificar o cliente com a finalidade de conhecer o seu perfil de risco e sua capacidade econômico-financeira'
@@ -1597,6 +1630,7 @@ components:
           maxLength: 100
           description: 'Campo livre, de preenchimento obrigatório. Traz o código da ocupação ou o descritivo da ocupação, se selecionada a opção ''OUTRO'''
           example: '01'
+      additionalProperties: false
     ResponseBusinessCustomersFinancialRelation:
       type: object
       required:
@@ -1610,6 +1644,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseBusinessCustomersIdentification:
       type: object
       required:
@@ -1623,6 +1658,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseBusinessCustomersQualification:
       type: object
       required:
@@ -1636,6 +1672,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseError:
       type: object
       required:
@@ -1659,8 +1696,10 @@ components:
               detail:
                 description: Descrição legível por humanos deste erro específico
                 type: string
+            additionalProperties: false
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponsePersonalCustomersFinancialRelation:
       type: object
       required:
@@ -1674,6 +1713,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponsePersonalCustomersIdentification:
       type: object
       required:
@@ -1687,6 +1727,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
       example:
         data:
           requestDateTime: '2021-01-28T08:30:00Z'
@@ -1770,14 +1811,17 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
   parameters:
     Authorization:
       name: Authorization
       in: header
-      description: a definir
-      required: false
+      description: Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado
+      required: true
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     page:
       name: page
       in: query
@@ -1801,6 +1845,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiAuthDate:
       name: x-fapi-auth-date
       in: header
@@ -1816,6 +1862,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiInteractionId:
       name: x-fapi-interaction-id
       in: header
@@ -1823,6 +1871,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
   securitySchemes:
     OpenId:
       type: openIdConnect

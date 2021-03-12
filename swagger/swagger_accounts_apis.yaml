@@ -292,6 +292,7 @@ components:
           pattern: \w*\W*
           maxLength: 100
           example: '92792126019929279212650822221989319252576'
+      additionalProperties: false
     AccountBalancesData:
       type: object
       description: |
@@ -340,6 +341,7 @@ components:
           description: Saldo disponível com aplicação automática - corresponde a soma do saldo disponível acrescido do valor obtido a partir da aplicação automática Expresso em valor monetário com 4 casas decimais
           maxLength: 19
           example: 100000
+      additionalProperties: false
     AccountData:
       type: object
       description: |
@@ -367,6 +369,7 @@ components:
           items:
             $ref: '#/components/schemas/Account'
           minItems: 1
+      additionalProperties: false
     AccountIdentificationData:
       type: object
       description: |
@@ -441,6 +444,7 @@ components:
           $ref: '#/components/schemas/EnumAccountType'
         subtype:
           $ref: '#/components/schemas/EnumAccountSubType'
+      additionalProperties: false
     AccountOverdraftLimitsData:
       type: object
       description: Conjunto das informações relativas aos Limites referentes ao valor das operações de crédito (Cheque especial e Adiantamento a Depositantes) vinculadas à conta de depósito à vista ou conta corrente
@@ -479,6 +483,7 @@ components:
           items:
             $ref: '#/components/schemas/OverdraftLimitsBalance'
           minItems: 1
+      additionalProperties: false
     AccountTransactionsData:
       type: object
       description: |
@@ -509,6 +514,7 @@ components:
           example: BRL
         transactions:
           $ref: '#/components/schemas/Transaction'
+      additionalProperties: false
     EnumAccountSubType:
       type: string
       enum:
@@ -639,9 +645,13 @@ components:
           format: URIString
           description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+      additionalProperties: false
     Meta:
       type: object
       description: Meta informações referente a API requisitada.
+      required:
+        - totalRecords
+        - totalPages
       properties:
         totalRecords:
           type: integer
@@ -651,9 +661,7 @@ components:
           type: integer
           description: Número total de páginas no resultado
           example: 1
-      required:
-        - totalRecords
-        - totalPages
+      additionalProperties: false
     OverdraftLimitsBalance:
       type: object
       required:
@@ -668,6 +676,7 @@ components:
           nullable: true
           maxLength: 19
           example: 500
+      additionalProperties: false
     ResponseAccount:
       type: object
       required:
@@ -681,6 +690,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseAccountBalances:
       type: object
       required:
@@ -694,6 +704,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseAccountIdentification:
       type: object
       required:
@@ -707,6 +718,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseAccountOverdraftLimits:
       type: object
       required:
@@ -720,6 +732,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseAccountTransactions:
       type: object
       required:
@@ -733,6 +746,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseError:
       type: object
       required:
@@ -756,8 +770,10 @@ components:
               detail:
                 description: Descrição legível por humanos deste erro específico
                 type: string
+            additionalProperties: false
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     Transaction:
       type: object
       description: |
@@ -882,6 +898,7 @@ components:
           pattern: \w*\W*
           description: Dígito da conta
           example: '4'
+      additionalProperties: false
   parameters:
     accountId:
       name: accountId
@@ -930,10 +947,12 @@ components:
     Authorization:
       name: Authorization
       in: header
-      description: a definir
-      required: false
+      description: Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado
+      required: true
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     creditDebitIndicator:
       name: creditDebitIndicator
       in: query
@@ -978,6 +997,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiAuthDate:
       name: x-fapi-auth-date
       in: header
@@ -993,6 +1014,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiInteractionId:
       name: x-fapi-interaction-id
       in: header
@@ -1000,6 +1023,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
   securitySchemes:
     OpenId:
       type: openIdConnect

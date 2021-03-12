@@ -282,6 +282,7 @@ components:
           description: Valor utilizado do limite informado Expresso em valor monetário com 4 casas decimais
           maxLength: 19
           example: 2000
+      additionalProperties: false
     CreditCardAccountsBilling:
       type: object
       description: Conjunto de informações de conta de pagamento pós-paga
@@ -290,6 +291,7 @@ components:
       properties:
         bill:
           $ref: '#/components/schemas/CreditCardAccountsBillingBill'
+      additionalProperties: false
     CreditCardAccountsBillingBill:
       type: object
       description: Conjunto das informações referentes a fatura associada à conta de pagamento pós-paga
@@ -335,6 +337,7 @@ components:
           minItems: 1
           maxItems: 2
           description: Lista que traz os valores relativos aos pagamentos da Fatura da conta de pagamento pós-paga
+      additionalProperties: false
     CreditCardAccountsBillingData:
       type: object
       required:
@@ -342,6 +345,7 @@ components:
       properties:
         creditCardAccount:
           $ref: '#/components/schemas/CreditCardAccountsBilling'
+      additionalProperties: false
     CreditCardAccountsBillingFinanceCharge:
       type: object
       required:
@@ -366,6 +370,7 @@ components:
           maxLength: 40
           pattern: \w*\W*
           description: Campo de livre preenchimento. Literal usada na instituição financeira para identificar a transação
+      additionalProperties: false
     CreditCardAccountsBillingPayment:
       type: object
       required:
@@ -387,6 +392,7 @@ components:
             $ref: '#/components/schemas/CreditCardAccountsBillingFinanceCharge'
           minItems: 1
           description: Lista dos encargos cobrados na fatura
+      additionalProperties: false
     CreditCardsAccountIdentification:
       type: object
       description: Conjunto de informações referentes à identificação da conta de pagamento pós-paga.
@@ -446,6 +452,7 @@ components:
           maxLength: 50
         paymentMethod:
           $ref: '#/components/schemas/CreditCardsAccountPaymentMethod'
+      additionalProperties: false
     CreditCardAccountsLimits:
       type: object
       required:
@@ -472,6 +479,7 @@ components:
           example: BRL
         limits:
           $ref: '#/components/schemas/AccountsLimits'
+      additionalProperties: false
     CreditCardAccountsLimitsBrand:
       type: object
       required:
@@ -479,6 +487,7 @@ components:
       properties:
         creditCardAccounts:
           $ref: '#/components/schemas/CreditCardAccountsLimits'
+      additionalProperties: false
     CreditCardsAccountPaymentMethod:
       type: object
       description: Conjunto de informações relativas aos Meios de Pagamento da Conta de pagamento pós-paga
@@ -499,6 +508,7 @@ components:
             Fonte: Tipos de cartão - Banco Central do Brasilwww.bcb.gov.br › port ›folder_serie_I_tipos_de_
             cartao
           example: true
+      additionalProperties: false
     CreditCardAccountStatementTransaction:
       type: object
       description: Lista que traz os valores relativos aos saldos do Limite de crédito total da conta de pagamento pós-paga
@@ -584,6 +594,7 @@ components:
           type: number
           description: 'MCC é o Merchant Category Code, ou o código da categoria do estabelecimento comercial. Os MCCs são agrupados segundo suas similaridades'
           maxLength: 4
+      additionalProperties: false
     CreditCardAccountsTransactions:
       type: object
       description: objeto que agrupa as informações referentes as transações de pagamentos realizadas na conta de  pagamento pós-paga
@@ -618,6 +629,7 @@ components:
           example: '21128159000166'
         statementCreditCardAccounts:
           $ref: '#/components/schemas/CreditCardAccountStatementTransaction'
+      additionalProperties: false
     CreditCardaccountsTransactionsBrand:
       type: object
       required:
@@ -625,6 +637,7 @@ components:
       properties:
         creditCardAccount:
           $ref: '#/components/schemas/CreditCardTransactionAccount'
+      additionalProperties: false
     CreditCardTransactionAccount:
       type: object
       required:
@@ -632,6 +645,7 @@ components:
       properties:
         transactions:
           $ref: '#/components/schemas/CreditCardAccountsTransactions'
+      additionalProperties: false
     EnumCreditCardAccountFee:
       type: string
       description: Traz os tipos de Tarifas
@@ -841,9 +855,13 @@ components:
           format: URIString
           description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+      additionalProperties: false
     Meta:
       type: object
       description: Meta informações referente a API requisitada.
+      required:
+        - totalRecords
+        - totalPages
       properties:
         totalRecords:
           type: integer
@@ -853,9 +871,7 @@ components:
           type: integer
           description: Número total de páginas no resultado
           example: 1
-      required:
-        - totalRecords
-        - totalPages
+      additionalProperties: false
     ResponseCreditCardAccounts:
       type: object
       required:
@@ -911,10 +927,12 @@ components:
               description: Um identificador único e imutável usado para identificar o recurso da conta de pagamento pós paga. Este identificador não tem significado para o proprietário da conta
               maxLength: 100
               example: XXZTR3459087
+          additionalProperties: false
         links:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseCreditCardAccountsBilling:
       type: object
       required:
@@ -928,6 +946,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
       example:
         data:
           creditCardAccount:
@@ -972,6 +991,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseCreditCardAccountsLimits:
       type: object
       required:
@@ -985,6 +1005,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseCreditCardAccountsTransactions:
       type: object
       required:
@@ -998,6 +1019,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseError:
       type: object
       required:
@@ -1021,16 +1043,20 @@ components:
               detail:
                 description: Descrição legível por humanos deste erro específico
                 type: string
+            additionalProperties: false
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
   parameters:
     Authorization:
       name: Authorization
       in: header
-      description: a definir
-      required: false
+      description: Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado
+      required: true
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     creditCardAccountId:
       name: creditCardAccountId
       in: path
@@ -1107,6 +1133,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiAuthDate:
       name: x-fapi-auth-date
       in: header
@@ -1122,6 +1150,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiInteractionId:
       name: x-fapi-interaction-id
       in: header
@@ -1129,6 +1159,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
   securitySchemes:
     OpenId:
       type: openIdConnect

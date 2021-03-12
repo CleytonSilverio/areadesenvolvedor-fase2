@@ -513,6 +513,7 @@ components:
           format: URIString
           description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+      additionalProperties: false
     LoansBalloonInstalments:
       type: object
       required:
@@ -531,6 +532,7 @@ components:
           description: Valor monetário da parcela não regular a vencer.  Expresso em valor monetário com 2 casas decimais
           maxLength: 19
           example: '200.00'
+      additionalProperties: false
     LoansBalloonPayment:
       type: object
       description: Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada
@@ -549,6 +551,7 @@ components:
           description: Lista que traz as datas de vencimento e valor das parcelas não regulares  do contrato da modalidade de crédito consultada
           items:
             $ref: '#/components/schemas/LoansBalloonInstalments'
+      additionalProperties: false
     LoansContract:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de empréstimo
@@ -696,6 +699,7 @@ components:
           pattern: '\d{14}'
           description: |
             CNPJ do consignante (CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica). Deve-se ter apenas os números do CNPJ, sem máscara. Informação adicional específica para Modalidade de Crédito: Empréstimo-Crédito Pessoal Consignado
+      additionalProperties: false
     LoansContractedFee:
       type: object
       description: Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito
@@ -733,6 +737,7 @@ components:
             Percentual que representa o valor da tarifa pactuada para o contrato. Preenchimento obrigatório quando a forma de cobrança por Percentual
           maxLength: 19
           example: 50
+      additionalProperties: false
     LoansContractedWarranty:
       type: object
       description: Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada
@@ -751,6 +756,7 @@ components:
           nullable: true
           description: 'Valor original da garantia. Valor monetário, expresso com 2 casas decimais'
           example: 200
+      additionalProperties: false
     LoansContractInterestRate:
       type: object
       description: Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito
@@ -802,6 +808,7 @@ components:
           maxLength: 1200
           description: Texto com informações adicionais sobre a composição das taxas de juros pactuadas
           pattern: \w*\W*
+      additionalProperties: false
     LoansChargeOverParcel:
       type: object
       required:
@@ -833,6 +840,7 @@ components:
           description: Traz o valor do pagamento da tarifa avulsa fora da parcela. Expresso em valor monetário com 2 casas decimais
           maxLength: 19
           example: 200
+      additionalProperties: false
     LoansFinanceCharge:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito
@@ -851,6 +859,7 @@ components:
             Representa o valor do encargo em percentual pactuado no contrato. Exemplo: 0.0210 (=2.1%). Deve-se preencher as 4 casas decimais obrigatoriamente.
           maxLength: 19
           example: 0.07
+      additionalProperties: false
     LoansInstalments:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de empréstimo
@@ -884,6 +893,7 @@ components:
           example: 73
         balloonPayment:
           $ref: '#/components/schemas/LoansBalloonPayment'
+      additionalProperties: false
     LoansInstalmentsBank:
       type: object
       description: Conjunto de informações de operações de crédito de empréstimos contratadas
@@ -892,6 +902,7 @@ components:
       properties:
         instalments:
           $ref: '#/components/schemas/LoansInstalments'
+      additionalProperties: false
     LoansInstalmentsData:
       type: object
       required:
@@ -899,6 +910,7 @@ components:
       properties:
         loans:
           $ref: '#/components/schemas/LoansInstalmentsBank'
+      additionalProperties: false
     LoansListContract:
       type: object
       required:
@@ -959,6 +971,7 @@ components:
           description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito.
           maxLength: 100
           example: '92792126019929279212650822221989319252576'
+      additionalProperties: false
     LoansNonRegulatedCharge:
       type: object
       required:
@@ -970,6 +983,7 @@ components:
           maxLength: 3
           format: CurrencyString
           description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
+      additionalProperties: false
     LoansPayments:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de empréstimo
@@ -1010,6 +1024,7 @@ components:
           description: Lista dos encargos que foram pagos fora da parcela
           items:
             $ref: '#/components/schemas/LoansTaxesOverParcel'
+      additionalProperties: false
     LoansPaymentBank:
       type: object
       description: |
@@ -1019,6 +1034,7 @@ components:
       properties:
         payments:
           $ref: '#/components/schemas/LoansPayments'
+      additionalProperties: false
     LoansPaymentsData:
       type: object
       required:
@@ -1026,6 +1042,7 @@ components:
       properties:
         loans:
           $ref: '#/components/schemas/LoansPaymentBank'
+      additionalProperties: false
     LoansReleases:
       type: object
       description: Lista dos pagamentos realizados no período
@@ -1058,6 +1075,7 @@ components:
           description: Traz o valor do pagamento referente ao  contrato da modalidade de crédito consultada. Expresso em valor monetário com 2 casas decimais
           maxLength: 19
           example: 200
+      additionalProperties: false
     LoansTaxesOverParcel:
       type: object
       required:
@@ -1082,6 +1100,7 @@ components:
           description: Traz o valor do pagamento do encargo pago fora da parcela. Expresso em valor monetário com 2 casas decimais
           example: 200
           maxLength: 19
+      additionalProperties: false
     LoansWarranties:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de empréstimo
@@ -1112,6 +1131,7 @@ components:
             $ref: '#/components/schemas/LoansContractedWarranty'
           minItems: 1
           description: Lista das garantias que avalizam a operação de crédito contratada
+      additionalProperties: false
     LoansWarrantiesBank:
       type: object
       description: |
@@ -1121,6 +1141,7 @@ components:
       properties:
         warranties:
           $ref: '#/components/schemas/LoansWarranties'
+      additionalProperties: false
     LoansWarrantiesData:
       type: object
       required:
@@ -1128,9 +1149,13 @@ components:
       properties:
         loans:
           $ref: '#/components/schemas/LoansWarrantiesBank'
+      additionalProperties: false
     Meta:
       type: object
       description: Meta informações referente a API requisitada.
+      required:
+        - totalRecords
+        - totalPages
       properties:
         totalRecords:
           type: integer
@@ -1140,9 +1165,7 @@ components:
           type: integer
           description: Número total de páginas no resultado
           example: 1
-      required:
-        - totalRecords
-        - totalPages
+      additionalProperties: false
     ResponseError:
       type: object
       required:
@@ -1166,8 +1189,10 @@ components:
               detail:
                 description: Descrição legível por humanos deste erro específico
                 type: string
+            additionalProperties: false
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseLoansListContract:
       type: object
       required:
@@ -1181,6 +1206,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseLoansContract:
       type: object
       required:
@@ -1194,6 +1220,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseLoansInstalments:
       type: object
       required:
@@ -1207,6 +1234,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseLoansPayments:
       type: object
       required:
@@ -1220,6 +1248,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseLoansWarranties:
       type: object
       required:
@@ -1233,14 +1262,17 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
   parameters:
     Authorization:
       name: Authorization
       in: header
-      description: a definir
-      required: false
+      description: Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado
+      required: true
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     contractId:
       name: contractId
       in: path
@@ -1272,6 +1304,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiAuthDate:
       name: x-fapi-auth-date
       in: header
@@ -1287,6 +1321,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiInteractionId:
       name: x-fapi-interaction-id
       in: header
@@ -1294,6 +1330,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
   securitySchemes:
     OpenId:
       type: openIdConnect

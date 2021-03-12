@@ -381,9 +381,13 @@ components:
           format: URIString
           description: URI da última página dessa lista de resultados. Restrição - Obrigatório quando não for a última página da resposta
           example: 'https://api.banco.com.br/open-banking/<api>/v1/<resource>'
+      additionalProperties: false
     Meta:
       type: object
       description: Meta informações referente a API requisitada.
+      required:
+        - totalRecords
+        - totalPages
       properties:
         totalRecords:
           type: integer
@@ -393,9 +397,7 @@ components:
           type: integer
           description: Número total de páginas no resultado
           example: 1
-      required:
-        - totalRecords
-        - totalPages
+      additionalProperties: false
     ResponseError:
       type: object
       required:
@@ -419,8 +421,10 @@ components:
               detail:
                 description: Descrição legível por humanos deste erro específico
                 type: string
+            additionalProperties: false
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseUnarrangedAccountOverdraftContract:
       type: object
       required:
@@ -434,6 +438,7 @@ components:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseUnarrangedAccountOverdraftInstalments:
       type: object
       required:
@@ -517,10 +522,16 @@ components:
                                 description: Valor monetário da parcela não regular a vencer.  Expresso em valor monetário com 2 casas decimais
                                 maxLength: 19
                                 example: '200.00'
+                            additionalProperties: false
+                      additionalProperties: false
+                  additionalProperties: false
+              additionalProperties: false
+          additionalProperties: false
         links:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseUnarrangedAccountOverdraftPayments:
       type: object
       required:
@@ -572,6 +583,7 @@ components:
                           maxLength: 3
                           format: CurrencyString
                           description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
+                      additionalProperties: false
                     contractOutstandingBalance:
                       type: string
                       maxLength: 19
@@ -609,6 +621,7 @@ components:
                           description: Traz o valor do pagamento referente ao  contrato da modalidade de crédito consultada. Expresso em valor monetário com 2 casas decimais
                           maxLength: 19
                           example: 200
+                      additionalProperties: false
                     chargesOverParcel:
                       type: array
                       description: 'Lista das tarifas que foram pagas fora da parcela, só para pagamento avulso.'
@@ -643,6 +656,7 @@ components:
                             description: Traz o valor do pagamento da tarifa avulsa fora da parcela. Expresso em valor monetário com 2 casas decimais
                             maxLength: 19
                             example: 200
+                        additionalProperties: false
                     taxesOverParcel:
                       type: array
                       description: Lista dos encargos que foram pagos fora da parcela
@@ -678,10 +692,15 @@ components:
                             description: Traz o valor do pagamento do encargo pago fora da parcela. Expresso em valor monetário com 2 casas decimais
                             example: 200
                             maxLength: 19
+                        additionalProperties: false
+                  additionalProperties: false
+              additionalProperties: false
+          additionalProperties: false
         links:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseUnarrangedAccountOverdraftWarranties:
       type: object
       required:
@@ -817,12 +836,17 @@ components:
                             nullable: true
                             description: 'Valor original da garantia. Valor monetário, expresso com 2 casas decimais'
                             example: 200
+                        additionalProperties: false
                       minItems: 1
                       description: Lista das garantias que avalizam a operação de crédito contratada
+                  additionalProperties: false
+              additionalProperties: false
+          additionalProperties: false
         links:
           $ref: '#/components/schemas/Links'
         meta:
           $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     UnarrangedAccountOverdraftContract:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de adiantamento a depositantes
@@ -958,6 +982,7 @@ components:
           items:
             $ref: '#/components/schemas/UnarrangedAccountOverdraftFinanceCharge'
           minItems: 1
+      additionalProperties: false
     UnarrangedAccountOverdraftContractedFee:
       type: object
       description: Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito
@@ -995,6 +1020,7 @@ components:
             Percentual que representa o valor da tarifa pactuada para o contrato. Preenchimento obrigatório quando a forma de cobrança por Percentual
           maxLength: 19
           example: 50
+      additionalProperties: false
     UnarrangedAccountOverdraftFinanceCharge:
       type: object
       required:
@@ -1012,6 +1038,7 @@ components:
             Percentual que representa o valor do encargo pactuado no contrato. Preenchimento obrigatório quando a forma de cobrança for: Mínimo, Máximo ou Fixo
           maxLength: 19
           example: 0.07
+      additionalProperties: false
     UnarrangedAccountOverdraftContractInterestRate:
       type: object
       description: Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito
@@ -1063,14 +1090,17 @@ components:
           maxLength: 1200
           description: Texto com informações adicionais sobre a composição das taxas de juros pactuadas
           pattern: \w*\W*
+      additionalProperties: false
   parameters:
     Authorization:
       name: Authorization
       in: header
-      description: a definir
-      required: false
+      description: Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado
+      required: true
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     contractId:
       name: contractId
       in: path
@@ -1102,6 +1132,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiAuthDate:
       name: x-fapi-auth-date
       in: header
@@ -1117,6 +1149,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
     xFapiInteractionId:
       name: x-fapi-interaction-id
       in: header
@@ -1124,6 +1158,8 @@ components:
       required: false
       schema:
         type: string
+        pattern: \w*\W*
+        maxLength: 2048
   securitySchemes:
     OpenId:
       type: openIdConnect
