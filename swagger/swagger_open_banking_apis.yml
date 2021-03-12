@@ -4029,6 +4029,7 @@ components:
         - PRICE (Sistema Francês de Amortização - As parcelas são fixas do início ao fim do contrato. Ou seja, todas as parcelas terão o mesmo valor, desde a primeira até a última. Nos primeiros pagamentos, a maior parte do valor da prestação corresponde aos juros. Ao longo do tempo, a taxa de juros vai decrescendo. Como o valor da prestação é fixo, com o passar das parcelas, o valor de amortização vai aumentando)
         - SAM (Sociedade de arrendamento mercantil) - realiza arrendamento de bens móveis e imóveis adquiridos por ela, segundo as especificações da arrendatária (cliente), para fins de uso próprio desta. Assim, os contratantes deste serviço podem usufruir de determinado bem sem serem proprietários dele. As operações de arrendamento mercantil podem ser divididas em duas modalidades: leasing financeiro e leasing operacional. A diferença básica é que no leasing financeiro o prazo é usualmente maior e o arrendatário tem a possibilidade de adquirir o bem por um valor pré-estabelecido. Ao final do contrato, o arrendatário tem as opções de efetivar a aquisição do bem arrendado ou devolvê-lo. Ao final do leasing financeiro, em geral o cliente já terá pago a maior parte do valor do bem, não sendo a devolução, embora possível, financeiramente vantajosa)
         - SEM SISTEMA DE AMORTIZAÇÃO
+      maxLength: 24
       enum:
         - SAC
         - PRICE
@@ -4037,44 +4038,35 @@ components:
       example: SAC
     EnumBankBorrowingContractCalculation:
       type: string
-      description: |
-        Base de cálculo (Vide Enum)
-        - 1.21/25
-        - 2.30/360
-        - 3.30/365
+      description: Base de cálculo
+      maxLength: 6
       enum:
-        - 1.21/25
-        - 2.30/360
-        - 3.30/365
-      example: 1.21/25
+        - 21/25
+        - 30/360
+        - 30/365
+      example: 21/25
     EnumBankBorrowingContractFeeCharge:
       type: string
-      description: |
-        Forma de cobrança relativa a tarifa pactuada no contrato. (Vide Enum)
-        - Mínimo
-        - Máximo
-        - Fixo
-        - Percentual Cardinalidade de (1-N)
+      description: Forma de cobrança relativa a tarifa pactuada no contrato
+      maxLength: 10
       enum:
         - MINIMO
         - MAXIMO
         - FIXO
-        - PERCENTUAL_CARDINALIDADE_1_N
+        - PERCENTUAL
       example: MINIMO
     EnumBankBorrowingContractFeeChargeType:
       type: string
-      description: |
-        Tipo de cobrança para a tarifa pactuada no contrato. (Vide Enum)
-        - Única 
-        - Por Parcela
+      description: Tipo de cobrança para a tarifa pactuada no contrato.
+      maxLength: 10
       enum:
         - UNICA
         - POR_PARCELA
       example: UNICA
     EnumBankBorrowingContractFinanceChargeType:
       type: string
-      description: |
-        Tipo de encargo pactuado no contrato. (Vide Enum) 
+      description: Tipo de encargo pactuado no contrato.
+      maxLength: 31
       enum:
         - JUROS_REMUNERATORIOS_POR_ATRASO
         - MULTA_ATRASO_PAGAMENTO
@@ -4085,9 +4077,8 @@ components:
       example: JUROS_REMUNERATORIOS_POR_ATRASO
     EnumBankBorrowingContractInstalmentPeriodicity:
       type: string
-      description: |
-        Informação relativa à periodicidade regular das parcelas. (Vide Enum)
-        sem periodicidade regular, semanal, quinzenal, mensal, trimestral, semestral, anual
+      description: Informação relativa à periodicidade regular das parcelas
+      maxLength: 24
       enum:
         - SEM_PERIODICIDADE_REGULAR
         - SEMANAL
@@ -4104,6 +4095,7 @@ components:
         Tipo de Juros  (vide  Enum)
         - SIMPLES (aplicada/cobrada sempre sobre o capital inicial, que é o valor emprestado/investido. Não há cobrança de juros sobre juros acumulados no(s) período(s) anterior(es). Exemplo: em um empréstimo de R$1.000, com taxa de juros simples de 8% a.a., com duração de 2 anos, o total de juros será R$80 no primeiro ano e R$ 80 no segundo ano. Ao final do contrato, o tomador irá devolver o principal e os juros simples de cada ano: R$1.000+R$80+R$80=R$1.160)
         - COMPOSTO (para cada período do contrato (diário, mensal, anual etc.), há um “novo capital” para a cobrança da taxa de juros contratada. Esse “novo capital” é a soma do capital e do juro cobrado no período anterior. Exemplo: em um empréstimo de R$1.000, com taxa de juros composta de 8% a.a., com duração de 2 anos, o total de juros será R$80 no primeiro ano. No segundo ano, os juros vão ser somados ao capital (R$1.000 + R$ 80 = R$ 1.080), resultando em juros de R$ 86 (8%de R$ 1.080))
+      maxLength: 10
       enum:
         - SIMPLES
         - COMPOSTO
@@ -4156,7 +4148,9 @@ components:
       type: string
       description: |
         Tipos de taxas referenciais ou indexadores, conforme Anexo 5: Taxa referencial ou Indexador (Indx), do Documento 3040
+      maxLength: 20
       enum:
+        - SEM_SUB_TIPO_INDEXADOR
         - SEM_INDEXADOR_TAXA
         - PRE_FIXADO
         - POS_FIXADO
@@ -4169,7 +4163,9 @@ components:
       type: string
       description: |
         Sub tipos de taxas referenciais ou indexadores, conforme Anexo 5: Taxa referencial ou Indexador (Indx), do Documento 3040
+      maxLength: 25
       enum:
+        - SEM_SUB_TIPO_INDEXADOR
         - SEM_INDEXADOR_TAXA
         - PRE_FIXADO
         - TR_TBF
@@ -4196,6 +4192,7 @@ components:
         Periodicidade da taxa . (Vide  Enum)
         a.m - ao mês
         a.a. - ao ano
+      maxLength: 2
       enum:
         - AM
         - AA
@@ -4206,6 +4203,7 @@ components:
         Tipo de Taxa (vide  Enum)
         - NOMINAL (taxa nominal é uma taxa de juros em que a unidade referencial não coincide com a unidade de tempo da capitalização. Ela é sempre fornecida em termos anuais, e seus períodos de capitalização podem ser diários, mensais, trimestrais ou semestrais. p.ex. Uma taxa de 12% ao ano com capitalização mensal)
         - EFETIVA (É a taxa de juros em que a unidade referencial coincide com a unidade de tempo da capitalização. Como as unidades de medida de tempo da taxa de juros e dos períodos de capitalização são iguais, usa-se exemplos simples como 1% ao mês, 60% ao ano)
+      maxLength: 10
       enum:
         - NOMINAL
         - EFETIVA
@@ -4433,9 +4431,8 @@ components:
       example: DESCONTO_DUPLICATAS
     EnumContractProductSubTypeLoans:
       type: string
-      description: |
-        Sub tipo da modalidades de crédito Empréstimos contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Enum)
-        Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo
+      description: 'Sub tipo da modalidades de crédito Empréstimos contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR).'
+      maxLength: 42
       enum:
         - CREDITO_PESSOAL_SEM_CONSIGNACAO
         - CREDITO_PESSOAL_COM_CONSIGNACAO
@@ -4467,9 +4464,8 @@ components:
       example: DIREITOS_CREDITORIOS_DESCONTADOS
     EnumContractProductTypeLoans:
       type: string
-      description: |
-        Tipo da modalidade de crédito contratada, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Enum)
-        Empréstimos
+      description: 'Tipo da modalidade de crédito contratada, conforme  circular 4.015 e descrição do DOC3040 do SCR).'
+      maxLength: 10
       enum:
         - EMPRESTIMO
       example: EMPRESTIMO
@@ -6181,6 +6177,7 @@ components:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de empréstimo
       required:
+        - contractId
         - ipocCode
         - requestDateTime
         - productName
@@ -6201,6 +6198,11 @@ components:
         - contractedFees
         - contractedFinancesCharges
       properties:
+        contractId:
+          type: string
+          description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito
+          maxLength: 100
+          example: '92792126019929279212650822221989319252576'
         ipocCode:
           type: string
           maxLength: 67
@@ -6250,7 +6252,7 @@ components:
         contractAmount:
           type: number
           maxLength: 19
-          description: Valor contratado da operação. Expresso em valor monetário com 2 casas decimais
+          description: Valor contratado da operação. Expresso em valor monetário com até 4 casas decimais
           example: 26000
         currency:
           type: string
@@ -6439,7 +6441,7 @@ components:
         chargeRate:
           type: number
           description: |
-            Percentual que representa o valor do encargo pactuado no contrato. Preenchimento obrigatório quando a forma de cobrança for: Mínimo, Máximo ou Fixo
+            Representa o valor do encargo em percentual pactuado no contrato. Exemplo: 0.0210 (=2.1%). Deve-se preencher as 4 casas decimais obrigatoriamente.
           maxLength: 19
           example: 0.07
     LoansInstalments:
