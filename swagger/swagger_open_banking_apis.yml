@@ -1732,6 +1732,83 @@ paths:
         - OpenId:
             - openId
             - loans
+  /financings/v1/contracts:
+    get:
+      tags:
+        - API - Operações de Crédito - Financiamentos
+      summary: Financiamentos
+      description: |
+        |Versão|
+        |:-----|
+        |1     |
+
+        ### Visão Geral
+
+        Obtém dados referentes à operação de crédito de Financiamentos
+
+        Tags: [Custo Efetivo Total (CET)](#glossarioCET), [Encargo (Charge)](#glossarioEncargo), [Ente Consignante (CnpjConsignee)](#glossarioEnteConsignante), [Financiamento (Financing)](#glossarioFinanciamento), [Identificador padronizado da operação de crédito – Ipoc Code](#glossarioIPOC), [Indexador (Indexer)](#glossarioIndexador), [Sistema de Amortização Constante (SAC)](#glossarioSAC), [Sistema Francês de Amortização (Price)](#glossarioPrice), [Sociedade de arrendamento mercantil  (SAM)](#glossarioSAM), [Tarifa (Fee)](#glossarioTarifa), [Taxa Efetiva (EffectiveTax)](#glossarioTaxaEfetiva) e [Taxa nominal (NominalTax)](#glossarioTaxaNominal).
+
+        ### Visão de alto de nível das estruturas de dados
+
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/financings/TLD_Financings_Contract.png"/>
+
+        ### DER - Diagramas de Entidade e Relacionamento
+
+        * DER Conceitual
+
+        <img class="lazy" src="images/loading.gif" data-src="images/der/financings/DER_Financings.png"/>
+
+        <a href="images/der/financings/DER_Financings.png" target="_blank">Fazer download do DER Conceitual</a>
+
+        * DER Lógico
+
+        <img class="lazy" src="images/loading.gif" data-src="images/der/financings/DER_Financings_Contract.png"/>
+
+        <a href="images/der/financings/DER_Financings_Contract.png" target="_blank">Fazer download do DER Lógico</a>
+
+        ### Dicionário de dados
+
+        <a href='dictionary/financings_contract.csv' target="_blank">Fazer download do dicionário de dados</a>
+
+        <a href="dictionary/example/examples_financings_contract.csv" target="_blank">Fazer download dos exemplos</a>
+
+        ### Especificação em OAS 3.0
+
+        <a href='swagger/swagger_financings_apis.yaml'>Download da Especificação (OAS 3.0)</a>
+      operationId: getContracts
+      parameters:
+        - $ref: '#/components/parameters/Authorization'
+        - $ref: '#/components/parameters/xFapiAuthDate'
+        - $ref: '#/components/parameters/xFapiCustomerIpAddress'
+        - $ref: '#/components/parameters/xFapiInteractionId'
+        - $ref: '#/components/parameters/xCustomerUserAgent'
+      responses:
+        '200':
+          description: Dados dos contratos de financiamentos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseFinancingsListContract'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '405':
+          $ref: '#/components/responses/MethodNotAllowed'
+        '406':
+          $ref: '#/components/responses/NotAcceptable'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+      security:
+        - OpenId:
+            - openId
+            - financings
   '/financings/v1/contracts/{contractId}':
     get:
       tags:
@@ -5222,6 +5299,67 @@ components:
         financings:
           $ref: '#/components/schemas/FinancingsInstalmentsBank'
       additionalProperties: false
+    FinancingsListContract:
+      type: object
+      required:
+        - brandName
+        - companyCnpj
+        - productType
+        - productSubType
+        - ipocCode
+        - contractId
+      properties:
+        brandName:
+          type: string
+          description: 'Nome da Marca reportada pelo participante do Open Banking. O conceito a que se refere a ''marca'' é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes'
+          pattern: \w*\W*
+          maxLength: 80
+          example: Organização A
+        companyCnpj:
+          type: string
+          pattern: '\d{14}|^NA$'
+          description: 'Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara.'
+          maxLength: 14
+          example: '21128159000166'
+        productType:
+          type: string
+          description: 'Tipo da modalidade de crédito contratada, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio).'
+          maxLength: 10
+          example: EMPRESTIMO
+        productSubType:
+          type: string
+          description: 'Sub tipo da modalidades de crédito Empréstimos contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio). Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo'
+          enum:
+            - CREDITO_PESSOAL_SEM_CONSIGNACAO
+            - CREDITO_PESSOAL_COM_CONSIGNACAO
+            - HOME_EQUITY
+            - MICROCREDITO_PRODUTIVO_ORIENTADO
+            - CHEQUE_ESPECIAL
+            - CONTA_GARANTIDA
+            - CAPITAL_GIRO_PRAZO_VENCIMENTO_ATE_365_DIAS
+            - CAPITAL_GIRO_PRAZO_VENCIMENTO_SUPERIOR_365_DIAS
+            - CAPITAL_GIRO_TETO_ROTATIVO
+          example: CREDITO_PESSOAL_SEM_CONSIGNACAO
+        ipocCode:
+          type: string
+          maxLength: 67
+          description: |
+            Número padronizado do contrato - IPOC (Identificação Padronizada da Operação de Crédito). Segundo DOC 3040, composta por:
+            - **CNPJ da instituição:** 8 (oito) posições iniciais;
+            - **Modalidade da operação:** 4 (quatro) posições;
+            - **Tipo do cliente:** 1 (uma) posição( 1 = pessoa natural - CPF, 2= pessoa jurídica – CNPJ, 3 = pessoa física no exterior, 4 = pessoa jurídica no exterior, 5 = pessoa natural sem CPF e 6 = pessoa jurídica sem CNPJ);
+            - **Código do cliente:** O número de posições varia conforme o tipo do cliente:
+              1. Para clientes pessoa física com CPF (tipo de cliente = 1), informar as 11 (onze) posições do CPF;
+              2. Para clientes pessoa jurídica com CNPJ (tipo de cliente = 2), informar as 8 (oito) posições iniciais do CNPJ;
+              3. Para os demais clientes (tipos de cliente 3, 4, 5 e 6), informar 14 (catorze) posições com complemento de zeros à esquerda se a identificação tiver tamanho inferior;
+            - **Código do contrato:** 1 (uma) até 40 (quarenta) posições, sem complemento de caracteres.
+          example: '92792126019929279212650822221989319252576'
+        contractId:
+          type: string
+          description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito.
+          maxLength: 100
+          example: '92792126019929279212650822221989319252576'
+      additionalProperties: false
     FinancingsNonRegulatedCharge:
       type: object
       required:
@@ -7529,6 +7667,20 @@ components:
         meta:
           $ref: '#/components/schemas/Meta'
       additionalProperties: false
+    ResponseFinancingsListContract:
+      type: object
+      required:
+        - data
+        - links
+        - meta
+      properties:
+        data:
+          $ref: '#/components/schemas/FinancingsListContract'
+        links:
+          $ref: '#/components/schemas/Links'
+        meta:
+          $ref: '#/components/schemas/Meta'
+      additionalProperties: false
     ResponseFinancingsPayments:
       type: object
       required:
@@ -7592,19 +7744,7 @@ components:
               maxLength: 10
               example: EMPRESTIMO
             productSubType:
-              type: string
-              description: 'Sub tipo da modalidades de crédito Empréstimos contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio). Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo'
-              enum:
-                - CREDITO_PESSOAL_SEM_CONSIGNACAO
-                - CREDITO_PESSOAL_COM_CONSIGNACAO
-                - HOME_EQUITY
-                - MICROCREDITO_PRODUTIVO_ORIENTADO
-                - CHEQUE_ESPECIAL
-                - CONTA_GARANTIDA
-                - CAPITAL_GIRO_PRAZO_VENCIMENTO_ATE_365_DIAS
-                - CAPITAL_GIRO_PRAZO_VENCIMENTO_SUPERIOR_365_DIAS
-                - CAPITAL_GIRO_TETO_ROTATIVO
-              example: CREDITO_PESSOAL_SEM_CONSIGNACAO
+              $ref: '#/components/schemas/FinancingsListContract/properties/productSubType'
             ipocCode:
               type: string
               maxLength: 67
