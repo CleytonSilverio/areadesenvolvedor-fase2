@@ -7597,7 +7597,6 @@ OpenId ( Scopes: openId accounts )
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"compeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"branchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24550245"</span><span class="p">,</span><span class="w">
@@ -7605,8 +7604,10 @@ OpenId ( Scopes: openId accounts )
     </span><span class="nl">"brandName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organização A"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"companyCnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21128159000166"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updateDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONTA_DEPOSITO_A_VISTA"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INDIVIDUAL"</span><span class="w">
+    </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INDIVIDUAL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -14004,7 +14005,6 @@ OpenId ( Scopes: openId invoice-financings )
 <a id="tocSaccountidentificationdata"></a>
 <a id="tocsaccountidentificationdata"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"compeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"branchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24550245"</span><span class="p">,</span><span class="w">
@@ -14012,8 +14012,10 @@ OpenId ( Scopes: openId invoice-financings )
   </span><span class="nl">"brandName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organização A"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"companyCnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21128159000166"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"updateDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONTA_DEPOSITO_A_VISTA"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INDIVIDUAL"</span><span class="w">
+  </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INDIVIDUAL"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div>
@@ -14031,12 +14033,6 @@ OpenId ( Scopes: openId invoice-financings )
 </tr>
 </thead><tbody>
 <tr>
-<td>accountId</td>
-<td>string</td>
-<td>true</td>
-<td>Um identificador único e imutável usado para identificar o recurso da conta (de depósito à vista, poupança ou de pagamento pré-paga). Este identificador não tem significado para o proprietário da conta.</td>
-</tr>
-<tr>
 <td>compeCode</td>
 <td>string</td>
 <td>true</td>
@@ -14046,7 +14042,7 @@ OpenId ( Scopes: openId invoice-financings )
 <td>branchCode</td>
 <td>string</td>
 <td>true</td>
-<td>Código da Agência detentora da conta</td>
+<td>Código da Agência detentora da conta. (Agência é a dependência destinada ao atendimento aos clientes, ao público em geral e aos associados de cooperativas de crédito, no exercício de atividades da instituição, não podendo ser móvel ou transitória)</td>
 </tr>
 <tr>
 <td>number</td>
@@ -14079,6 +14075,12 @@ OpenId ( Scopes: openId invoice-financings )
 <td>Data e hora da consulta, conforme especificação RFC-3339, formato UTC.</td>
 </tr>
 <tr>
+<td>updateDateTime</td>
+<td>string</td>
+<td>true</td>
+<td>Data e hora da atualização, conforme especificação RFC-3339.</td>
+</tr>
+<tr>
 <td>type</td>
 <td><a href="#schemaenumaccounttype">EnumAccountType</a></td>
 <td>true</td>
@@ -14088,7 +14090,13 @@ OpenId ( Scopes: openId invoice-financings )
 <td>subtype</td>
 <td><a href="#schemaenumaccountsubtype">EnumAccountSubType</a></td>
 <td>true</td>
-<td>Conta individual - possui um único titular<br>Conta conjunta solidária - é a modalidade cujos titulares podem realizar movimentações de forma isolada, isto é, sem que seja necessária a autorização dos demais titulares<br>Conta conjunta não solidária - onde as movimentações financeiras só podem serem realizadas mediante autorização de TODOS os correntistas da conta.</td>
+<td>Subtipo de conta (vide Enum): <br>Conta individual - possui um único titular<br>Conta conjunta solidária - é a modalidade cujos titulares podem realizar movimentações de forma isolada, isto é, sem que seja necessária a autorização dos demais titulares<br>Conta conjunta não solidária - onde as movimentações financeiras só podem serem realizadas mediante autorização de TODOS os correntistas da conta.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>string(CurrencyString)</td>
+<td>true</td>
+<td>Moeda referente ao valor da transação, segundo modelo ISO-4217. p.ex. &#39;BRL&#39; <br>Todos os saldos informados estão representados com a moeda vigente do Brasil</td>
 </tr>
 </tbody></table>
 
@@ -16091,7 +16099,8 @@ OpenId ( Scopes: openId invoice-financings )
 
 </span></code></pre></div>
 
-<p>Conta individual - possui um único titular
+<p>Subtipo de conta (vide Enum): 
+Conta individual - possui um único titular
 Conta conjunta solidária - é a modalidade cujos titulares podem realizar movimentações de forma isolada, isto é, sem que seja necessária a autorização dos demais titulares
 Conta conjunta não solidária - onde as movimentações financeiras só podem serem realizadas mediante autorização de TODOS os correntistas da conta.</p>
 
@@ -16109,7 +16118,7 @@ Conta conjunta não solidária - onde as movimentações financeiras só podem s
 <td>**</td>
 <td>string</td>
 <td>false</td>
-<td>Conta individual - possui um único titular<br>Conta conjunta solidária - é a modalidade cujos titulares podem realizar movimentações de forma isolada, isto é, sem que seja necessária a autorização dos demais titulares<br>Conta conjunta não solidária - onde as movimentações financeiras só podem serem realizadas mediante autorização de TODOS os correntistas da conta.</td>
+<td>Subtipo de conta (vide Enum): <br>Conta individual - possui um único titular<br>Conta conjunta solidária - é a modalidade cujos titulares podem realizar movimentações de forma isolada, isto é, sem que seja necessária a autorização dos demais titulares<br>Conta conjunta não solidária - onde as movimentações financeiras só podem serem realizadas mediante autorização de TODOS os correntistas da conta.</td>
 </tr>
 </tbody></table>
 
@@ -25667,7 +25676,6 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocsresponseaccountidentification"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"compeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"branchCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6272"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24550245"</span><span class="p">,</span><span class="w">
@@ -25675,8 +25683,10 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
     </span><span class="nl">"brandName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organização A"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"companyCnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21128159000166"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"updateDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONTA_DEPOSITO_A_VISTA"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INDIVIDUAL"</span><span class="w">
+    </span><span class="nl">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INDIVIDUAL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
