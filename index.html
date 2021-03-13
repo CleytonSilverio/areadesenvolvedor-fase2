@@ -516,6 +516,9 @@
             <a href="#apis-do-open-banking-brasil-api-opera-es-de-cr-dito-direitos-credit-rios-descontados" class="toc-h1 toc-link" data-title="API - Operações de Crédito - Direitos Creditórios Descontados">API - Operações de Crédito - Direitos Creditórios Descontados</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#direitos-creditorios-descontados" class="toc-h2 toc-link" data-title="Direitos Creditórios Descontados">Direitos Creditórios Descontados</a>
+                  </li>
+                  <li>
                     <a href="#direitos-creditorios-descontados-contrato" class="toc-h2 toc-link" data-title="Direitos Creditórios Descontados - Contrato">Direitos Creditórios Descontados - Contrato</a>
                   </li>
                   <li>
@@ -1116,6 +1119,9 @@
                   </li>
                   <li>
                     <a href="#tocS_ResponseInvoiceFinancingsContract" class="toc-h2 toc-link" data-title="ResponseInvoiceFinancingsContract">ResponseInvoiceFinancingsContract</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_ResponseInvoiceFinancingsListContract" class="toc-h2 toc-link" data-title="ResponseInvoiceFinancingsListContract">ResponseInvoiceFinancingsListContract</a>
                   </li>
                   <li>
                     <a href="#tocS_ResponseInvoiceFinancingsInstalments" class="toc-h2 toc-link" data-title="ResponseInvoiceFinancingsInstalments">ResponseInvoiceFinancingsInstalments</a>
@@ -12658,6 +12664,261 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 
 <h1 id="apis-do-open-banking-brasil-api-opera-es-de-cr-dito-direitos-credit-rios-descontados">API - Operações de Crédito - Direitos Creditórios Descontados</h1>
 
+<h2 id='direitos-creditorios-descontados'>Direitos Creditórios Descontados</h2>
+
+<p><a id="opIdgetContracts"></a></p>
+
+<blockquote>
+<p>Exemplo de código</p>
+</blockquote>
+
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">withCredentials</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">readystatechange</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="k">this</span><span class="p">.</span><span class="nx">DONE</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">https://api.banco.com.br/open-banking/invoice-financings/v1/contracts</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-customer-ip-address</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-interaction-id</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-customer-user-agent</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">http.client</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">"api.banco.com.br"</span><span class="p">)</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'Accept'</span><span class="p">:</span> <span class="s">"application/json"</span><span class="p">,</span>
+    <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">'x-fapi-auth-date'</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">'x-fapi-customer-ip-address'</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">'x-fapi-interaction-id'</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
+    <span class="p">}</span>
+
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/invoice-financings/v1/contracts"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"https://api.banco.com.br/open-banking/invoice-financings/v1/contracts"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-customer-ip-address"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-interaction-id"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-customer-user-agent"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
+</code></pre></div>
+
+<p><code>GET /invoice-financings/v1/contracts</code></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Versão</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">1</td>
+</tr>
+</tbody></table>
+
+<h3 id='visao-geral-31'>Visão Geral</h3>
+
+<p>Conjunto de informações  de contratos de direitos creditórios descontados mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento</p>
+
+<p>Tags: <a href="#glossarioCET">Custo Efetivo Total (CET)</a>, <a href="#glossarioDireitoCreditorioDescontado">Direito Creditório Descontado (Invoice Financing)</a>, <a href="#glossarioEncargo">Encargo (Charge)</a>, <a href="#glossarioEnteConsignante">Ente Consignante (CnpjConsignee)</a>, <a href="#glossarioIPOC">Identificador padronizado da operação de crédito – Ipoc Code</a>, <a href="#glossarioIndexador">Indexador (Indexer)</a>, <a href="#glossarioSAC">Sistema de Amortização Constante (SAC)</a>, <a href="#glossarioPrice">Sistema Francês de Amortização (Price)</a>, <a href="#glossarioSAM">Sociedade de arrendamento mercantil  (SAM)</a>, <a href="#glossarioTarifa">Tarifa (Fee)</a>, <a href="#glossarioTaxaEfetiva">Taxa Efetiva (EffectiveTax)</a> e <a href="#glossarioTaxaNominal">Taxa nominal (NominalTax)</a>.</p>
+
+<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-31'>Visão de alto de nível das estruturas de dados</h3>
+
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/invoice_financings/TLD_InvoiceFinancings_Contract-52037be9.png"/></p>
+
+<h3 id='der-diagramas-de-entidade-e-relacionamento-31'>DER - Diagramas de Entidade e Relacionamento</h3>
+
+<ul>
+<li>DER Conceitual</li>
+</ul>
+
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/invoice_financings/DER_InvoiceFinancings-11ff0d5b.png"/></p>
+
+<p><a href="images/der/invoice_financings/DER_InvoiceFinancings_.png" target="_blank">Fazer download do DER Conceitual</a></p>
+
+<ul>
+<li>DER Lógico</li>
+</ul>
+
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/invoice_financings/DER_InvoiceFinancings_Contract-fce9c1e9.png"/></p>
+
+<p><a href="images/der/invoice_financings/DER_InvoiceFinancings_Contract-fce9c1e9.png" target="_blank">Fazer download do DER Lógico</a></p>
+
+<h3 id='dicionario-de-dados-31'>Dicionário de dados</h3>
+
+<p><a href='dictionary/invoice_financings_contract.csv' target="_blank">Fazer download do dicionário de dados</a></p>
+
+<p><a href="dictionary/example/examples_invoice_financings_contract.csv" target="_blank">Fazer download dos exemplos</a></p>
+
+<h3 id='especificacao-em-oas-3-0-31'>Especificação em OAS 3.0</h3>
+
+<p><a href='swagger/swagger_invoice_financings_apis.yaml'>Download da Especificação (OAS 3.0)</a></p>
+
+<h3 id="direitos-creditórios-descontados-parameters">Parâmetros</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Origem</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>header</td>
+<td>string</td>
+<td>true</td>
+<td>Cabeçalho HTTP padrão. Permite que as credenciais sejam fornecidas dependendo do tipo de recurso solicitado</td>
+</tr>
+<tr>
+<td>x-fapi-auth-date</td>
+<td>header</td>
+<td>string</td>
+<td>false</td>
+<td>Data em que o usuário logou pela última vez com o receptor. Representada de acordo com a <a href="https://tools.ietf.org/html/rfc7231">RFC7231</a>.Exemplo: Sun, 10 Sep 2017 19:43:31 UTC</td>
+</tr>
+<tr>
+<td>x-fapi-customer-ip-address</td>
+<td>header</td>
+<td>string</td>
+<td>false</td>
+<td>O endereço IP do usuário se estiver atualmente logado com o receptor.</td>
+</tr>
+<tr>
+<td>x-fapi-interaction-id</td>
+<td>header</td>
+<td>string</td>
+<td>false</td>
+<td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
+</tr>
+<tr>
+<td>x-customer-user-agent</td>
+<td>header</td>
+<td>string</td>
+<td>false</td>
+<td>Indica o user-agent que o usuário utiliza.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>O comando acima retorna uma estrutura json como essa:</p>
+
+<p>200 Response</p>
+</blockquote>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"brandName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organização A"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"companyCnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21128159000166"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMPRESTIMO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productSubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CREDITO_PESSOAL_SEM_CONSIGNACAO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ipocCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"totalRecords"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalPages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<h3 id="direitos-creditórios-descontados-responses">Resposta</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Significado</th>
+<th>Descrição</th>
+<th>Schema</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>Dados do contrato de antecipação de recebíveis identificado por <code>contractId</code></td>
+<td><a href="#schemaresponseinvoicefinancingslistcontract">ResponseInvoiceFinancingsListContract</a></td>
+</tr>
+<tr>
+<td>400</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td>
+<td>A requisição foi malformada, omitindo atributos obrigatórios, seja no payload ou através de atributos na URL.</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Cabeçalho de autenticação ausente/inválido ou token inválido</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>403</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.3">Forbidden</a></td>
+<td>O token tem escopo incorreto ou uma política de segurança foi violada</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>404</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
+<td>O recurso solicitado não existe ou não foi implementado</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>405</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.5">Method Not Allowed</a></td>
+<td>O consumidor tentou acessar o recurso com um método não suportado</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>406</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.6">Not Acceptable</a></td>
+<td>A solicitação continha um cabeçalho Accept diferente dos tipos de mídia permitidos ou um conjunto de caracteres diferente de UTF-8</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>429</td>
+<td><a href="https://tools.ietf.org/html/rfc6585#section-4">Too Many Requests</a></td>
+<td>A operação foi recusada, pois muitas solicitações foram feitas dentro de um determinado período ou o limite global de requisições concorrentes foi atingido</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>Ocorreu um erro no gateway da API ou no microsserviço</td>
+<td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+Para realizar esta operação, você deve ser autenticado por meio de um dos seguintes métodos:
+OpenId ( Scopes: openId invoice-financings )
+</aside>
+
 <h2 id='direitos-creditorios-descontados-contrato'>Direitos Creditórios Descontados - Contrato</h2>
 
 <p><a id="opIdgetContractsContractId"></a></p>
@@ -12727,17 +12988,17 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 </tr>
 </tbody></table>
 
-<h3 id='visao-geral-31'>Visão Geral</h3>
+<h3 id='visao-geral-32'>Visão Geral</h3>
 
 <p>Obtém dados referentes à identificação da operação de crédito de Direitos Creditórios Descontados</p>
 
 <p>Tags: <a href="#glossarioCET">Custo Efetivo Total (CET)</a>, <a href="#glossarioDireitoCreditorioDescontado">Direito Creditório Descontado (Invoice Financing)</a>, <a href="#glossarioEncargo">Encargo (Charge)</a>, <a href="#glossarioEnteConsignante">Ente Consignante (CnpjConsignee)</a>, <a href="#glossarioIPOC">Identificador padronizado da operação de crédito – Ipoc Code</a>, <a href="#glossarioIndexador">Indexador (Indexer)</a>, <a href="#glossarioSAC">Sistema de Amortização Constante (SAC)</a>, <a href="#glossarioPrice">Sistema Francês de Amortização (Price)</a>, <a href="#glossarioSAM">Sociedade de arrendamento mercantil  (SAM)</a>, <a href="#glossarioTarifa">Tarifa (Fee)</a>, <a href="#glossarioTaxaEfetiva">Taxa Efetiva (EffectiveTax)</a> e <a href="#glossarioTaxaNominal">Taxa nominal (NominalTax)</a>.</p>
 
-<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-31'>Visão de alto de nível das estruturas de dados</h3>
+<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-32'>Visão de alto de nível das estruturas de dados</h3>
 
 <p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/invoice_financings/TLD_InvoiceFinancings_Contract-52037be9.png"/></p>
 
-<h3 id='der-diagramas-de-entidade-e-relacionamento-31'>DER - Diagramas de Entidade e Relacionamento</h3>
+<h3 id='der-diagramas-de-entidade-e-relacionamento-32'>DER - Diagramas de Entidade e Relacionamento</h3>
 
 <ul>
 <li>DER Conceitual</li>
@@ -12755,13 +13016,13 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 
 <p><a href="images/der/invoice_financings/DER_InvoiceFinancings_Contract-fce9c1e9.png" target="_blank">Fazer download do DER Lógico</a></p>
 
-<h3 id='dicionario-de-dados-31'>Dicionário de dados</h3>
+<h3 id='dicionario-de-dados-32'>Dicionário de dados</h3>
 
 <p><a href='dictionary/invoice_financings_contract.csv' target="_blank">Fazer download do dicionário de dados</a></p>
 
 <p><a href="dictionary/example/examples_invoice_financings_contract.csv" target="_blank">Fazer download dos exemplos</a></p>
 
-<h3 id='especificacao-em-oas-3-0-31'>Especificação em OAS 3.0</h3>
+<h3 id='especificacao-em-oas-3-0-32'>Especificação em OAS 3.0</h3>
 
 <p><a href='swagger/swagger_invoice_financings_apis.yaml'>Download da Especificação (OAS 3.0)</a></p>
 
@@ -13030,17 +13291,17 @@ OpenId ( Scopes: openId invoice-financings )
 </tr>
 </tbody></table>
 
-<h3 id='visao-geral-32'>Visão Geral</h3>
+<h3 id='visao-geral-33'>Visão Geral</h3>
 
 <p>Obtém dados referentes às garantias que avalizam a operação de crédito de Direitos Creditórios Descontados contratada</p>
 
 <p>Tags: <a href="#glossarioDireitoCreditorioDescontado">Direito Creditório Descontado (Invoice Financing)</a> e <a href="#glossarioGarantia">Garantia (Warranty)</a>.</p>
 
-<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-32'>Visão de alto de nível das estruturas de dados</h3>
+<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-33'>Visão de alto de nível das estruturas de dados</h3>
 
 <p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/invoice_financings/TLD_InvoiceFinancings_Warranties-43c64b00.png"/></p>
 
-<h3 id='der-diagramas-de-entidade-e-relacionamento-32'>DER - Diagramas de Entidade e Relacionamento</h3>
+<h3 id='der-diagramas-de-entidade-e-relacionamento-33'>DER - Diagramas de Entidade e Relacionamento</h3>
 
 <ul>
 <li>DER Conceitual</li>
@@ -13058,13 +13319,13 @@ OpenId ( Scopes: openId invoice-financings )
 
 <p><a href="images/der/invoice_financings/DER_InvoiceFinancings_Warranties-35e65c98.png" target="_blank">Fazer download do DER Lógico</a></p>
 
-<h3 id='dicionario-de-dados-32'>Dicionário de dados</h3>
+<h3 id='dicionario-de-dados-33'>Dicionário de dados</h3>
 
 <p><a href='dictionary/invoice_financings_warranties.csv' target="_blank">Fazer download do dicionário de dados</a></p>
 
 <p><a href="dictionary/example/examples_invoice_financings_warranties.csv" target="_blank">Fazer download dos exemplos</a></p>
 
-<h3 id='especificacao-em-oas-3-0-32'>Especificação em OAS 3.0</h3>
+<h3 id='especificacao-em-oas-3-0-33'>Especificação em OAS 3.0</h3>
 
 <p><a href='swagger/swagger_invoice_financings_apis.yaml'>Download da Especificação (OAS 3.0)</a></p>
 
@@ -13309,17 +13570,17 @@ OpenId ( Scopes: openId invoice-financings )
 </tr>
 </tbody></table>
 
-<h3 id='visao-geral-33'>Visão Geral</h3>
+<h3 id='visao-geral-34'>Visão Geral</h3>
 
 <p>Obtém dados dos pagamentos referentes às operações de crédito de Direitos Creditórios Descontados contratadas</p>
 
 <p>Tags: <a href="#glossarioDireitoCreditorioDescontado">Direito Creditório Descontado (Invoice Financing)</a>, <a href="#glossarioEncargo">Encargo (Charge)</a>, <a href="#glossarioSaldoDevedor">Saldo Devedor (Outstanding Balance)</a> e <a href="#glossarioTarifa">Tarifa (Fee)</a>.</p>
 
-<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-33'>Visão de alto de nível das estruturas de dados</h3>
+<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-34'>Visão de alto de nível das estruturas de dados</h3>
 
 <p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/invoice_financings/TLD_InvoiceFinancings_Payments-6ddebf30.png"/></p>
 
-<h3 id='der-diagramas-de-entidade-e-relacionamento-33'>DER - Diagramas de Entidade e Relacionamento</h3>
+<h3 id='der-diagramas-de-entidade-e-relacionamento-34'>DER - Diagramas de Entidade e Relacionamento</h3>
 
 <ul>
 <li>DER Conceitual</li>
@@ -13337,13 +13598,13 @@ OpenId ( Scopes: openId invoice-financings )
 
 <p><a href="images/der/invoice_financings/DER_InvoiceFinancings_Payments-748e2c68.png" target="_blank">Fazer download do DER Lógico</a></p>
 
-<h3 id='dicionario-de-dados-33'>Dicionário de dados</h3>
+<h3 id='dicionario-de-dados-34'>Dicionário de dados</h3>
 
 <p><a href='dictionary/invoice_financings_payments.csv' target="_blank">Fazer download do dicionário de dados</a></p>
 
 <p><a href="dictionary/example/examples_invoice_financings_payments.csv" target="_blank">Fazer download dos exemplos</a></p>
 
-<h3 id='especificacao-em-oas-3-0-33'>Especificação em OAS 3.0</h3>
+<h3 id='especificacao-em-oas-3-0-34'>Especificação em OAS 3.0</h3>
 
 <p><a href='swagger/swagger_invoice_financings_apis.yaml'>Download da Especificação (OAS 3.0)</a></p>
 
@@ -13607,17 +13868,17 @@ OpenId ( Scopes: openId invoice-financings )
 </tr>
 </tbody></table>
 
-<h3 id='visao-geral-34'>Visão Geral</h3>
+<h3 id='visao-geral-35'>Visão Geral</h3>
 
 <p>Obtém dados referentes às parcelas / prestações da operação de crédito de Direitos Creditórios Descontados contratadas</p>
 
 <p>Tags: <a href="#glossarioDireitoCreditorioDescontado">Direito Creditório Descontado (Invoice Financing)</a>.</p>
 
-<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-34'>Visão de alto de nível das estruturas de dados</h3>
+<h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-35'>Visão de alto de nível das estruturas de dados</h3>
 
 <p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/invoice_financings/TLD_InvoiceFinancings_Instalments-8cad1030.png"/></p>
 
-<h3 id='der-diagramas-de-entidade-e-relacionamento-34'>DER - Diagramas de Entidade e Relacionamento</h3>
+<h3 id='der-diagramas-de-entidade-e-relacionamento-35'>DER - Diagramas de Entidade e Relacionamento</h3>
 
 <ul>
 <li>DER Conceitual</li>
@@ -13635,13 +13896,13 @@ OpenId ( Scopes: openId invoice-financings )
 
 <p><a href="images/der/invoice_financings/DER_InvoiceFinancings_Instalments-34eb4eab.png" target="_blank">Fazer download do DER Lógico</a></p>
 
-<h3 id='dicionario-de-dados-34'>Dicionário de dados</h3>
+<h3 id='dicionario-de-dados-35'>Dicionário de dados</h3>
 
 <p><a href='dictionary/invoice_financings_instalments.csv' target="_blank">Fazer download do dicionário de dados</a></p>
 
 <p><a href="dictionary/example/examples_invoice_financings_instalments.csv" target="_blank">Fazer download dos exemplos</a></p>
 
-<h3 id='especificacao-em-oas-3-0-34'>Especificação em OAS 3.0</h3>
+<h3 id='especificacao-em-oas-3-0-35'>Especificação em OAS 3.0</h3>
 
 <p><a href='swagger/swagger_invoice_financings_apis.yaml'>Download da Especificação (OAS 3.0)</a></p>
 
@@ -27361,6 +27622,99 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
+<h2 id="tocS_ResponseInvoiceFinancingsListContract">ResponseInvoiceFinancingsListContract</h2>
+
+<p><a id="schemaresponseinvoicefinancingslistcontract"></a>
+<a id="schema_ResponseInvoiceFinancingsListContract"></a>
+<a id="tocSresponseinvoicefinancingslistcontract"></a>
+<a id="tocsresponseinvoicefinancingslistcontract"></a></p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"brandName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organização A"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"companyCnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21128159000166"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EMPRESTIMO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productSubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CREDITO_PESSOAL_SEM_CONSIGNACAO"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ipocCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"totalRecords"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalPages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='propriedades-196'>Propriedades</h3>
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data</td>
+<td>object</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>» brandName</td>
+<td>string</td>
+<td>true</td>
+<td>Nome da Marca reportada pelo participante do Open Banking. O conceito a que se refere a &#39;marca&#39; é em essência uma promessa da empresa em fornecer uma série específica de atributos, benefícios e serviços uniformes aos clientes</td>
+</tr>
+<tr>
+<td>» companyCnpj</td>
+<td>string</td>
+<td>true</td>
+<td>Número completo do CNPJ da instituição responsável pelo Cadastro - o CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica. Deve-se ter apenas os números do CNPJ, sem máscara.</td>
+</tr>
+<tr>
+<td>» productType</td>
+<td>string</td>
+<td>true</td>
+<td>Tipo da modalidade de crédito contratada, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio).</td>
+</tr>
+<tr>
+<td>» productSubType</td>
+<td><a href="#schemafinancingslistcontract/properties/productsubtype">FinancingsListContract/properties/productSubType</a></td>
+<td>true</td>
+<td>Sub tipo da modalidades de crédito Empréstimos contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio). Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo</td>
+</tr>
+<tr>
+<td>» ipocCode</td>
+<td>string</td>
+<td>true</td>
+<td>Número padronizado do contrato - IPOC (Identificação Padronizada da Operação de Crédito). Segundo DOC 3040, composta por:<br>- <strong>CNPJ da instituição:</strong> 8 (oito) posições iniciais;<br>- <strong>Modalidade da operação:</strong> 4 (quatro) posições;<br>- <strong>Tipo do cliente:</strong> 1 (uma) posição( 1 = pessoa natural - CPF, 2= pessoa jurídica – CNPJ, 3 = pessoa física no exterior, 4 = pessoa jurídica no exterior, 5 = pessoa natural sem CPF e 6 = pessoa jurídica sem CNPJ);<br>- <strong>Código do cliente:</strong> O número de posições varia conforme o tipo do cliente:<br>  1. Para clientes pessoa física com CPF (tipo de cliente = 1), informar as 11 (onze) posições do CPF;<br>  2. Para clientes pessoa jurídica com CNPJ (tipo de cliente = 2), informar as 8 (oito) posições iniciais do CNPJ;<br>  3. Para os demais clientes (tipos de cliente 3, 4, 5 e 6), informar 14 (catorze) posições com complemento de zeros à esquerda se a identificação tiver tamanho inferior;<br>- <strong>Código do contrato:</strong> 1 (uma) até 40 (quarenta) posições, sem complemento de caracteres.</td>
+</tr>
+<tr>
+<td>» contractId</td>
+<td>string</td>
+<td>true</td>
+<td>Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito.</td>
+</tr>
+<tr>
+<td>links</td>
+<td><a href="#schemalinks">Links</a></td>
+<td>true</td>
+<td>Referências para outros recusos da API requisitada.</td>
+</tr>
+<tr>
+<td>meta</td>
+<td><a href="#schemameta">Meta</a></td>
+<td>true</td>
+<td>Meta informações referente a API requisitada.</td>
+</tr>
+</tbody></table>
+
 <h2 id="tocS_ResponseInvoiceFinancingsInstalments">ResponseInvoiceFinancingsInstalments</h2>
 
 <p><a id="schemaresponseinvoicefinancingsinstalments"></a>
@@ -27396,7 +27750,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-196'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-197'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27475,7 +27829,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-197'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-198'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27535,7 +27889,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-198'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-199'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27633,7 +27987,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-199'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-200'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27701,7 +28055,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-200'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-201'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27784,7 +28138,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-201'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-202'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27848,7 +28202,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-202'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-203'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27888,7 +28242,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">800.87</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-203'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-204'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27943,7 +28297,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos lançamentos referentes às transações realizadas e de pagamentos aurotizados para as contas de: depósito à vista, pouopança e de pagamento pré-paga.</p>
 
-<h3 id='propriedades-204'>Propriedades</h3>
+<h3 id='propriedades-205'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28081,7 +28435,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-205'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-206'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28124,7 +28478,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
 
-<h3 id='propriedades-206'>Propriedades</h3>
+<h3 id='propriedades-207'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28162,7 +28516,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-207'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-208'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28208,7 +28562,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-208'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-209'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28291,7 +28645,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de adiantamento a depositantes</p>
 
-<h3 id='propriedades-209'>Propriedades</h3>
+<h3 id='propriedades-210'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28437,7 +28791,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-210'>Propriedades</h3>
+<h3 id='propriedades-211'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28502,7 +28856,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-211'>Propriedades</h3>
+<h3 id='propriedades-212'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28556,7 +28910,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-212'>Propriedades</h3>
+<h3 id='propriedades-213'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28641,7 +28995,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"chargeRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.07</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-213'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-214'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28696,7 +29050,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-214'>Propriedades</h3>
+<h3 id='propriedades-215'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28767,7 +29121,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito contratadas</p>
 
-<h3 id='propriedades-215'>Propriedades</h3>
+<h3 id='propriedades-216'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28812,7 +29166,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-216'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-217'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28839,7 +29193,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-217'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-218'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28899,7 +29253,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito de adiantamento a depositantes contratadas</p>
 
-<h3 id='propriedades-218'>Propriedades</h3>
+<h3 id='propriedades-219'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28959,7 +29313,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações dos pagamentos referentes às operações de crédito de adiantamento a depositantes contratadas</p>
 
-<h3 id='propriedades-219'>Propriedades</h3>
+<h3 id='propriedades-220'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29055,7 +29409,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-220'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-221'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29089,7 +29443,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-221'>Propriedades</h3>
+<h3 id='propriedades-222'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29139,7 +29493,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-222'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-223'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29196,7 +29550,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-223'>Propriedades</h3>
+<h3 id='propriedades-224'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29251,7 +29605,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito contratadas</p>
 
-<h3 id='propriedades-224'>Propriedades</h3>
+<h3 id='propriedades-225'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29292,7 +29646,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w"></p>
 
-<p></span></code></pre></div><h3 id='propriedades-225'>Propriedades</h3>
+<p></span></code></pre></div><h3 id='propriedades-226'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
