@@ -5592,20 +5592,6 @@ components:
           items:
             $ref: '#/components/schemas/InvoiceFinancingsBalloonInstalments'
       additionalProperties: false
-    InvoiceFinancingsBorrowingWarranties:
-      type: object
-      required:
-        - data
-        - links
-        - meta
-      properties:
-        data:
-          $ref: '#/components/schemas/InvoiceFinancingsWarrantiesData'
-        links:
-          $ref: '#/components/schemas/Links'
-        meta:
-          $ref: '#/components/schemas/Meta'
-      additionalProperties: false
     InvoiceFinancingsChargeOverParcel:
       type: object
       required:
@@ -5954,23 +5940,6 @@ components:
         balloonPayment:
           $ref: '#/components/schemas/InvoiceFinancingsBalloonPayment'
       additionalProperties: false
-    InvoiceFinancingsInstalmentsBank:
-      type: object
-      description: Conjunto de informações de operações de direitos  creditórios descontados contratadas
-      required:
-        - instalments
-      properties:
-        instalments:
-          $ref: '#/components/schemas/InvoiceFinancingsInstalments'
-      additionalProperties: false
-    InvoiceFinancingsInstalmentsData:
-      type: object
-      required:
-        - invoiceFinancings
-      properties:
-        invoiceFinancings:
-          $ref: '#/components/schemas/InvoiceFinancingsInstalmentsBank'
-      additionalProperties: false
     InvoiceFinancingsNonRegulatedCharge:
       type: object
       required:
@@ -6033,14 +6002,6 @@ components:
           description: Lista dos encargos que foram pagos fora da parcela
           items:
             $ref: '#/components/schemas/InvoiceFinancingsTaxesOverParcel'
-      additionalProperties: false
-    InvoiceFinancingsPaymentsData:
-      type: object
-      required:
-        - invoiceFinancings
-      properties:
-        invoiceFinancings:
-          $ref: '#/components/schemas/InvoiceFinancingsPaymentBank'
       additionalProperties: false
     InvoiceFinancingsReleases:
       type: object
@@ -6129,24 +6090,6 @@ components:
           items:
             $ref: '#/components/schemas/InvoiceFinancingsContractedWarranty'
           minItems: 1
-      additionalProperties: false
-    InvoiceFinancingsWarrantiesBank:
-      type: object
-      description: |
-        Conjunto de informações de operações de direitos creditórios descontados contratadas
-      required:
-        - warranties
-      properties:
-        warranties:
-          $ref: '#/components/schemas/InvoiceFinancingsWarranties'
-      additionalProperties: false
-    InvoiceFinancingsWarrantiesData:
-      type: object
-      required:
-        - invoiceFinancings
-      properties:
-        invoiceFinancings:
-          $ref: '#/components/schemas/InvoiceFinancingsWarrantiesBank'
       additionalProperties: false
     Links:
       type: object
@@ -7849,7 +7792,7 @@ components:
         - meta
       properties:
         data:
-          $ref: '#/components/schemas/InvoiceFinancingsInstalmentsData'
+          $ref: '#/components/schemas/InvoiceFinancingsInstalments'
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -7863,7 +7806,7 @@ components:
         - meta
       properties:
         data:
-          $ref: '#/components/schemas/InvoiceFinancingsPaymentsData'
+          $ref: '#/components/schemas/InvoiceFinancingsPayments'
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -7877,7 +7820,7 @@ components:
         - meta
       properties:
         data:
-          $ref: '#/components/schemas/InvoiceFinancingsWarrantiesData'
+          $ref: '#/components/schemas/InvoiceFinancingsWarranties'
         links:
           $ref: '#/components/schemas/Links'
         meta:
