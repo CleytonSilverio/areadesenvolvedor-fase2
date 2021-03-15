@@ -62,11 +62,7 @@ paths:
         - $ref: '#/components/parameters/xCustomerUserAgent'
       responses:
         '200':
-          description: Conjunto de informações das Contas de pagamento pós paga
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseCreditCardAccounts'
+          $ref: '#/components/responses/OKResponseCreditCardAccountsList'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -872,7 +868,7 @@ components:
           description: Número total de páginas no resultado
           example: 1
       additionalProperties: false
-    ResponseCreditCardAccounts:
+    ResponseCreditCardAccountsList:
       type: object
       required:
         - data
@@ -881,6 +877,7 @@ components:
       properties:
         data:
           type: array
+          description: Conjunto de informações de conta de pagamento pós-paga
           items:
             $ref: '#/components/schemas/CreditCardAccountsData'
           minItems: 1
@@ -1184,15 +1181,25 @@ components:
       description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
       required: false
       schema:
-        type: string
-        pattern: '^[a-zA-Z0-9][a-zA-Z0-9\-]{0,99}$'
-        maxLength: 100
-        description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
+        $ref: '#/components/responses/OKResponseCreditCardAccountsList/headers/x-fapi-interaction-id/schema'
   securitySchemes:
     OpenId:
       type: openIdConnect
       openIdConnectUrl: 'https://authserver.example/.well-known/openid-configuration'
   responses:
+    OKResponseCreditCardAccountsList:
+      description: Conjunto de informações das Contas de pagamento pós paga
+      headers:
+        x-fapi-interaction-id:
+          schema:
+            type: string
+            pattern: '^[a-zA-Z0-9][a-zA-Z0-9\-]{0,99}$'
+            maxLength: 100
+            description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseCreditCardAccountsList'
     BadRequest:
       description: 'A requisição foi malformada, omitindo atributos obrigatórios, seja no payload ou através de atributos na URL.'
       content:

@@ -1022,7 +1022,7 @@
                     <a href="#tocS_PersonalQualificationData" class="toc-h2 toc-link" data-title="PersonalQualificationData">PersonalQualificationData</a>
                   </li>
                   <li>
-                    <a href="#tocS_ResponseAccount" class="toc-h2 toc-link" data-title="ResponseAccount">ResponseAccount</a>
+                    <a href="#tocS_ResponseAccountList" class="toc-h2 toc-link" data-title="ResponseAccountList">ResponseAccountList</a>
                   </li>
                   <li>
                     <a href="#tocS_ResponseAccountBalances" class="toc-h2 toc-link" data-title="ResponseAccountBalances">ResponseAccountBalances</a>
@@ -1046,7 +1046,7 @@
                     <a href="#tocS_ResponseBusinessCustomersQualification" class="toc-h2 toc-link" data-title="ResponseBusinessCustomersQualification">ResponseBusinessCustomersQualification</a>
                   </li>
                   <li>
-                    <a href="#tocS_ResponseCreditCardAccounts" class="toc-h2 toc-link" data-title="ResponseCreditCardAccounts">ResponseCreditCardAccounts</a>
+                    <a href="#tocS_ResponseCreditCardAccountsList" class="toc-h2 toc-link" data-title="ResponseCreditCardAccountsList">ResponseCreditCardAccountsList</a>
                   </li>
                   <li>
                     <a href="#tocS_ResponseCreditCardAccountsIdentification" class="toc-h2 toc-link" data-title="ResponseCreditCardAccountsIdentification">ResponseCreditCardAccountsIdentification</a>
@@ -5793,8 +5793,8 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Dados de identificação da conta identificada por creditCardAccountId obtidos com sucesso.</td>
-<td><a href="#schemaresponsecreditcardaccounts">ResponseCreditCardAccounts</a></td>
+<td>Conjunto de informações das Contas de pagamento pós paga</td>
+<td><a href="#schemaresponsecreditcardaccountslist">ResponseCreditCardAccountsList</a></td>
 </tr>
 <tr>
 <td>400</td>
@@ -5843,6 +5843,26 @@ OpenId ( Scopes: openId customers )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+</tbody></table>
+
+<h3 id='response-headers'>Response Headers</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Header</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>x-fapi-interaction-id</td>
+<td>string</td>
+<td></td>
+<td>none</td>
 </tr>
 </tbody></table>
 
@@ -7134,7 +7154,7 @@ OpenId ( Scopes: openId credit-card )
 
 <h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-12'>Visão de alto de nível das estruturas de dados</h3>
 
-<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/accounts/TLD_Accounts_Lista-3ae2ea95.png"/></p>
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/accounts/TLD_Accounts_List-3ae2ea95.png"/></p>
 
 <h3 id='der-diagramas-de-entidade-e-relacionamento-12'>DER - Diagramas de Entidade e Relacionamento</h3>
 
@@ -7150,9 +7170,9 @@ OpenId ( Scopes: openId credit-card )
 <li>DER Lógico</li>
 </ul>
 
-<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/accounts/DER_Lista_Accounts-a8044239.png"/></p>
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/accounts/DER_Accounts_List-a8044239.png"/></p>
 
-<p><a href="images/der/accounts/DER_Lista_Accounts-a8044239.png" target="_blank">Fazer download do DER Lógico</a></p>
+<p><a href="images/der/accounts/DER_Accounts_List-a8044239.png" target="_blank">Fazer download do DER Lógico</a></p>
 
 <h3 id='dicionario-de-dados-12'>Dicionário de dados</h3>
 
@@ -7283,8 +7303,8 @@ OpenId ( Scopes: openId credit-card )
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Dados de identificação da conta identificada por accountId obtidos com sucesso.</td>
-<td><a href="#schemaresponseaccount">ResponseAccount</a></td>
+<td>Dados de identificação das contas obtidos com sucesso.</td>
+<td><a href="#schemaresponseaccountlist">ResponseAccountList</a></td>
 </tr>
 <tr>
 <td>400</td>
@@ -7333,6 +7353,26 @@ OpenId ( Scopes: openId credit-card )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
+</tr>
+</tbody></table>
+
+<h3 id='response-headers-2'>Response Headers</h3>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Header</th>
+<th>Type</th>
+<th>Format</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>x-fapi-interaction-id</td>
+<td>string</td>
+<td></td>
+<td>none</td>
 </tr>
 </tbody></table>
 
@@ -10226,7 +10266,7 @@ OpenId ( Scopes: openId loans )
 </tr>
 </tbody></table>
 
-<h3 id='response-headers'>Response Headers</h3>
+<h3 id='response-headers-3'>Response Headers</h3>
 
 <table><thead>
 <tr>
@@ -11680,7 +11720,7 @@ OpenId ( Scopes: openId financings )
 </tr>
 </tbody></table>
 
-<h3 id='response-headers-2'>Response Headers</h3>
+<h3 id='response-headers-4'>Response Headers</h3>
 
 <table><thead>
 <tr>
@@ -13134,7 +13174,7 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 </tr>
 </tbody></table>
 
-<h3 id='response-headers-3'>Response Headers</h3>
+<h3 id='response-headers-5'>Response Headers</h3>
 
 <table><thead>
 <tr>
@@ -25524,12 +25564,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_ResponseAccount">ResponseAccount</h2>
+<h2 id="tocS_ResponseAccountList">ResponseAccountList</h2>
 
-<p><a id="schemaresponseaccount"></a>
-<a id="schema_ResponseAccount"></a>
-<a id="tocSresponseaccount"></a>
-<a id="tocsresponseaccount"></a></p>
+<p><a id="schemaresponseaccountlist"></a>
+<a id="schema_ResponseAccountList"></a>
+<a id="tocSresponseaccountlist"></a>
+<a id="tocsresponseaccountlist"></a></p>
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -26083,12 +26123,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_ResponseCreditCardAccounts">ResponseCreditCardAccounts</h2>
+<h2 id="tocS_ResponseCreditCardAccountsList">ResponseCreditCardAccountsList</h2>
 
-<p><a id="schemaresponsecreditcardaccounts"></a>
-<a id="schema_ResponseCreditCardAccounts"></a>
-<a id="tocSresponsecreditcardaccounts"></a>
-<a id="tocsresponsecreditcardaccounts"></a></p>
+<p><a id="schemaresponsecreditcardaccountslist"></a>
+<a id="schema_ResponseCreditCardAccountsList"></a>
+<a id="tocSresponsecreditcardaccountslist"></a>
+<a id="tocsresponsecreditcardaccountslist"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -26128,7 +26168,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>data</td>
 <td>[<a href="#schemacreditcardaccountsdata">CreditCardAccountsData</a>]</td>
 <td>true</td>
-<td>[Conjunto de informações das Contas de pagamento pós paga]</td>
+<td>Conjunto de informações de conta de pagamento pós-paga</td>
 </tr>
 <tr>
 <td>links</td>
