@@ -45,8 +45,8 @@ paths:
     get:
       tags:
         - Invoice Financings
-      summary: Obtém os dados dos contratos de antecipação de recebíveis
-      description: Método para obter os dados dos contratos de antecipação de recebíveis mantidos pelos clientes na instituição transmissora
+      summary: Obtém a lista de contratos de financiamento consentidos pelo cliente.
+      description: Método para obter a lista de contratos de financiamento mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento.
       operationId: getContracts
       parameters:
         - $ref: '#/components/parameters/Authorization'
@@ -54,13 +54,11 @@ paths:
         - $ref: '#/components/parameters/xFapiCustomerIpAddress'
         - $ref: '#/components/parameters/xFapiInteractionId'
         - $ref: '#/components/parameters/xCustomerUserAgent'
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
       responses:
         '200':
-          description: Dados dos contratos de antecipação de recebíveis
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseInvoiceFinancingsListContract'
+          $ref: '#/components/responses/OKResponseInvoiceFinancingsContractList'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -77,6 +75,8 @@ paths:
           $ref: '#/components/responses/TooManyRequests'
         '500':
           $ref: '#/components/responses/InternalServerError'
+        default:
+          $ref: '#/components/responses/OKResponseInvoiceFinancingsContractList'
       security:
         - OpenId:
             - openId
@@ -874,7 +874,7 @@ components:
         balloonPayment:
           $ref: '#/components/schemas/InvoiceFinancingsBalloonPayment'
       additionalProperties: false
-    InvoiceFinancingsListContract:
+    InvoiceFinancingsContractData:
       type: object
       required:
         - brandName
@@ -899,22 +899,13 @@ components:
         productType:
           type: string
           description: 'Tipo da modalidade de crédito contratada, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio).'
-          maxLength: 10
-          example: EMPRESTIMO
+          maxLength: 35
+          example: DIREITOS_CREDITORIOS_DESCONTADOS
         productSubType:
           type: string
-          description: 'Sub tipo da modalidades de crédito Empréstimos contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio). Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo'
-          enum:
-            - CREDITO_PESSOAL_SEM_CONSIGNACAO
-            - CREDITO_PESSOAL_COM_CONSIGNACAO
-            - HOME_EQUITY
-            - MICROCREDITO_PRODUTIVO_ORIENTADO
-            - CHEQUE_ESPECIAL
-            - CONTA_GARANTIDA
-            - CAPITAL_GIRO_PRAZO_VENCIMENTO_ATE_365_DIAS
-            - CAPITAL_GIRO_PRAZO_VENCIMENTO_SUPERIOR_365_DIAS
-            - CAPITAL_GIRO_TETO_ROTATIVO
-          example: CREDITO_PESSOAL_SEM_CONSIGNACAO
+          description: 'Sub tipo da modalidades de crédito de direistos creditórios descontados contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Domínio). Desconto de duplicatas, Desconto de cheques,  Antecipação da fatura do cartão de crédito, Outros direitos creditórios descontados, Outros títulos descontados'
+          maxLength: 40
+          example: DESCONTO_CHEQUES
         ipocCode:
           type: string
           maxLength: 67
@@ -1192,7 +1183,7 @@ components:
         meta:
           $ref: '#/components/schemas/Meta'
       additionalProperties: false
-    ResponseInvoiceFinancingsListContract:
+    ResponseInvoiceFinancingsContractList:
       type: object
       required:
         - data
@@ -1200,7 +1191,9 @@ components:
         - meta
       properties:
         data:
-          $ref: '#/components/schemas/InvoiceFinancingsListContract'
+          type: array
+          items:
+            $ref: '#/components/schemas/InvoiceFinancingsContractData'
         links:
           $ref: '#/components/schemas/Links'
         meta:
@@ -1304,14 +1297,24 @@ components:
       description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
       required: false
       schema:
-        type: string
-        pattern: \w*\W*
-        maxLength: 2048
+        $ref: '#/components/responses/OKResponseInvoiceFinancingsContractList/headers/x-fapi-interaction-id/schema'
   securitySchemes:
     OpenId:
       type: openIdConnect
       openIdConnectUrl: 'https://authserver.example/.well-known/openid-configuration'
   responses:
+    OKResponseInvoiceFinancingsContractList:
+      description: Lista de contratos obtida com sucesso.
+      headers:
+        x-fapi-interaction-id:
+          schema:
+            type: string
+            pattern: '^[a-zA-Z0-9][a-zA-Z0-9\-]{0,99}$'
+            maxLength: 100
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseInvoiceFinancingsContractList'
     BadRequest:
       description: 'A requisição foi malformada, omitindo atributos obrigatórios, seja no payload ou através de atributos na URL.'
       content:
