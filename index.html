@@ -1064,7 +1064,7 @@
                     <a href="#tocS_ResponseFinancingsWarranties" class="toc-h2 toc-link" data-title="ResponseFinancingsWarranties">ResponseFinancingsWarranties</a>
                   </li>
                   <li>
-                    <a href="#tocS_ResponseLoansListContract" class="toc-h2 toc-link" data-title="ResponseLoansListContract">ResponseLoansListContract</a>
+                    <a href="#tocS_ResponseLoansContractList" class="toc-h2 toc-link" data-title="ResponseLoansContractList">ResponseLoansContractList</a>
                   </li>
                   <li>
                     <a href="#tocS_ResponseLoansContract" class="toc-h2 toc-link" data-title="ResponseLoansContract">ResponseLoansContract</a>
@@ -1173,9 +1173,6 @@
                   </li>
                   <li>
                     <a href="#tocS_UnarrangedAccountOverdraftWarrantiesData" class="toc-h2 toc-link" data-title="UnarrangedAccountOverdraftWarrantiesData">UnarrangedAccountOverdraftWarrantiesData</a>
-                  </li>
-                  <li>
-                    <a href="#tocS_XFapiInteractionId" class="toc-h2 toc-link" data-title="XFapiInteractionId">XFapiInteractionId</a>
                   </li>
               </ul>
           </li>
@@ -3916,7 +3913,7 @@ Os testes para instituições receptoras devem acontecer em 3 etapas:</p>
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -4260,7 +4257,7 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -4593,7 +4590,7 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -4870,7 +4867,7 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -5151,7 +5148,7 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -5431,7 +5428,7 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -5710,7 +5707,7 @@ OpenId ( Scopes: openId customers )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -5819,26 +5816,6 @@ OpenId ( Scopes: openId customers )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
-</tr>
-</tbody></table>
-
-<h3 id='response-headers'>Response Headers</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Header</th>
-<th>Type</th>
-<th>Format</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>x-fapi-interaction-id</td>
-<td>string</td>
-<td></td>
-<td>none</td>
 </tr>
 </tbody></table>
 
@@ -5989,7 +5966,7 @@ OpenId ( Scopes: openId credit-card )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -6256,7 +6233,7 @@ OpenId ( Scopes: openId credit-card )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -6527,7 +6504,7 @@ OpenId ( Scopes: openId credit-card )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -6875,7 +6852,7 @@ OpenId ( Scopes: openId credit-card )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -7195,7 +7172,7 @@ OpenId ( Scopes: openId credit-card )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -7329,26 +7306,6 @@ OpenId ( Scopes: openId credit-card )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
-</tr>
-</tbody></table>
-
-<h3 id='response-headers-2'>Response Headers</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Header</th>
-<th>Type</th>
-<th>Format</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>x-fapi-interaction-id</td>
-<td>string</td>
-<td></td>
-<td>none</td>
 </tr>
 </tbody></table>
 
@@ -7501,7 +7458,7 @@ OpenId ( Scopes: openId accounts )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -7770,7 +7727,7 @@ OpenId ( Scopes: openId accounts )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -8059,7 +8016,7 @@ OpenId ( Scopes: openId accounts )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -8416,7 +8373,7 @@ OpenId ( Scopes: openId accounts )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -8644,7 +8601,7 @@ OpenId ( Scopes: openId accounts )
 
 <h3 id='visao-de-alto-de-nivel-das-estruturas-de-dados-17'>Visão de alto de nível das estruturas de dados</h3>
 
-<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/loans/TLD_Loans_Contract-a641dede.png"/></p>
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/tld/loans/TLD_Loans_List-8a5f9ecc.png"/></p>
 
 <h3 id='der-diagramas-de-entidade-e-relacionamento-17'>DER - Diagramas de Entidade e Relacionamento</h3>
 
@@ -8652,23 +8609,23 @@ OpenId ( Scopes: openId accounts )
 <li>DER Conceitual</li>
 </ul>
 
-<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/loans/DER_Loans-14b4a0b8.png"/></p>
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/loans/DER_Loans_Conceitual.png"/></p>
 
-<p><a href="images/der/loans/DER_Loans-14b4a0b8.png" target="_blank">Fazer download do DER Conceitual</a></p>
+<p><a href="images/der/loans/DER_Loans_Conceitual.png" target="_blank">Fazer download do DER Conceitual</a></p>
 
 <ul>
 <li>DER Lógico</li>
 </ul>
 
-<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/loans/DER_Loans_Contract-ae01cd41.png"/></p>
+<p><img class="lazy" src="images/loading-e35b35a4.gif" data-src="images/der/loans/DER_Loans_Logico.png"/></p>
 
-<p><a href="images/der/loans/DER_Loans_Contract-ae01cd41.png" target="_blank">Fazer download do DER Lógico</a></p>
+<p><a href="images/der/loans/DER_Loans_Logico.png" target="_blank">Fazer download do DER Lógico</a></p>
 
 <h3 id='dicionario-de-dados-17'>Dicionário de dados</h3>
 
-<p><a href='dictionary/loans_contract.csv' target="_blank">Fazer download do dicionário de dados</a></p>
+<p><a href='dictionary/loans_contract_list.csv' target="_blank">Fazer download do dicionário de dados</a></p>
 
-<p><a href="dictionary/example/examples_loans_contract.csv" target="_blank">Fazer download dos exemplos</a></p>
+<p><a href="dictionary/example/examples_loans_contract_list.csv" target="_blank">Fazer download dos exemplos</a></p>
 
 <h3 id='especificacao-em-oas-3-0-17'>Especificação em OAS 3.0</h3>
 
@@ -8709,7 +8666,7 @@ OpenId ( Scopes: openId accounts )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -8766,8 +8723,8 @@ OpenId ( Scopes: openId accounts )
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>Dados do contratos de empréstimos</td>
-<td><a href="#schemaresponseloanslistcontract">ResponseLoansListContract</a></td>
+<td>Dados dos contratos de empréstimos obtidos com sucesso.</td>
+<td><a href="#schemaresponseloanscontractlist">ResponseLoansContractList</a></td>
 </tr>
 <tr>
 <td>400</td>
@@ -8973,7 +8930,7 @@ OpenId ( Scopes: openId loans )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -9292,7 +9249,7 @@ OpenId ( Scopes: openId loans )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -9572,7 +9529,7 @@ OpenId ( Scopes: openId loans )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -9869,7 +9826,7 @@ OpenId ( Scopes: openId loans )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -10132,7 +10089,7 @@ OpenId ( Scopes: openId loans )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -10239,26 +10196,6 @@ OpenId ( Scopes: openId loans )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
-</tr>
-</tbody></table>
-
-<h3 id='response-headers-3'>Response Headers</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Header</th>
-<th>Type</th>
-<th>Format</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>x-fapi-interaction-id</td>
-<td>string</td>
-<td></td>
-<td>none</td>
 </tr>
 </tbody></table>
 
@@ -10416,7 +10353,7 @@ OpenId ( Scopes: openId financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -10734,7 +10671,7 @@ OpenId ( Scopes: openId financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -11014,7 +10951,7 @@ OpenId ( Scopes: openId financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -11311,7 +11248,7 @@ OpenId ( Scopes: openId financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -11573,7 +11510,7 @@ OpenId ( Scopes: openId financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -11680,26 +11617,6 @@ OpenId ( Scopes: openId financings )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
-</tr>
-</tbody></table>
-
-<h3 id='response-headers-4'>Response Headers</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Header</th>
-<th>Type</th>
-<th>Format</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>x-fapi-interaction-id</td>
-<td>string</td>
-<td></td>
-<td>none</td>
 </tr>
 </tbody></table>
 
@@ -11857,7 +11774,7 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -12174,7 +12091,7 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -12457,7 +12374,7 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -12759,7 +12676,7 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -13027,7 +12944,7 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -13134,26 +13051,6 @@ OpenId ( Scopes: openId unarranged-accounts-overdraft )
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
 <td>Ocorreu um erro no gateway da API ou no microsserviço</td>
 <td><a href="#schemaresponseerror">ResponseError</a></td>
-</tr>
-</tbody></table>
-
-<h3 id='response-headers-5'>Response Headers</h3>
-
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Header</th>
-<th>Type</th>
-<th>Format</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>200</td>
-<td>x-fapi-interaction-id</td>
-<td>string</td>
-<td></td>
-<td>none</td>
 </tr>
 </tbody></table>
 
@@ -13311,7 +13208,7 @@ OpenId ( Scopes: openId invoice-financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -13628,7 +13525,7 @@ OpenId ( Scopes: openId invoice-financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -13907,7 +13804,7 @@ OpenId ( Scopes: openId invoice-financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -14205,7 +14102,7 @@ OpenId ( Scopes: openId invoice-financings )
 <tr>
 <td>x-fapi-interaction-id</td>
 <td>header</td>
-<td><a href="#schemaxfapiinteractionid">XFapiInteractionId</a></td>
+<td>string</td>
 <td>false</td>
 <td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
@@ -26806,12 +26703,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_ResponseLoansListContract">ResponseLoansListContract</h2>
+<h2 id="tocS_ResponseLoansContractList">ResponseLoansContractList</h2>
 
-<p><a id="schemaresponseloanslistcontract"></a>
-<a id="schema_ResponseLoansListContract"></a>
-<a id="tocSresponseloanslistcontract"></a>
-<a id="tocsresponseloanslistcontract"></a></p>
+<p><a id="schemaresponseloanscontractlist"></a>
+<a id="schema_ResponseLoansContractList"></a>
+<a id="tocSresponseloanscontractlist"></a>
+<a id="tocsresponseloanscontractlist"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -26849,7 +26746,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>data</td>
 <td>[<a href="#schemaloanslistcontractdata">LoansListContractData</a>]</td>
 <td>true</td>
-<td>[Conjunto de informações  de contratos de empréstimo mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento]</td>
+<td>Conjunto de informações de contratos de empréstimo mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento</td>
 </tr>
 <tr>
 <td>links</td>
@@ -29167,23 +29064,23 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocSunarrangedaccountoverdraftwarrantiesdata"></a>
 <a id="tocsunarrangedaccountoverdraftwarrantiesdata"></a></p>
 
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"unarrangedAccountOverdraft"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"warranties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;unarrangedAccountOverdraft&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;warranties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">&quot;requestDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-07-21T08:30:00Z&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BRL&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="nl">&quot;contractedWarranties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+          </span><span class="nl">&quot;warrantyType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CESSAO_DIREITOS_CREDITORIOS&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;warrantySubType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO&quot;</span><span class="p">,</span><span class="w">
+          </span><span class="nl">&quot;warrantyAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w"></p>
 
-</span></code></pre></div><h3 id='propriedades-212'>Propriedades</h3>
+<p></span></code></pre></div><h3 id='propriedades-212'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29198,37 +29095,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>true</td>
 <td>Conjunto de informações de operações de crédito contratadas</td>
 </tr>
-</tbody></table>
-
-<h2 id="tocS_XFapiInteractionId">XFapiInteractionId</h2>
-
-<p><a id="schemaxfapiinteractionid"></a>
-<a id="schema_XFapiInteractionId"></a>
-<a id="tocSxfapiinteractionid"></a>
-<a id="tocsxfapiinteractionid"></a></p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"string"</span><span class="w">
-
-</span></code></pre></div>
-
-<p>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</p>
-
-<h3 id='propriedades-213'>Propriedades</h3>
-
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>**</td>
-<td>string</td>
-<td>false</td>
-<td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
-</tr>
-</tbody></table>
+</tbody></table></p>
 
 <h1 id='divulgacao-dos-valores-de-tarifas-e-taxas-de-juros-remuneratorias'>Divulgação dos valores de tarifas e taxas de juros remuneratórias</h1>
 
