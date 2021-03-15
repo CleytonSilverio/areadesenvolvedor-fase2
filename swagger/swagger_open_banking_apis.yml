@@ -5631,25 +5631,6 @@ components:
           maxLength: 13
           example: '-180.836519'
       additionalProperties: false
-    InvoiceFinancingsBalloonInstalments:
-      type: object
-      required:
-        - dueDate
-        - amount
-      properties:
-        dueDate:
-          type: string
-          pattern: '^(\d{4})-(1[0-2]|0?[1-9])-(3[01]|[12][0-9]|0?[1-9])$'
-          description: 'Traz a data de vencimento da parcela não regular  a vencer do contrato da modalidade de crédito consultada, conforme especificação RFC-3339'
-          maxLength: 10
-          example: '2020-01-10'
-        amount:
-          type: string
-          nullable: true
-          description: Valor monetário da parcela não regular a vencer.  Expresso em valor monetário com 2 casas decimais
-          maxLength: 19
-          example: '200.00'
-      additionalProperties: false
     InvoiceFinancingsBalloonPayment:
       type: object
       description: Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada
@@ -5657,17 +5638,18 @@ components:
         - currency
         - instalments
       properties:
-        currency:
+        dueDate:
           type: string
-          pattern: '^(\w{3}){1}$'
-          maxLength: 3
-          format: CurrencyString
-          description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
-        instalments:
-          type: array
-          description: Lista que traz as datas de vencimento e valor das parcelas não regulares  do contrato da modalidade de crédito consultada
-          items:
-            $ref: '#/components/schemas/InvoiceFinancingsBalloonInstalments'
+          pattern: '^(\d{4})-(1[0-2]|0?[1-9])-(3[01]|[12][0-9]|0?[1-9])$'
+          description: 'Data de vencimento da parcela não regular  a vencer do contrato da modalidade de crédito consultada, conforme especificação RFC-3339. p.ex. 2014-03-19'
+          maxLength: 10
+          example: '2020-01-10'
+        amount:
+          type: number
+          nullable: true
+          description: Valor monetário da parcela não regular a vencer.  Expresso em valor monetário com 2 casas decimais
+          maxLength: 19
+          example: 200
       additionalProperties: false
     InvoiceFinancingsChargeOverParcel:
       type: object
@@ -5680,7 +5662,7 @@ components:
         feeName:
           type: string
           description: Denominação da Tarifa avulsa paga fora da parcela
-          maxLength: 140
+          maxLength: 250
           pattern: \w*\W*
           example: reavaliação periódica do bem
         feeCode:
@@ -5691,7 +5673,7 @@ components:
           example: aval_bem
         feePaidDate:
           type: string
-          description: 'Traz a data de efetivação do pagamento da tarifa avulsa paga fora da parcela, conforme especificação RFC-3339.'
+          description: Data efetiva do pagamento da tarifa  conforme especificação RFC-3339. p.ex. 2014-03-19
           maxLength: 10
           pattern: '^(\d{4})-(1[0-2]|0?[1-9])-(3[01]|[12][0-9]|0?[1-9])$'
           example: '2020-01-10'
@@ -5723,6 +5705,7 @@ components:
       type: object
       description: Conjunto de informações referentes à identificação da operação de crédito de direitos creditórios descontados
       required:
+        - contractId
         - ipocCode
         - requestDateTime
         - productName
@@ -5741,8 +5724,13 @@ components:
         - amortizationSchedule
         - interestRates
         - contractedFees
-        - contractedFinancesCharges
+        - contractedFinanceCharges
       properties:
+        contractId:
+          type: string
+          description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito
+          maxLength: 100
+          example: '92792126019929279212650822221989319252576'
         ipocCode:
           type: string
           maxLength: 67
@@ -5792,7 +5780,7 @@ components:
         contractAmount:
           type: number
           maxLength: 19
-          description: Valor contratado da operação. Expresso em valor monetário com 2 casas decimais
+          description: Valor contratado da operação. Expresso em valor monetário com até 4 casas decimais
           example: 26000
         currency:
           type: string
@@ -5848,12 +5836,18 @@ components:
           items:
             $ref: '#/components/schemas/InvoiceFinancingsContractedFee'
           minItems: 1
-        contractedFinancesCharges:
+        contractedFinanceCharges:
           type: array
           description: Lista que traz os encargos pactuados no contrato
           items:
             $ref: '#/components/schemas/InvoiceFinancingsFinanceCharge'
           minItems: 1
+        cnpjConsignee:
+          type: string
+          maxLength: 14
+          pattern: '\d{14}'
+          description: |
+            CNPJ do consignante (CNPJ corresponde ao número de inscrição no Cadastro de Pessoa Jurídica). Deve-se ter apenas os números do CNPJ, sem máscara. Informação adicional específica para Modalidade de Crédito: Empréstimo-Crédito Pessoal Consignado
       additionalProperties: false
     InvoiceFinancingsContractData:
       type: object
@@ -5961,7 +5955,7 @@ components:
           type: number
           maxLength: 19
           nullable: true
-          description: 'Valor original da garantia. Valor monetário, expresso com 2 casas decimais'
+          description: 'Valor original da garantia. Valor monetário, expresso com até 4 casas decimais.'
           example: 200
       additionalProperties: false
     InvoiceFinancingsContractInterestRate:
@@ -6031,7 +6025,7 @@ components:
         chargeRate:
           type: number
           description: |
-            Percentual que representa o valor do encargo pactuado no contrato. Preenchimento obrigatório quando a forma de cobrança for: Mínimo, Máximo ou Fixo
+            Representa o valor do encargo em percentual pactuado no contrato. Exemplo: 0.0210 (=2.1%). Deve-se preencher as 4 casas decimais obrigatoriamente.
           maxLength: 19
           example: 0.07
       additionalProperties: false
@@ -6069,18 +6063,6 @@ components:
         balloonPayment:
           $ref: '#/components/schemas/InvoiceFinancingsBalloonPayment'
       additionalProperties: false
-    InvoiceFinancingsNonRegulatedCharge:
-      type: object
-      required:
-        - currency
-      properties:
-        currency:
-          type: string
-          pattern: '^(\w{3}){1}$'
-          maxLength: 3
-          format: CurrencyString
-          description: 'Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217'
-      additionalProperties: false
     InvoiceFinancingsPaymentBank:
       type: object
       description: |
@@ -6101,6 +6083,11 @@ components:
         - contractOutstandingBalance
         - releases
       properties:
+        contractId:
+          type: string
+          description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito
+          maxLength: 100
+          example: '92792126019929279212650822221989319252576'
         requestDateTime:
           type: string
           maxLength: 20
@@ -6112,8 +6099,12 @@ components:
           maxLength: 3
           description: Quantidade total de parcelas pagas do contrato referente à Modalidade de Crédito informada
           example: 73
-        nonRegulatedCharge:
-          $ref: '#/components/schemas/InvoiceFinancingsNonRegulatedCharge'
+        currency:
+          type: string
+          pattern: '^(\w{3}){1}$'
+          maxLength: 3
+          format: CurrencyString
+          description: 'Moeda referente ao valor monetário informado, segundo modelo ISO-4217. p.ex. ''BRL''. Todos os valores monetários informados estão representados com a moeda vigente do Brasil'
         contractOutstandingBalance:
           type: string
           maxLength: 19
@@ -6178,15 +6169,16 @@ components:
           type: string
           description: Campo de preenchimento obrigatório se selecionada a opção 'OUTROS' em Tipo de encargo pago fora da parcela
           pattern: \w*\W*
+          maxLength: 140
         taxpaidDate:
           type: string
-          description: 'Traz a data de efetivação do pagamento do encargo pago fora da parcela, conforme especificação RFC-3339'
+          description: 'Data efetiva  do pagamento do encargo pago fora da parcela, conforme especificação RFC-3339. p.ex. 2014-03-19'
           pattern: '^(\d{4})-(1[0-2]|0?[1-9])-(3[01]|[12][0-9]|0?[1-9])$'
           maxLength: 10
           example: '2020-01-10'
         taxAmount:
           type: number
-          description: Traz o valor do pagamento do encargo pago fora da parcela. Expresso em valor monetário com 2 casas decimais
+          description: Valor do pagamento do encargo pago fora da parcela. Expresso em valor monetário com até 4 casas decimais.
           example: 200
           maxLength: 19
       additionalProperties: false
@@ -6194,10 +6186,16 @@ components:
       type: object
       description: Conjunto de informações referentes às garantias que avalizam a operação de direitos creditórios descontados contratada
       required:
+        - contractId
         - requestDateTime
         - currency
         - contractedWarranties
       properties:
+        contractId:
+          type: string
+          description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito
+          maxLength: 100
+          example: '92792126019929279212650822221989319252576'
         requestDateTime:
           type: string
           maxLength: 20
@@ -6210,12 +6208,11 @@ components:
           pattern: '^(\w{3}){1}$'
           maxLength: 3
           format: CurrencyString
-          description: |
-            Moeda referente ao valor da garantia, segundo modelo ISO-4217. p.ex. 'BRL'
-            Todos os valores monetários informados estão representados com a moeda vigente do Brasil
+          description: 'Moeda referente ao valor da garantia, segundo modelo ISO-4217. p.ex. ''BRL''. Todos os valores monetários informados estão representados com a moeda vigente do Brasil'
           example: BRL
-        contractedWarranties:
+        warranties:
           type: array
+          description: Lista das garantias que avalizam a operação de crédito contratada
           items:
             $ref: '#/components/schemas/InvoiceFinancingsContractedWarranty'
           minItems: 1
