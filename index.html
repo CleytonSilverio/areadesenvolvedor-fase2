@@ -818,9 +818,6 @@
                     <a href="#tocS_Errors" class="toc-h2 toc-link" data-title="Errors">Errors</a>
                   </li>
                   <li>
-                    <a href="#tocS_FinancingsBalloonInstalments" class="toc-h2 toc-link" data-title="FinancingsBalloonInstalments">FinancingsBalloonInstalments</a>
-                  </li>
-                  <li>
                     <a href="#tocS_FinancingsBalloonPayment" class="toc-h2 toc-link" data-title="FinancingsBalloonPayment">FinancingsBalloonPayment</a>
                   </li>
                   <li>
@@ -848,25 +845,10 @@
                     <a href="#tocS_FinancingsInstalments" class="toc-h2 toc-link" data-title="FinancingsInstalments">FinancingsInstalments</a>
                   </li>
                   <li>
-                    <a href="#tocS_FinancingsInstalmentsBank" class="toc-h2 toc-link" data-title="FinancingsInstalmentsBank">FinancingsInstalmentsBank</a>
-                  </li>
-                  <li>
-                    <a href="#tocS_FinancingsInstalmentsData" class="toc-h2 toc-link" data-title="FinancingsInstalmentsData">FinancingsInstalmentsData</a>
-                  </li>
-                  <li>
                     <a href="#tocS_FinancingsListContract" class="toc-h2 toc-link" data-title="FinancingsListContract">FinancingsListContract</a>
                   </li>
                   <li>
-                    <a href="#tocS_FinancingsNonRegulatedCharge" class="toc-h2 toc-link" data-title="FinancingsNonRegulatedCharge">FinancingsNonRegulatedCharge</a>
-                  </li>
-                  <li>
-                    <a href="#tocS_FinancingsPaymentBank" class="toc-h2 toc-link" data-title="FinancingsPaymentBank">FinancingsPaymentBank</a>
-                  </li>
-                  <li>
                     <a href="#tocS_FinancingsPayments" class="toc-h2 toc-link" data-title="FinancingsPayments">FinancingsPayments</a>
-                  </li>
-                  <li>
-                    <a href="#tocS_FinancingsPaymentsData" class="toc-h2 toc-link" data-title="FinancingsPaymentsData">FinancingsPaymentsData</a>
                   </li>
                   <li>
                     <a href="#tocS_FinancingsReleases" class="toc-h2 toc-link" data-title="FinancingsReleases">FinancingsReleases</a>
@@ -876,12 +858,6 @@
                   </li>
                   <li>
                     <a href="#tocS_FinancingsWarranties" class="toc-h2 toc-link" data-title="FinancingsWarranties">FinancingsWarranties</a>
-                  </li>
-                  <li>
-                    <a href="#tocS_FinancingsWarrantiesBank" class="toc-h2 toc-link" data-title="FinancingsWarrantiesBank">FinancingsWarrantiesBank</a>
-                  </li>
-                  <li>
-                    <a href="#tocS_FinancingsWarrantiesData" class="toc-h2 toc-link" data-title="FinancingsWarrantiesData">FinancingsWarrantiesData</a>
                   </li>
                   <li>
                     <a href="#tocS_GeographicCoordinates" class="toc-h2 toc-link" data-title="GeographicCoordinates">GeographicCoordinates</a>
@@ -10461,6 +10437,7 @@ OpenId ( Scopes: openId financings )
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ipocCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AD"</span><span class="p">,</span><span class="w">
@@ -10778,19 +10755,16 @@ OpenId ( Scopes: openId financings )
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"warranties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -11061,38 +11035,33 @@ OpenId ( Scopes: openId financings )
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"payments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"nonRegulatedCharge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"paidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"paidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"chargesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"feeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reavaliação periódica do bem"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"feeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aval_bem"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"feePaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="nl">"taxesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"taxType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JUROS_REMUNERATORIOS_POR_ATRASO"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"taxAdditionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"taxpaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"paidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"paidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"chargesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"feeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reavaliação periódica do bem"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"feeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aval_bem"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"feePaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"taxesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"taxType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JUROS_REMUNERATORIOS_POR_ATRASO"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taxAdditionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taxpaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -11198,7 +11167,7 @@ OpenId ( Scopes: openId financings )
   <span class="p">}</span>
 <span class="p">});</span>
 
-<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">https://api.banco.com.br/open-banking/financings/v1/contracts/string/instalments</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">https://api.banco.com.br/open-banking/financings/v1/contracts/string/scheduled-instalments</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="dl">"</span><span class="s2">x-fapi-auth-date</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">);</span>
@@ -11220,13 +11189,13 @@ OpenId ( Scopes: openId financings )
     <span class="s">'x-customer-user-agent'</span><span class="p">:</span> <span class="s">"string"</span>
     <span class="p">}</span>
 
-<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contracts/string/instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/open-banking/financings/v1/contracts/string/scheduled-instalments"</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
-</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"https://api.banco.com.br/open-banking/financings/v1/contracts/string/instalments"</span><span class="o">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">HttpResponse</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="nc">Unirest</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"https://api.banco.com.br/open-banking/financings/v1/contracts/string/scheduled-instalments"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
   <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"x-fapi-auth-date"</span><span class="o">,</span> <span class="s">"string"</span><span class="o">)</span>
@@ -11236,7 +11205,7 @@ OpenId ( Scopes: openId financings )
   <span class="o">.</span><span class="na">asString</span><span class="o">();</span>
 </code></pre></div>
 
-<p><code>GET /financings/v1/contracts/{contractId}/instalments</code></p>
+<p><code>GET /financings/v1/contracts/{contractId}/scheduled-instalments</code></p>
 
 <table><thead>
 <tr>
@@ -11363,23 +11332,17 @@ OpenId ( Scopes: openId financings )
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"contractRemainingMonths"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"balloonPayment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">]</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractRemainingDays"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"balloonPayments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -21133,18 +21096,23 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_FinancingsBalloonInstalments">FinancingsBalloonInstalments</h2>
+<h2 id="tocS_FinancingsBalloonPayment">FinancingsBalloonPayment</h2>
 
-<p><a id="schemafinancingsballooninstalments"></a>
-<a id="schema_FinancingsBalloonInstalments"></a>
-<a id="tocSfinancingsballooninstalments"></a>
-<a id="tocsfinancingsballooninstalments"></a></p>
+<p><a id="schemafinancingsballoonpayment"></a>
+<a id="schema_FinancingsBalloonPayment"></a>
+<a id="tocSfinancingsballoonpayment"></a>
+<a id="tocsfinancingsballoonpayment"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-94'>Propriedades</h3>
+</span></code></pre></div>
+
+<p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
+
+<h3 id='propriedades-94'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21156,58 +21124,14 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <tr>
 <td>dueDate</td>
 <td>string</td>
-<td>true</td>
-<td>Traz a data de vencimento da parcela não regular  a vencer do contrato da modalidade de crédito consultada, conforme especificação RFC-3339</td>
+<td>false</td>
+<td>Data de vencimento da parcela não regular  a vencer do contrato da modalidade de crédito consultada, conforme especificação RFC-3339. p.ex. 2014-03-19</td>
 </tr>
 <tr>
 <td>amount</td>
-<td>string¦null</td>
-<td>true</td>
+<td>number¦null</td>
+<td>false</td>
 <td>Valor monetário da parcela não regular a vencer.  Expresso em valor monetário com 2 casas decimais</td>
-</tr>
-</tbody></table>
-
-<h2 id="tocS_FinancingsBalloonPayment">FinancingsBalloonPayment</h2>
-
-<p><a id="schemafinancingsballoonpayment"></a>
-<a id="schema_FinancingsBalloonPayment"></a>
-<a id="tocSfinancingsballoonpayment"></a>
-<a id="tocsfinancingsballoonpayment"></a></p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div>
-
-<p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
-
-<h3 id='propriedades-95'>Propriedades</h3>
-
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>currency</td>
-<td>string(CurrencyString)</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
-</tr>
-<tr>
-<td>instalments</td>
-<td>[<a href="#schemafinancingsballooninstalments">FinancingsBalloonInstalments</a>]</td>
-<td>true</td>
-<td>Lista que traz as datas de vencimento e valor das parcelas não regulares  do contrato da modalidade de crédito consultada</td>
 </tr>
 </tbody></table>
 
@@ -21225,7 +21149,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-96'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-95'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21250,7 +21174,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>feePaidDate</td>
 <td>string</td>
 <td>true</td>
-<td>Traz a data de efetivação do pagamento da tarifa avulsa paga fora da parcela, conforme especificação RFC-3339.</td>
+<td>Data efetiva do pagamento da tarifa  conforme especificação RFC-3339. p.ex. 2014-03-19</td>
 </tr>
 <tr>
 <td>feeAmount</td>
@@ -21271,7 +21195,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-97'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-96'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21301,6 +21225,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocSfinancingscontract"></a>
 <a id="tocsfinancingscontract"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"ipocCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AD"</span><span class="p">,</span><span class="w">
@@ -21354,7 +21279,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de financiamentos</p>
 
-<h3 id='propriedades-98'>Propriedades</h3>
+<h3 id='propriedades-97'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21364,6 +21289,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <th>Descrição</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>contractId</td>
+<td>string</td>
+<td>true</td>
+<td>Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito.</td>
+</tr>
 <tr>
 <td>ipocCode</td>
 <td>string</td>
@@ -21500,7 +21431,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-99'>Propriedades</h3>
+<h3 id='propriedades-98'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21565,7 +21496,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-100'>Propriedades</h3>
+<h3 id='propriedades-99'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21619,7 +21550,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-101'>Propriedades</h3>
+<h3 id='propriedades-100'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21708,7 +21639,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito</p>
 
-<h3 id='propriedades-102'>Propriedades</h3>
+<h3 id='propriedades-101'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21747,25 +21678,23 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"contractRemainingMonths"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"contractRemainingDays"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
   </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
   </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"balloonPayment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"balloonPayments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div>
 
 <p>Conjunto de informações referentes às parcelas / prestações da operação de crédito de financiamentos contratada</p>
 
-<h3 id='propriedades-103'>Propriedades</h3>
+<h3 id='propriedades-102'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21782,10 +21711,10 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>Data e hora da consulta, conforme especificação RFC-3339, formato UTC.</td>
 </tr>
 <tr>
-<td>contractRemainingMonths</td>
+<td>contractRemainingDays</td>
 <td>number</td>
-<td>true</td>
-<td>Prazo Remanescente em meses do contrato referente à Modalidade de Crédito informada</td>
+<td>false</td>
+<td>Prazo Remanescente em dias do contrato referente à Modalidade de Crédito informada</td>
 </tr>
 <tr>
 <td>dueInstalments</td>
@@ -21800,101 +21729,16 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>Quantidade de prestações vencidas. (No caso de modalidades que não possuam parcelas, o número de prestações é igual a zero)</td>
 </tr>
 <tr>
-<td>balloonPayment</td>
-<td><a href="#schemafinancingsballoonpayment">FinancingsBalloonPayment</a></td>
-<td>true</td>
-<td>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</td>
+<td>currency</td>
+<td>string(CurrencyString)</td>
+<td>false</td>
+<td>Moeda referente ao valor monetário informado, segundo modelo ISO-4217. p.ex. &#39;BRL&#39;<br>Todos os valores monetários informados estão representados com a moeda vigente do Brasil</td>
 </tr>
-</tbody></table>
-
-<h2 id="tocS_FinancingsInstalmentsBank">FinancingsInstalmentsBank</h2>
-
-<p><a id="schemafinancingsinstalmentsbank"></a>
-<a id="schema_FinancingsInstalmentsBank"></a>
-<a id="tocSfinancingsinstalmentsbank"></a>
-<a id="tocsfinancingsinstalmentsbank"></a></p>
-
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"contractRemainingMonths"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"balloonPayment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div>
-
-<p>Conjunto de informações de operações de crédito de financiamentos contratadas</p>
-
-<h3 id='propriedades-104'>Propriedades</h3>
-
-<table><thead>
 <tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>instalments</td>
-<td><a href="#schemafinancingsinstalments">FinancingsInstalments</a></td>
-<td>true</td>
-<td>Conjunto de informações referentes às parcelas / prestações da operação de crédito de financiamentos contratada</td>
-</tr>
-</tbody></table>
-
-<h2 id="tocS_FinancingsInstalmentsData">FinancingsInstalmentsData</h2>
-
-<p><a id="schemafinancingsinstalmentsdata"></a>
-<a id="schema_FinancingsInstalmentsData"></a>
-<a id="tocSfinancingsinstalmentsdata"></a>
-<a id="tocsfinancingsinstalmentsdata"></a></p>
-
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"contractRemainingMonths"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"balloonPayment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div><h3 id='propriedades-105'>Propriedades</h3>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>financings</td>
-<td><a href="#schemafinancingsinstalmentsbank">FinancingsInstalmentsBank</a></td>
-<td>true</td>
-<td>Conjunto de informações de operações de crédito de financiamentos contratadas</td>
+<td>balloonPayments</td>
+<td>[<a href="#schemafinancingsballoonpayment">FinancingsBalloonPayment</a>]</td>
+<td>false</td>
+<td>[Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada]</td>
 </tr>
 </tbody></table>
 
@@ -21904,6 +21748,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="schema_FinancingsListContract"></a>
 <a id="tocSfinancingslistcontract"></a>
 <a id="tocsfinancingslistcontract"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"brandName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organização A"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"companyCnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21128159000166"</span><span class="p">,</span><span class="w">
@@ -21913,7 +21758,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-106'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-103'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21960,107 +21805,17 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_FinancingsNonRegulatedCharge">FinancingsNonRegulatedCharge</h2>
-
-<p><a id="schemafinancingsnonregulatedcharge"></a>
-<a id="schema_FinancingsNonRegulatedCharge"></a>
-<a id="tocSfinancingsnonregulatedcharge"></a>
-<a id="tocsfinancingsnonregulatedcharge"></a></p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div><h3 id='propriedades-107'>Propriedades</h3>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>currency</td>
-<td>string(CurrencyString)</td>
-<td>true</td>
-<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
-</tr>
-</tbody></table>
-
-<h2 id="tocS_FinancingsPaymentBank">FinancingsPaymentBank</h2>
-
-<p><a id="schemafinancingspaymentbank"></a>
-<a id="schema_FinancingsPaymentBank"></a>
-<a id="tocSfinancingspaymentbank"></a>
-<a id="tocsfinancingspaymentbank"></a></p>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"payments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"nonRegulatedCharge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"paidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"paidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"chargesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"feeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reavaliação periódica do bem"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"feeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aval_bem"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"feePaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"taxesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"taxType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JUROS_REMUNERATORIOS_POR_ATRASO"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"taxAdditionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"taxpaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div>
-
-<p>Conjunto de informações de operações de crédito de financiamentos contratadas</p>
-
-<h3 id='propriedades-108'>Propriedades</h3>
-
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>payments</td>
-<td><a href="#schemafinancingspayments">FinancingsPayments</a></td>
-<td>true</td>
-<td>Conjunto de informações dos pagamentos referentes às operações de crédito de financiamentos contratadas</td>
-</tr>
-</tbody></table>
-
 <h2 id="tocS_FinancingsPayments">FinancingsPayments</h2>
 
 <p><a id="schemafinancingspayments"></a>
 <a id="schema_FinancingsPayments"></a>
 <a id="tocSfinancingspayments"></a>
 <a id="tocsfinancingspayments"></a></p>
-
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"nonRegulatedCharge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
@@ -22090,7 +21845,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações dos pagamentos referentes às operações de crédito de financiamentos contratadas</p>
 
-<h3 id='propriedades-109'>Propriedades</h3>
+<h3 id='propriedades-104'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22100,6 +21855,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <th>Descrição</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>contractId</td>
+<td>string</td>
+<td>true</td>
+<td>Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito.</td>
+</tr>
 <tr>
 <td>requestDateTime</td>
 <td>string</td>
@@ -22113,10 +21874,10 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>Quantidade total de parcelas pagas do contrato referente à Modalidade de Crédito informada</td>
 </tr>
 <tr>
-<td>nonRegulatedCharge</td>
-<td><a href="#schemafinancingsnonregulatedcharge">FinancingsNonRegulatedCharge</a></td>
+<td>currency</td>
+<td>string(CurrencyString)</td>
 <td>true</td>
-<td></td>
+<td>Moeda referente ao valor mínimo da Tarifa, segundo modelo ISO-4217</td>
 </tr>
 <tr>
 <td>contractOutstandingBalance</td>
@@ -22144,71 +21905,13 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_FinancingsPaymentsData">FinancingsPaymentsData</h2>
-
-<p><a id="schemafinancingspaymentsdata"></a>
-<a id="schema_FinancingsPaymentsData"></a>
-<a id="tocSfinancingspaymentsdata"></a>
-<a id="tocsfinancingspaymentsdata"></a></p>
-
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"payments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"nonRegulatedCharge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"paidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"paidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"chargesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"feeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reavaliação periódica do bem"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"feeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aval_bem"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"feePaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="nl">"taxesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"taxType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JUROS_REMUNERATORIOS_POR_ATRASO"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"taxAdditionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"taxpaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div><h3 id='propriedades-110'>Propriedades</h3>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>financings</td>
-<td><a href="#schemafinancingspaymentbank">FinancingsPaymentBank</a></td>
-<td>true</td>
-<td>Conjunto de informações de operações de crédito de financiamentos contratadas</td>
-</tr>
-</tbody></table>
-
 <h2 id="tocS_FinancingsReleases">FinancingsReleases</h2>
 
 <p><a id="schemafinancingsreleases"></a>
 <a id="schema_FinancingsReleases"></a>
 <a id="tocSfinancingsreleases"></a>
 <a id="tocsfinancingsreleases"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
@@ -22220,7 +21923,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-111'>Propriedades</h3>
+<h3 id='propriedades-105'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22234,25 +21937,25 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>paymentId</td>
 <td>string</td>
 <td>true</td>
-<td>Texto livre de responsabilidade de cada Instituição transmissora para identificar o pagamento informado</td>
+<td>Identificador de pagamento de responsabilidade de cada Instituição transmissora.</td>
 </tr>
 <tr>
 <td>instalmentId</td>
 <td>string</td>
 <td>true</td>
-<td>Texto livre de responsabilidade de cada Instituição transmissora para identificar a parcela informada</td>
+<td>Identificador de parcela, de responsabilidade de cada Instituição transmissora.</td>
 </tr>
 <tr>
 <td>paidDate</td>
 <td>string</td>
 <td>true</td>
-<td>Traz a data de efetivação do pagamento referente ao contrato da modalidade de crédito consultada, conforme especificação RFC-3339.</td>
+<td>Data efetiva do pagamento referente ao contrato da modalidade de crédito consultada, conforme especificação RFC-3339. p.ex. 2014-03-19</td>
 </tr>
 <tr>
 <td>paidAmount</td>
 <td>number</td>
 <td>true</td>
-<td>Traz o valor do pagamento referente ao  contrato da modalidade de crédito consultada. Expresso em valor monetário com 2 casas decimais</td>
+<td>Valor do pagamento referente ao  contrato da modalidade de crédito consultada. Expresso em valor monetário com até 4 casas decimais</td>
 </tr>
 </tbody></table>
 
@@ -22270,7 +21973,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-112'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-106'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22312,6 +22015,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocSfinancingswarranties"></a>
 <a id="tocsfinancingswarranties"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -22327,7 +22031,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito de financiamentos contratada</p>
 
-<h3 id='propriedades-113'>Propriedades</h3>
+<h3 id='propriedades-107'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22337,6 +22041,12 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <th>Descrição</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>contractId</td>
+<td>string</td>
+<td>true</td>
+<td>Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito.</td>
+</tr>
 <tr>
 <td>requestDateTime</td>
 <td>string(DateTimeString)</td>
@@ -22357,95 +22067,13 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h2 id="tocS_FinancingsWarrantiesBank">FinancingsWarrantiesBank</h2>
-
-<p><a id="schemafinancingswarrantiesbank"></a>
-<a id="schema_FinancingsWarrantiesBank"></a>
-<a id="tocSfinancingswarrantiesbank"></a>
-<a id="tocsfinancingswarrantiesbank"></a></p>
-
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"warranties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div>
-
-<p>Conjunto de informações de operações de crédito de financiamentos contratadas</p>
-
-<h3 id='propriedades-114'>Propriedades</h3>
-
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>warranties</td>
-<td><a href="#schemafinancingswarranties">FinancingsWarranties</a></td>
-<td>true</td>
-<td>Conjunto de informações referentes às garantias que avalizam a operação de crédito de financiamentos contratada</td>
-</tr>
-</tbody></table>
-
-<h2 id="tocS_FinancingsWarrantiesData">FinancingsWarrantiesData</h2>
-
-<p><a id="schemafinancingswarrantiesdata"></a>
-<a id="schema_FinancingsWarrantiesData"></a>
-<a id="tocSfinancingswarrantiesdata"></a>
-<a id="tocsfinancingswarrantiesdata"></a></p>
-
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"warranties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-</span></code></pre></div><h3 id='propriedades-115'>Propriedades</h3>
-<table><thead>
-<tr>
-<th>Nome</th>
-<th>Tipo</th>
-<th>Obrigatório</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>financings</td>
-<td><a href="#schemafinancingswarrantiesbank">FinancingsWarrantiesBank</a></td>
-<td>true</td>
-<td>Conjunto de informações de operações de crédito de financiamentos contratadas</td>
-</tr>
-</tbody></table>
-
 <h2 id="tocS_GeographicCoordinates">GeographicCoordinates</h2>
 
 <p><a id="schemageographiccoordinates"></a>
 <a id="schema_GeographicCoordinates"></a>
 <a id="tocSgeographiccoordinates"></a>
 <a id="tocsgeographiccoordinates"></a></p>
+
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-90.8365180"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
@@ -22455,7 +22083,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações, que correspondem aos valores das coordenadas geográficas em graus decimais, no Sistema de referência WGS84</p>
 
-<h3 id='propriedades-116'>Propriedades</h3>
+<h3 id='propriedades-108'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22491,7 +22119,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-117'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-109'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22534,7 +22162,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
 
-<h3 id='propriedades-118'>Propriedades</h3>
+<h3 id='propriedades-110'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22572,7 +22200,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-119'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-111'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22618,7 +22246,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-120'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-112'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22701,7 +22329,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de direitos creditórios descontados</p>
 
-<h3 id='propriedades-121'>Propriedades</h3>
+<h3 id='propriedades-113'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22843,7 +22471,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-122'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-114'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22909,7 +22537,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-123'>Propriedades</h3>
+<h3 id='propriedades-115'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22974,7 +22602,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-124'>Propriedades</h3>
+<h3 id='propriedades-116'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23028,7 +22656,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-125'>Propriedades</h3>
+<h3 id='propriedades-117'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23117,7 +22745,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito</p>
 
-<h3 id='propriedades-126'>Propriedades</h3>
+<h3 id='propriedades-118'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23174,7 +22802,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às parcelas / prestações da operação de crédito contratada</p>
 
-<h3 id='propriedades-127'>Propriedades</h3>
+<h3 id='propriedades-119'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23227,7 +22855,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-128'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-120'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23287,7 +22915,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito de direitos creditórios descontados contratadas</p>
 
-<h3 id='propriedades-129'>Propriedades</h3>
+<h3 id='propriedades-121'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23347,7 +22975,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações dos pagamentos referentes às operações de direitos creditórios descontados  contratadas</p>
 
-<h3 id='propriedades-130'>Propriedades</h3>
+<h3 id='propriedades-122'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23419,7 +23047,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-131'>Propriedades</h3>
+<h3 id='propriedades-123'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23469,7 +23097,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-132'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-124'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23526,7 +23154,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de direitos creditórios descontados contratada</p>
 
-<h3 id='propriedades-133'>Propriedades</h3>
+<h3 id='propriedades-125'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23575,7 +23203,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Referências para outros recusos da API requisitada.</p>
 
-<h3 id='propriedades-134'>Propriedades</h3>
+<h3 id='propriedades-126'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23637,7 +23265,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações  de contratos de empréstimo mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento</p>
 
-<h3 id='propriedades-135'>Propriedades</h3>
+<h3 id='propriedades-127'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23743,7 +23371,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-136'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-128'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23791,7 +23419,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito contratadas</p>
 
-<h3 id='propriedades-137'>Propriedades</h3>
+<h3 id='propriedades-129'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23823,7 +23451,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-138'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-130'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23869,7 +23497,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-139'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-131'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23954,7 +23582,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de empréstimo</p>
 
-<h3 id='propriedades-140'>Propriedades</h3>
+<h3 id='propriedades-132'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24112,7 +23740,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-141'>Propriedades</h3>
+<h3 id='propriedades-133'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24177,7 +23805,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-142'>Propriedades</h3>
+<h3 id='propriedades-134'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24231,7 +23859,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-143'>Propriedades</h3>
+<h3 id='propriedades-135'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24320,7 +23948,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito</p>
 
-<h3 id='propriedades-144'>Propriedades</h3>
+<h3 id='propriedades-136'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24376,7 +24004,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes ao prazo remanescente e às parcelas de uma operação de crédito de empréstimos</p>
 
-<h3 id='propriedades-145'>Propriedades</h3>
+<h3 id='propriedades-137'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24471,7 +24099,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes aos pagamentos realizados de uma operação de crédito de empréstimos.</p>
 
-<h3 id='propriedades-146'>Propriedades</h3>
+<h3 id='propriedades-138'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24549,7 +24177,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-147'>Propriedades</h3>
+<h3 id='propriedades-139'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24599,7 +24227,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-148'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-140'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24657,7 +24285,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de empréstimo</p>
 
-<h3 id='propriedades-149'>Propriedades</h3>
+<h3 id='propriedades-141'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24709,7 +24337,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Meta informações referente a API requisitada.</p>
 
-<h3 id='propriedades-150'>Propriedades</h3>
+<h3 id='propriedades-142'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24758,7 +24386,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que agrupa informações relativas à nacionalidade da Pessoa Natural</p>
 
-<h3 id='propriedades-151'>Propriedades</h3>
+<h3 id='propriedades-143'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24804,7 +24432,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações específicas para cliente que possue nacionalidade diferente da brasileira</p>
 
-<h3 id='propriedades-152'>Propriedades</h3>
+<h3 id='propriedades-144'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24841,7 +24469,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"expirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-19"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-153'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-145'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24893,7 +24521,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista relativa às informações das partes envolvidas, como: sócio e /ou administrador</p>
 
-<h3 id='propriedades-154'>Propriedades</h3>
+<h3 id='propriedades-146'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24983,7 +24611,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto agrupador de informações relativas a Documentos da pessoa natural</p>
 
-<h3 id='propriedades-155'>Propriedades</h3>
+<h3 id='propriedades-147'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -25031,7 +24659,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-156'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-148'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25082,7 +24710,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que reúne as informações relativas ao relacionamento do cliente junto à Instituição. Considera-se relacionamento as informações que permitam conhecer desde quando a pessoa consultada é cliente da instituição, bem como um indicador dos produtos e serviços que ela consome atualmente e seus representantes</p>
 
-<h3 id='propriedades-157'>Propriedades</h3>
+<h3 id='propriedades-149'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -25224,7 +24852,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas a Identificação ou seja a ação e o efeito de identificar de forma única a pessoa natural através de seus dados cadastrais.</p>
 
-<h3 id='propriedades-158'>Propriedades</h3>
+<h3 id='propriedades-150'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -25360,7 +24988,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"expirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-19"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-159'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-151'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25420,7 +25048,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"socialName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NA"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-160'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-152'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25480,7 +25108,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas ao processo de qualificação. Considera-se qualificação as informações que permitam as instituições apreciar, avaliar, caracterizar e classificar o cliente com a finalidade de conhecer o seu perfil de risco e sua capacidade econômico-financeira</p>
 
-<h3 id='propriedades-161'>Propriedades</h3>
+<h3 id='propriedades-153'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -25597,7 +25225,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-162'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-154'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25651,7 +25279,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-163'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-155'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25713,7 +25341,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-164'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-156'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25771,7 +25399,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-165'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-157'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25843,7 +25471,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-166'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-158'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25908,7 +25536,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-167'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-159'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26027,7 +25655,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-168'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-160'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26094,7 +25722,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-169'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-161'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26155,7 +25783,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-170'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-162'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26217,7 +25845,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-171'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-163'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26348,7 +25976,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-172'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-164'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26414,7 +26042,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-173'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-165'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26488,7 +26116,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-174'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-166'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26537,7 +26165,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-175'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-167'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26597,7 +26225,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-176'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-168'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26727,7 +26355,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-177'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-169'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26790,7 +26418,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-178'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-170'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26827,6 +26455,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocsresponsefinancingscontract"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"ipocCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"productName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AD"</span><span class="p">,</span><span class="w">
@@ -26888,7 +26517,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-179'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-171'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26925,23 +26554,17 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocsresponsefinancingsinstalments"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"contractRemainingMonths"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"balloonPayment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"instalments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-              </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-          </span><span class="p">]</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractRemainingDays"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pastDueInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"balloonPayments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -26956,7 +26579,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-180'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-172'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26967,9 +26590,9 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </thead><tbody>
 <tr>
 <td>data</td>
-<td><a href="#schemafinancingsinstalmentsdata">FinancingsInstalmentsData</a></td>
+<td><a href="#schemafinancingsinstalments">FinancingsInstalments</a></td>
 <td>true</td>
-<td></td>
+<td>Conjunto de informações referentes às parcelas / prestações da operação de crédito de financiamentos contratada</td>
 </tr>
 <tr>
 <td>links</td>
@@ -27015,7 +26638,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-181'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-173'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27052,38 +26675,33 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocsresponsefinancingspayments"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"payments"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"nonRegulatedCharge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"paidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"paidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"chargesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"feeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reavaliação periódica do bem"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"feeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aval_bem"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"feePaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="nl">"taxesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"taxType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JUROS_REMUNERATORIOS_POR_ATRASO"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"taxAdditionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"taxpaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-05T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"paidInstalments"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractOutstandingBalance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11400.00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"releases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"paymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parcela regular"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"instalmentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"paidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"paidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"chargesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"feeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reavaliação periódica do bem"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"feeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aval_bem"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"feePaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"taxesOverParcel"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"taxType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JUROS_REMUNERATORIOS_POR_ATRASO"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taxAdditionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taxpaidDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-10"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -27098,7 +26716,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-182'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-174'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27109,9 +26727,9 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </thead><tbody>
 <tr>
 <td>data</td>
-<td><a href="#schemafinancingspaymentsdata">FinancingsPaymentsData</a></td>
+<td><a href="#schemafinancingspayments">FinancingsPayments</a></td>
 <td>true</td>
-<td></td>
+<td>Conjunto de informações dos pagamentos referentes às operações de crédito de financiamentos contratadas</td>
 </tr>
 <tr>
 <td>links</td>
@@ -27135,19 +26753,16 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocsresponsefinancingswarranties"></a></p>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"financings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"warranties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+    </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.banco.com.br/open-banking/&lt;api&gt;/v1/&lt;resource&gt;"</span><span class="p">,</span><span class="w">
@@ -27162,7 +26777,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-183'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-175'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27173,9 +26788,9 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </thead><tbody>
 <tr>
 <td>data</td>
-<td><a href="#schemafinancingswarrantiesdata">FinancingsWarrantiesData</a></td>
+<td><a href="#schemafinancingswarranties">FinancingsWarranties</a></td>
 <td>true</td>
-<td></td>
+<td>Conjunto de informações referentes às garantias que avalizam a operação de crédito de financiamentos contratada</td>
 </tr>
 <tr>
 <td>links</td>
@@ -27221,7 +26836,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-184'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-176'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27321,7 +26936,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-185'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-177'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27384,7 +26999,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-186'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-178'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27462,7 +27077,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-187'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-179'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27523,7 +27138,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-188'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-180'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27621,7 +27236,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-189'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-181'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27680,7 +27295,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-190'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-182'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27744,7 +27359,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-191'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-183'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27823,7 +27438,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-192'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-184'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27883,7 +27498,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-193'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-185'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27981,7 +27596,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-194'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-186'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28040,7 +27655,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-195'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-187'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28108,7 +27723,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-196'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-188'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28191,7 +27806,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-197'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-189'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28255,7 +27870,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-198'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-190'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28295,7 +27910,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-199'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-191'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28338,7 +27953,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
 
-<h3 id='propriedades-200'>Propriedades</h3>
+<h3 id='propriedades-192'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28376,7 +27991,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-201'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-193'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28422,7 +28037,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-202'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-194'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28505,7 +28120,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de adiantamento a depositantes</p>
 
-<h3 id='propriedades-203'>Propriedades</h3>
+<h3 id='propriedades-195'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28651,7 +28266,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-204'>Propriedades</h3>
+<h3 id='propriedades-196'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28716,7 +28331,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-205'>Propriedades</h3>
+<h3 id='propriedades-197'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28770,7 +28385,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-206'>Propriedades</h3>
+<h3 id='propriedades-198'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28858,7 +28473,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xcjklompowsa279212650822221989319aadrtjk"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-207'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-199'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28917,7 +28532,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"chargeRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.07</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-208'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-200'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28972,7 +28587,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-209'>Propriedades</h3>
+<h3 id='propriedades-201'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29043,7 +28658,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito contratadas</p>
 
-<h3 id='propriedades-210'>Propriedades</h3>
+<h3 id='propriedades-202'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29088,7 +28703,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-211'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-203'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29115,7 +28730,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"str"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-212'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-204'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29175,7 +28790,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito de adiantamento a depositantes contratadas</p>
 
-<h3 id='propriedades-213'>Propriedades</h3>
+<h3 id='propriedades-205'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29235,7 +28850,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações dos pagamentos referentes às operações de crédito de adiantamento a depositantes contratadas</p>
 
-<h3 id='propriedades-214'>Propriedades</h3>
+<h3 id='propriedades-206'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29331,7 +28946,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-215'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-207'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29365,7 +28980,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-216'>Propriedades</h3>
+<h3 id='propriedades-208'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29415,7 +29030,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-217'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-209'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29472,7 +29087,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-218'>Propriedades</h3>
+<h3 id='propriedades-210'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29527,7 +29142,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito contratadas</p>
 
-<h3 id='propriedades-219'>Propriedades</h3>
+<h3 id='propriedades-211'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -29568,7 +29183,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-220'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-212'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29597,7 +29212,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</p>
 
-<h3 id='propriedades-221'>Propriedades</h3>
+<h3 id='propriedades-213'>Propriedades</h3>
 
 <table><thead>
 <tr>
