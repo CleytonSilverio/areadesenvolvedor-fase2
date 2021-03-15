@@ -928,6 +928,8 @@ components:
       required: true
     accountType:
       name: accountType
+      description: 'Tipos de contas. Modalidades tradicionais previstas pela Resolução 4.753, não contemplando contas vinculadas, conta de domiciliados no exterior, contas em moedas estrangeiras e conta correspondente moeda eletrônica. Vide Enum.'
+      required: false
       in: query
       schema:
         $ref: '#/components/schemas/EnumAccountType'
@@ -942,6 +944,8 @@ components:
         maxLength: 2048
     creditDebitIndicator:
       name: creditDebitIndicator
+      description: Indicador do tipo de lançamento
+      required: false
       in: query
       schema:
         $ref: '#/components/schemas/EnumCreditDebitIndicator'
@@ -1019,6 +1023,7 @@ components:
         type: string
         pattern: '^[a-zA-Z0-9][a-zA-Z0-9\-]{0,99}$'
         maxLength: 100
+        description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
   securitySchemes:
     OpenId:
       type: openIdConnect

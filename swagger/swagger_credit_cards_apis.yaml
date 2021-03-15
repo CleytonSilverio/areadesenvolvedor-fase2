@@ -1079,14 +1079,17 @@ components:
         maxLength: 100
     creditCardPayeeMCC:
       name: payeeMCC
+      description: 'MCC é o Merchant Category Code, ou o código da categoria do estabelecimento comercial. Os MCCs são agrupados segundo suas similaridades'
+      required: false
       in: query
       schema:
         type: number
         maxLength: 4
-        description: 'MCC é o Merchant Category Code, ou o código da categoria do estabelecimento comercial. Os MCCs são agrupados segundo suas similaridades'
         example: 8299
     creditCardTransactionType:
       name: transactionType
+      description: Traz os tipos de Transação
+      required: false
       in: query
       schema:
         $ref: '#/components/schemas/EnumCreditCardTransactionType'
@@ -1184,6 +1187,7 @@ components:
         type: string
         pattern: '^[a-zA-Z0-9][a-zA-Z0-9\-]{0,99}$'
         maxLength: 100
+        description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
   securitySchemes:
     OpenId:
       type: openIdConnect

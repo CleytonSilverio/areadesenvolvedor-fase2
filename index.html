@@ -6582,14 +6582,14 @@ OpenId ( Scopes: openId credit-card )
 <td>query</td>
 <td><a href="#schemaenumcreditcardtransactiontype">EnumCreditCardTransactionType</a></td>
 <td>false</td>
-<td>none</td>
+<td>Traz os tipos de Transação</td>
 </tr>
 <tr>
 <td>payeeMCC</td>
 <td>query</td>
 <td>number</td>
 <td>false</td>
-<td>none</td>
+<td>MCC é o Merchant Category Code, ou o código da categoria do estabelecimento comercial. Os MCCs são agrupados segundo suas similaridades</td>
 </tr>
 </tbody></table>
 
@@ -7215,7 +7215,7 @@ OpenId ( Scopes: openId credit-card )
 <td>query</td>
 <td><a href="#schemaenumaccounttype">EnumAccountType</a></td>
 <td>false</td>
-<td>none</td>
+<td>Tipos de contas. Modalidades tradicionais previstas pela Resolução 4.753, não contemplando contas vinculadas, conta de domiciliados no exterior, contas em moedas estrangeiras e conta correspondente moeda eletrônica. Vide Enum.</td>
 </tr>
 </tbody></table>
 
@@ -8122,7 +8122,7 @@ OpenId ( Scopes: openId accounts )
 <td>query</td>
 <td><a href="#schemaenumcreditdebitindicator">EnumCreditDebitIndicator</a></td>
 <td>false</td>
-<td>none</td>
+<td>Indicador do tipo de lançamento</td>
 </tr>
 </tbody></table>
 
@@ -29504,23 +29504,23 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="tocSunarrangedaccountoverdraftwarrantiesdata"></a>
 <a id="tocsunarrangedaccountoverdraftwarrantiesdata"></a></p>
 
-<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">&quot;unarrangedAccountOverdraft&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">&quot;warranties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">&quot;requestDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-07-21T08:30:00Z&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nl">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BRL&quot;</span><span class="p">,</span><span class="w">
-      </span><span class="nl">&quot;contractedWarranties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"unarrangedAccountOverdraft"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"warranties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"requestDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-07-21T08:30:00Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"contractedWarranties"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="nl">&quot;warrantyType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CESSAO_DIREITOS_CREDITORIOS&quot;</span><span class="p">,</span><span class="w">
-          </span><span class="nl">&quot;warrantySubType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO&quot;</span><span class="p">,</span><span class="w">
-          </span><span class="nl">&quot;warrantyAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
+          </span><span class="nl">"warrantyType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CESSAO_DIREITOS_CREDITORIOS"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"warrantySubType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"warrantyAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w"></p>
+</span><span class="p">}</span><span class="w">
 
-<p></span></code></pre></div><h3 id='propriedades-220'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-220'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29535,7 +29535,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>true</td>
 <td>Conjunto de informações de operações de crédito contratadas</td>
 </tr>
-</tbody></table></p>
+</tbody></table>
 
 <h2 id="tocS_XFapiInteractionId">XFapiInteractionId</h2>
 
@@ -29543,10 +29543,14 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <a id="schema_XFapiInteractionId"></a>
 <a id="tocSxfapiinteractionid"></a>
 <a id="tocsxfapiinteractionid"></a></p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"string"</span><span class="w">
 
-<p><div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">&quot;string&quot;</span><span class="w"></p>
+</span></code></pre></div>
 
-<p></span></code></pre></div><h3 id='propriedades-221'>Propriedades</h3>
+<p>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</p>
+
+<h3 id='propriedades-221'>Propriedades</h3>
+
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -29559,9 +29563,9 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>**</td>
 <td>string</td>
 <td>false</td>
-<td></td>
+<td>Um UID <a href="https://tools.ietf.org/html/rfc4122">RFC4122</a> usado como um ID de correlação. Se fornecido, o transmissor deve &quot;reproduzir&quot; esse valor no cabeçalho de resposta.</td>
 </tr>
-</tbody></table></p>
+</tbody></table>
 
 <h1 id='divulgacao-dos-valores-de-tarifas-e-taxas-de-juros-remuneratorias'>Divulgação dos valores de tarifas e taxas de juros remuneratórias</h1>
 
