@@ -646,6 +646,7 @@ components:
     EnumOverdraftLimitType:
       type: string
       enum:
+        - VALOR_CONTRATADO_LIMITE
         - VALOR_UTILIZADO_LIMITE
         - SALDO_DESCOBERTO
       description: |

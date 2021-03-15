@@ -749,6 +749,7 @@ components:
       type: string
       example: '19'
       description: Número de DDD (Discagem Direta à Distância) do telefone do cliente - se houver
+      maxLength: 2
       enum:
         - '11'
         - '12'
@@ -853,13 +854,13 @@ components:
       example: SP
     EnumCustomerPhoneType:
       type: string
+      description: Identificação do Tipo de telefone do cliente.
+      maxLength: 5
       enum:
         - FIXO
         - MOVEL
         - OUTRO
       example: FIXO
-      description: |
-        Identificação do Tipo de telefone do cliente.
     EnumFiliationType:
       type: string
       description: |
@@ -938,9 +939,11 @@ components:
         Relação dos Códigos dos demais documentos pessoa natural.
     EnumProcuratorsType:
       type: string
+      maxLength: 19
       enum:
         - REPRESENTANTE_LOCAL
         - PROCURADOR
+        - NÃO_POSSUI
       description: |
         Tipo de representante.
         Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
