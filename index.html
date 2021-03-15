@@ -3267,7 +3267,7 @@ Executar um processo de autorização utilizando o padrão <em>Lodging Intent</e
 
 <h2 id='assinatura-de-mensagens'>Assinatura de mensagens</h2>
 
-<p>A assinatura de mensagens deve ser aplicada a APIs específicas, de acordo com a necessidade e a criticidade, levantamento a ser feito junto com o GT de Dados.<br>
+<p>A assinatura de mensagens deve ser aplicada a APIs específicas, de acordo com a definição na documentação do <em>Endpoint</em>.<br>
 Para a assinatura de mensagens, deve ser suportado o uso de um JWT assinado (JWS).  JWS representa o conteúdo protegido com assinaturas digitais ou com <em>Message Authentication Codes</em> (MACs) utilizando estruturas de dados JSON, referenciado em [RFC 7515]. </p>
 
 <p><img class='lazy' src='images/loading-e35b35a4.gif' data-src='images/security/JWS-efb7fa19.png'/></p>
@@ -3626,11 +3626,11 @@ subjectKeyIdentifier = hash<br>
 <p>$ openssl req -new -config assinatura.cnf -out assinatura.csr -keyout assinatura.key</p>
 
 <h2 id='diretorio-de-participantes'>Diretório de participantes</h2><h3 id='introducao'>Introdução</h3>
-<p>O Diretório de Participantes do Open Banking é o principal componente de arquitetura que permite que Instituições Provedoras (TPPs) se registrem e iniciem interações por meio de APIs com Instituições Transmissoras (ASPSPs), também fornece um ambiente de testes.<br>
+<p>O Diretório de Participantes do Open Banking é o principal componente de arquitetura que permite que instituições provedoras se registrem e iniciem interações por meio de APIs com instituições transmissoras, também fornece um ambiente de testes.<br>
 O Diretório é um serviço de gerenciamento de identidade e acesso que fornece informações de identidade que dão suporte aos participantes do Ecossistema do Open Banking.<br>
-O Diretório de Participantes disponibiliza os recursos funcionais necessários para que as Instituições Provedoras (TPPs) possam se autenticar no Open Banking e também recursos para identificar as Instituições Transmissoras (ASPSPs).<br>
-O Registro dos Provedores é obrigatório para usar as APIs fornecidas pelas Instituições Transmissoras (ASPSPs).<br>
-As instituições Transmissoras devem utilizar as informações técnicas contidas no Diretório para realizar o gerenciamento da identidade e da autorização das aplicações das instituições Participantes, que abrange a identificação, a autorização e a revogação de certificados utilizados no compartilhamento de dados e serviços do escopo do Open Banking.<br></p>
+O Diretório de Participantes disponibiliza os recursos funcionais necessários para que as instituições provedoras possam se autenticar no Open Banking e também recursos para identificar as instituições transmissoras.<br>
+O Registro dos Provedores é obrigatório para usar as APIs fornecidas pelas instituições transmissoras.<br>
+As instituições transmissoras devem utilizar as informações técnicas contidas no Diretório para realizar o gerenciamento da identidade e da autorização das aplicações das instituições Participantes, que abrange a identificação, a autorização e a revogação de certificados utilizados no compartilhamento de dados e serviços do escopo do Open Banking.<br></p>
 
 <p>Recursos funcionais do Diretório de Participantes:</p>
 
@@ -3658,20 +3658,20 @@ As instituições Transmissoras devem utilizar as informações técnicas contid
 </ul></li>
 </ul>
 <h3 id='registro-de-uma-instituicao-provedora'>Registro de uma Instituição Provedora</h3>
-<p>O Diretório deverá realizar validações para o Registro de uma TPP, depois destas validações, solicitações e respostas de API e/ou dados de contaspodem ser compartilhadas com segurança entre as duas partes. O diretório deve validar, se:</p>
+<p>O Diretório deverá realizar validações para o Registro de uma instituição receptora, depois destas validações, solicitações e respostas de API e/ou dados de contas podem ser compartilhadas com segurança entre as duas partes. O diretório deve validar, se:</p>
 
 <ul>
-<li>O TPP está utilizando um certificado digital.</li>
+<li>A instituição receptora está utilizando um certificado digital.</li>
 <li>O certificado se encontra em conformidade com os padrões do Open Banking Brasil.</li>
 <li>O certificado não está expirado.</li>
 <li>O certificado foi emitido por uma Entidade Emissora válida.</li>
 <li>O certificado não foi revogado. </li>
 </ul>
 
-<p>Depois que todas as verificações forem realizadas, será estabelecido uma conexão TLS segura, mutuamente autenticada entre o Diretório e o TPP. </p>
+<p>Depois que todas as verificações forem realizadas, será estabelecido uma conexão TLS segura, mutuamente autenticada entre o Diretório e a instituição receptora. </p>
 <h3 id='funcoes-operacionais-dos-participantes'>Funções Operacionais dos Participantes</h3>
 <p><br><br>
-<strong>Fluxos para Instituições Provedoras (TPP)</strong></p>
+<strong>Fluxos para instituições receptoras</strong></p>
 
 <p><img class='lazy' src='images/loading-e35b35a4.gif' data-src='images/security/TPP-7c6a3087.png'/></p>
 
@@ -3681,39 +3681,39 @@ As instituições Transmissoras devem utilizar as informações técnicas contid
 <br>
 <br></p>
 
-<p><strong>Fluxos para Instituições Transmissoras (ASPSP)</strong></p>
+<p><strong>Fluxos para instituições transmissoras</strong></p>
 
 <p><img class='lazy' src='images/loading-e35b35a4.gif' data-src='images/security/ASPPSP-ab9ca183.png'/></p>
 <h3 id='registro-no-diretorio-de-participantes'>Registro no diretório de participantes</h3>
-<p>Para poder consumir APIs disponibilizadas por um ASPSP, um TPP deverá realizar um registro junto ao ASPSP, esse processo de autenticação do participante deve ser feita de forma centralizada no Diretório de Participantes, sendo necessário a federação do seu portal ao Diretório.
-O ASPSP deve implementar um processo de integração do TPP ao seu sistema, esse processo deve:</p>
+<p>Para poder consumir APIs disponibilizadas por uma instituição transmissora, uma instituição receptora deverá realizar um registro junto a instituição transmissora, esse processo de autenticação do participante deve ser feita de forma centralizada no Diretório de Participantes, sendo necessário a federação do seu portal ao Diretório.
+A instituição transmissora deve implementar um processo de integração da instituição receptora ao seu sistema, esse processo deve:</p>
 
 <ul>
-<li>Validar se o TPP é autorizado por uma autoridade competente.</li>
-<li>Validar as informações do TPP.</li>
+<li>Validar se a instituição receptora é autorizada por uma autoridade competente.</li>
+<li>Validar as informações da instituição receptora.</li>
 </ul>
 
-<p>Após o TPP realizar o registro no Diretório de Participantes o mesmo poderá realizar o registro de <em>clients</em> (aplicações) na ASPSP.
+<p>Após a instituição receptora realizar o registro no Diretório de Participantes, o mesmo poderá realizar o registro de <em>clients</em> (aplicações) na instituição transmissora.
 Para a realização do registro de <em>clients</em> no Open Banking, é mandatório a disponibilização do processo de registro de <em>Client</em> dinâmico, conforme <a href='https://tools.ietf.org/html/rfc7591'target="_blank">[RFC 7591]</a>.  </p>
 
 <h2 id='registro-de-client-dinamico'>Registro de <em>Client</em> dinâmico</h2>
 
 <p>O registro de <em>Client</em> dinâmico é mandatório para os participantes do Open Banking. 
-Com uma API de registro de client dinâmico do Open Banking, utilizando o padrão de segurança OpenID Connect, os TPPs podem se registrar junto aos ASPSPs.  </p>
+Com uma API de registro de client dinâmico do Open Banking, utilizando o padrão de segurança OpenID Connect, as instituições receptoras podem se registrar junto a instituição transmissora.  </p>
 
 <ul>
-<li>Para usar o Registro dinâmico de <em>client</em>, um TPP deve se registrar no Diretório de Participantes e obter um SSA e demais certificados digitais. </li>
-<li>O Client envia o SSA a um ASPSP para registro dinâmico no ASPSP. </li>
+<li>Para usar o Registro dinâmico de <em>client</em>, uma instituição receptora deve se registrar no Diretório de Participantes e obter um SSA e demais certificados digitais. </li>
+<li>O <em>Client</em> envia o SSA a uma instituição transmissora para registro dinâmico na instituição transmissora. </li>
 </ul>
 
-<p>O diagrama abaixo mostra o fluxo do registro dinâmico de um TPP. </p>
+<p>O diagrama abaixo mostra o fluxo do registro dinâmico de uma instituição receptora. </p>
 
-<p><img class='lazy' src='images/loading-e35b35a4.gif' data-src='images/security/RegistroDinamicoFluxo-064f2ad6.png'/></p>
+<p><img class='lazy' src='images/loading-e35b35a4.gif' data-src='images/security/RegistroDinamicoFluxo-1ded216c.png'/></p>
 
 <p>Diagrama - Fluxo de registro dinâmico.</p>
 
-<p>Os TPPs precisam obter o SSA do Diretório de Participantes do Open Banking.<br>
-Uma API de Registro dinâmico consiste em <em>endpoints</em>, que realizam a concessão de credencias do <em>client</em> e a autenticação mútua de TLS para autenticar o TPP. A API deve permitir que as seguintes operações sejam realizadas:</p>
+<p>As instituições receptoras precisam obter o SSA do Diretório de Participantes do Open Banking.<br>
+Uma API de Registro dinâmico consiste em <em>endpoints</em>, que realizam a concessão de credencias do <em>client</em> e a autenticação mútua de TLS para autenticar a instituição receptora. A API deve permitir que as seguintes operações sejam realizadas:</p>
 
 <ul>
 <li>Registro de um <em>Client</em>. </li>
@@ -3724,25 +3724,25 @@ Uma API de Registro dinâmico consiste em <em>endpoints</em>, que realizam a con
 
 <h2 id='teste-e-homologacao'>Teste e homologação</h2>
 
-<p>A fase de teste e homologação, tem como finalidade, garantir que os participantes que desejam operar no Ecossistema do Open Banking, possam fazer isso de forma assertiva e segura. Isso incluí o suporte aos TPPs com a capacidade de testar seus produtos e serviços desde o lançamento, quanto nas atualizações, fornecendo uma série de ferramentas e infraestrutura no serviço de Diretório para garantir que seus produtos tenham sido testados tempestivamente antes de entrar em produção.<br>
-É obrigatório o teste e a homologação para TPPs e ASPSPs. Instituições receptoras devem utilizar o serviço de <em>Sandbox</em> fornecido pelo Diretório.<br>
-As ASPSPs devem prover um ambiente de teste que possibilite TPPs autorizados a realizarem testes de conexão e testes funcionais de seus produtos e serviços. Este recurso deve refletir ao máximo o ambiente de produção e deve fornecer o acesso aos desenvolvedores com os seguintes aspectos:</p>
+<p>A fase de teste e homologação, tem como finalidade, garantir que os participantes que desejam operar no Ecossistema do Open Banking, possam fazer isso de forma assertiva e segura. Isso incluí o suporte para as instituições receptoras com a capacidade de testar seus produtos e serviços desde o lançamento, quanto nas atualizações, fornecendo uma série de ferramentas e infraestrutura no serviço de Diretório para garantir que seus produtos tenham sido testados tempestivamente antes de entrar em produção.<br>
+É obrigatório o teste e a homologação para instituição receptora e instituição transmissora. Instituições receptoras devem utilizar o serviço de <em>Sandbox</em> fornecido pelo Diretório.<br>
+As instituição transmissoras devem prover um ambiente de teste que possibilite as instituições receptoras autorizados a realizarem testes de conexão e testes funcionais de seus produtos e serviços. Este recurso deve refletir ao máximo o ambiente de produção e deve fornecer o acesso aos desenvolvedores com os seguintes aspectos:</p>
 
 <ul>
 <li>Funcionalidade: Deve incluir todas as funcionalidades da interface de produção relacionadas aos casos de uso. Deve funcionar de maneira equivalente ou representativa para a interface de produção, incluindo casos de uso negativos e códigos de erro.</li>
 <li>Segurança: Deve utilizar o mesmo perfil de segurança das APIs em produção.</li>
-<li> <em>On-boarding</em>: Deve replicar o processo de <em>on-boarding</em> das instalações de produção do ASPSP, incluindo o <em>on-boarding</em> e a troca de certificados para identificação e assinatura de mensagem.</li>
-<li> Certificados: Deve permitir o uso de certificados de teste (que têm o mesmo formato/estrutura dos certificados de produção) de modo que os TPPs possam replicar a funcionalidade relacionados à troca de certificados para identificação e assinatura de mensagens.</li>
+<li> <em>On-boarding</em>: Deve replicar o processo de <em>on-boarding</em> das instalações de produção da instituição transmissora, incluindo o <em>on-boarding</em> e a troca de certificados para identificação e assinatura de mensagem.</li>
+<li> Certificados: Deve permitir o uso de certificados de teste (que têm o mesmo formato/estrutura dos certificados de produção) de modo que as instituições receptoras possam replicar a funcionalidade relacionados à troca de certificados para identificação e assinatura de mensagens.</li>
 <li>Dados de teste: Não deve incluir quaisquer dados reais de usuários finais. O volume e a variação dos dados devem ser suficientes para dar suporte a todos os testes técnicos e funcionais, incluindo paginação (onde for compatível com a interface dedicada).</li>
-<li>Contas de teste: Deve fornecer aos TPPs um número de contas de teste que habilitem a funcionalidade e o acesso aos dados que os usuários reais experimentarão na produção.</li>
-<li>Autenticação: O ASPSP deve fornecer recurso que permita que os TPPs testem os procedimentos de autenticação, inclusive em produção, utilizando suas próprias contas e/ou contas de teste.</li>
-<li> Disponibilidade e desempenho: Não deve lidar com volumes de produção (ou seja, não deve ser usada por ASPSPs ou TPPs para teste de estresse), no entanto, deve ter disponibilidade, capacidade, desempenho e outras características suficientes para facilitar a conexão eficaz e realista a testes funcionais do TPP.</li>
-<li>Suporte: A instalação deve ter um nível apropriado de suporte para permitir a comunicação de problemas ou questões por TPPs para ASPSPs e fornecer soluções eficientes e eficazes. </li>
-<li>Documentação: ASPSPs devem publicar externamente um resumo das especificações da instalação de teste em seu site, incluindo detalhes de acesso e cobertura de teste. </li>
+<li>Contas de teste: Deve fornecer para as instituições receptoras um número de contas de teste que habilitem a funcionalidade e o acesso aos dados que os usuários reais experimentarão na produção.</li>
+<li>Autenticação: A instituição transmissora deve fornecer recurso que permita que as instituições receptoras testem os procedimentos de autenticação, inclusive em produção, utilizando suas próprias contas e/ou contas de teste.</li>
+<li> Disponibilidade e desempenho: Não deve lidar com volumes de produção (ou seja, não deve ser usada por instituição transmissora ou instituição receptora para teste de estresse), no entanto, deve ter disponibilidade, capacidade, desempenho e outras características suficientes para facilitar a conexão eficaz e realista a testes funcionais da instituição receptora.</li>
+<li>Suporte: A instalação deve ter um nível apropriado de suporte para permitir a comunicação de problemas ou questões por instituições receptoras para instituições transmissoras e fornecer soluções eficientes e eficazes. </li>
+<li>Documentação: Instituição transmissora devem publicar externamente um resumo das especificações da instalação de teste em seu site, incluindo detalhes de acesso e cobertura de teste. </li>
 </ul>
 
 <p>Os testes devem garantir escopo mínimo para cobrir todos os casos de uso e de requisitos de segurança, evidenciados de forma que seja possível garantir que o processo de homologação foi efetuado.<br>
-Os testes para TPPs devem acontecer em 3 etapas:</p>
+Os testes para instituições receptoras devem acontecer em 3 etapas:</p>
 
 <ul>
 <li>Testes de integração: Testes utilizando APIs de um Banco de exemplo no <em>Sandbox</em> do Diretório.</li>
@@ -27621,7 +27621,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 <td>data</td>
 <td>[<a href="#schemainvoicefinancingscontractdata">InvoiceFinancingsContractData</a>]</td>
 <td>true</td>
-<td></td>
+<td>Conjunto de informações  de contratos de direitos creditórios descontados mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento</td>
 </tr>
 <tr>
 <td>links</td>
