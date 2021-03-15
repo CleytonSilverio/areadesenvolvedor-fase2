@@ -1635,7 +1635,7 @@ paths:
         - OpenId:
             - openId
             - loans
-  '/loans/v1/contracts/{contractId}/schedule-instalments':
+  '/loans/v1/contracts/{contractId}/scheduled-instalments':
     get:
       tags:
         - API - Operações de Crédito - Empréstimos
@@ -2417,7 +2417,7 @@ paths:
         - OpenId:
             - openId
             - unarranged-accounts-overdraft
-  '/unarranged-accounts-overdraft/v1/contracts/{contractId}/instalments':
+  '/unarranged-accounts-overdraft/v1/contracts/{contractId}/scheduled-instalments':
     get:
       tags:
         - API - Operações de Crédito - Adiantamento a Depositantes
@@ -2808,7 +2808,7 @@ paths:
         - OpenId:
             - openId
             - invoice-financings
-  '/invoice-financings/v1/contracts/{contractId}/instalments':
+  '/invoice-financings/v1/contracts/{contractId}/scheduled-instalments':
     get:
       tags:
         - API - Operações de Crédito - Direitos Creditórios Descontados
