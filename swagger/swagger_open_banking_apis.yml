@@ -41,21 +41,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Personal_Identification_v3.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Personal_Identification.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal.png"/>
 
-        <a href="images/der/customers/DER_Personal.v1.png" target="_blank">Fazer download do DER Conceitual</a>
+        <a href="images/der/customers/DER_Personal.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal_Identification.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal_Identification.png"/>
 
-        <a href="images/der/customers/DER_Personal_Identification.v1.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/customers/DER_Personal_Identification.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -123,7 +123,7 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Business_Customers_Identification_v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Business_Customers_Identification.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
@@ -135,9 +135,9 @@ paths:
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Business_Customers_Identification.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Business_Customers_Identification.png"/>
 
-        <a href="images/der/customers/DER_Business_Customers_Identification.v1.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/customers/DER_Business_Customers_Identification.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -204,21 +204,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Personal_Qualification_v3.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Personal_Qualification.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal.png"/>
 
-        <a href="images/der/customers/DER_Personal.v1.png" target="_blank">Fazer download do DER Conceitual</a>
+        <a href="images/der/customers/DER_Personal.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal_Qualification.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal_Qualification.png"/>
 
-        <a href="images/der/customers/DER_Personal_Qualification.v1.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/customers/DER_Personal_Qualification.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -286,7 +286,7 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Business_Customers_Qualification_v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Business_Customers_Qualification.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
@@ -298,9 +298,9 @@ paths:
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Business_Customers_Qualification.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Business_Customers_Qualification.png"/>
 
-        <a href="images/der/customers/DER_Business_Customers_Qualification.v1.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/customers/DER_Business_Customers_Qualification.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -368,21 +368,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Personal_Financial_Relation_v3.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Personal_Financial_Relation.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal.png"/>
 
-        <a href="images/der/customers/DER_Personal.v1.png" target="_blank">Fazer download do DER Conceitual</a>
+        <a href="images/der/customers/DER_Personal.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal_FinancialRelation.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Personal_FinancialRelation.png"/>
 
-        <a href="images/der/customers/DER_Personal_FinancialRelation.v1.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/customers/DER_Personal_FinancialRelation.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -450,7 +450,7 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Business_Customers_Financial_Relation_v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/customers/TLD_Business_Customers_Financial_Relation.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
@@ -462,9 +462,9 @@ paths:
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Business_Customers_FinancialRelation.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/customers/DER_Business_Customers_FinancialRelation.png"/>
 
-        <a href="images/der/customers/DER_Business_Customers_FinancialRelation.v1.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/customers/DER_Business_Customers_FinancialRelation.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -941,7 +941,7 @@ paths:
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.png"/>
 
         <a href="images/der/accounts/DER_Accounts.v2.png" target="_blank">Fazer download do DER Conceitual</a>
 
@@ -1015,21 +1015,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_Identification.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_Identification.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.png"/>
 
-        <a href="images/der/accounts/DER_Accounts.v2.png" target="_blank">Fazer download do DER Conceitual</a>
+        <a href="images/der/accounts/DER_Accounts.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_Identification.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_Identification.png"/>
 
-        <a href="images/der/accounts/DER_Accounts_Identification.v2.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/accounts/DER_Accounts_Identification.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -1095,21 +1095,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_Balances.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_Balances.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.png"/>
 
-        <a href="images/der/accounts/DER_Accounts.v2.png" target="_blank">Fazer download do DER Conceitual</a>
+        <a href="images/der/accounts/DER_Accounts.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_Balances.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_Balances.png"/>
 
-        <a href="images/der/accounts/DER_Accounts_Balances.v2.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/accounts/DER_Accounts_Balances.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -1179,21 +1179,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_Transactions.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_Transactions.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.png"/>
 
         <a href="images/der/accounts/DER_Accounts.v2.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_Transactions.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_Transactions.png"/>
 
-        <a href="images/der/accounts/DER_Accounts_Transactions.v2.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/accounts/DER_Accounts_Transactions.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
@@ -1268,21 +1268,21 @@ paths:
 
         ### Visão de alto de nível das estruturas de dados
 
-        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_OverdraftLimits.v1.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/tld/accounts/TLD_Accounts_OverdraftLimits.png"/>
 
         ### DER - Diagramas de Entidade e Relacionamento
 
         * DER Conceitual
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts.png"/>
 
         <a href="images/der/accounts/DER_Accounts.v2.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
-        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_OverdraftLimits.v2.png"/>
+        <img class="lazy" src="images/loading.gif" data-src="images/der/accounts/DER_Accounts_OverdraftLimits.png"/>
 
-        <a href="images/der/accounts/DER_Accounts_OverdraftLimits.v2.png" target="_blank">Fazer download do DER Lógico</a>
+        <a href="images/der/accounts/DER_Accounts_OverdraftLimits.png" target="_blank">Fazer download do DER Lógico</a>
 
         ### Dicionário de dados
 
