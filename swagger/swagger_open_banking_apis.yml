@@ -4794,6 +4794,7 @@ components:
       example: PROCURADOR
     EnumProductServiceType:
       type: string
+      maxLength: 24
       enum:
         - CONTA_DEPOSITO_A_VISTA
         - CONTA_POUPANCA
