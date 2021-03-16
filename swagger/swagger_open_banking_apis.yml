@@ -4050,7 +4050,7 @@ components:
         - '98'
         - '99'
         - NA
-    EnumBankBorrowingContractAmortizationSchedule:
+    EnumContractAmortizationScheduled:
       type: string
       description: |
         Sistema de amortização (Vide Enum)
@@ -4065,7 +4065,7 @@ components:
         - SAM
         - SEM_SISTEMA_AMORTIZACAO
       example: SAC
-    EnumBankBorrowingContractCalculation:
+    EnumContractCalculation:
       type: string
       description: Base de cálculo
       maxLength: 6
@@ -4074,7 +4074,7 @@ components:
         - 30/360
         - 30/365
       example: 21/25
-    EnumBankBorrowingContractFeeCharge:
+    EnumContractFeeCharge:
       type: string
       description: |
         Forma de cobrança relativa a tarifa pactuada no contrato. (Vide Enum)
@@ -4089,7 +4089,7 @@ components:
         - FIXO
         - PERCENTUAL
       example: MINIMO
-    EnumBankBorrowingContractFeeChargeType:
+    EnumContractFeeChargeType:
       type: string
       description: Tipo de cobrança para a tarifa pactuada no contrato.
       maxLength: 10
@@ -4097,7 +4097,7 @@ components:
         - UNICA
         - POR_PARCELA
       example: UNICA
-    EnumBankBorrowingContractFinanceChargeType:
+    EnumContractFinanceChargeType:
       type: string
       description: Tipo de encargo pactuado no contrato.
       maxLength: 31
@@ -4109,7 +4109,7 @@ components:
         - IOF_POR_ATRASO
         - OUTROS
       example: JUROS_REMUNERATORIOS_POR_ATRASO
-    EnumBankBorrowingContractInstalmentPeriodicity:
+    EnumContractInstalmentPeriodicity:
       type: string
       description: |
         Informação relativa à periodicidade regular das parcelas. (Vide Enum)
@@ -4125,7 +4125,7 @@ components:
         - SEMESTRAL
         - ANUAL
       example: SEMANAL
-    EnumBankBorrowingContractInterestRateType:
+    EnumContractInterestRateType:
       type: string
       description: |
         Tipo de Juros  (vide  Enum)
@@ -4136,51 +4136,7 @@ components:
         - SIMPLES
         - COMPOSTO
       example: SIMPLES
-    EnumBankBorrowingContractProductType:
-      type: string
-      description: |
-        Tipo da modalidade de crédito contratada, conforme circular 4.015 e descrição do DOC3040 do SCR). (Vide Enum)
-        Adiantamento a depositantes, Direitos creditórios descontados Empréstimos,  Financiamentos, Financiamentos rurais  e Financiamentos imobiliários
-      enum:
-        - ADIANTAMENTO_A_DEPOSITANTES
-        - DIREITOS_CREDITORIOS_DESCONTADOS
-        - EMPRESTIMO
-        - FINANCIAMENTOS
-        - FINANCIAMENTOS_RURAIS
-        - FINANCIAMENTOS_IMOBILIARIOS
-      example: ADIANTAMENTO_A_DEPOSITANTES
-    EnumBankBorrowingContractProductSubType:
-      type: string
-      description: |
-        Sub tipo da modalidades de crédito contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Enum)
-        Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo, Desconto de duplicatas, Desconto de cheques,  Antecipação da fatura do cartão de crédito, Outros direitos creditórios descontados, outros títulos descontados, Aquisição de bens veículos automotores, Aquisição de bens de outros bens, Microcrédito, Custeio, Investimento, Industrialização, Comercialização, Financiamento habitacional SFH e Financiamento habitacional exceto SFH
-      enum:
-        - ADIANTAMENTO_A_DEPOSITANTES
-        - CREDITO_PESSOAL_SEM_CONSIGNACAO
-        - CREDITO_PESSOAL_COM_CONSIGNACAO
-        - HOME_EQUITY
-        - MICROCREDITO_PRODUTIVO_ORIENTADO
-        - CHEQUE_ESPECIAL
-        - CONTA_GARANTIDA
-        - CAPITAL_GIRO_PRAZO_VENCIMENTO_ATE_365_DIAS
-        - CAPITAL_GIRO_PRAZO_VENCIMENTO_SUPERIOR_365_DIAS
-        - CAPITAL_GIRO_TETO_ROTATIVO
-        - DESCONTO_DUPLICATAS
-        - DESCONTO_CHEQUES
-        - ANTECIPACAO_FATURA_CARTAO_CREDITO
-        - OUTROS_DIREITOS_CREDITORIOS_DESCONTADOS
-        - OUTROS_TITULOS_DESCONTADOS
-        - AQUISICAO_BENS_VEICULOS_AUTOMOTORES
-        - AQUISICAO_BENS_OUTROS_BENS
-        - MICROCREDITO
-        - CUSTEIO
-        - INVESTIMENTO
-        - INDUSTRIALIZACAO
-        - COMERCIALIZACAO
-        - FINANCIAMENTO_HABITACIONAL_SFH
-        - FINANCIAMENTO_HABITACIONAL_EXCETO_SFH
-      example: ADIANTAMENTO_A_DEPOSITANTES
-    EnumBankBorrowingContractReferentialRateIndexerType:
+    EnumContractReferentialRateIndexerType:
       type: string
       description: |
         Tipos de taxas referenciais ou indexadores, conforme Anexo 5: Taxa referencial ou Indexador (Indx), do Documento 3040
@@ -4195,7 +4151,7 @@ components:
         - CREDITO_RURAL
         - OUTROS_INDEXADORES
       example: PRE_FIXADO
-    EnumBankBorrowingContractReferentialRateIndexerSubType:
+    EnumContractReferentialRateIndexerSubType:
       type: string
       description: |
         Sub tipos de taxas referenciais ou indexadores, conforme Anexo 5: Taxa referencial ou Indexador (Indx), do Documento 3040
@@ -4222,7 +4178,7 @@ components:
         - TRFC_POS
         - OUTROS_INDEXADORES
       example: TJLP
-    EnumBankBorrowingContractTaxPeriodicity:
+    EnumContractTaxPeriodicity:
       type: string
       description: |
         Periodicidade da taxa . (Vide  Enum)
@@ -4233,7 +4189,7 @@ components:
         - AM
         - AA
       example: AA
-    EnumBankBorrowingContractTaxType:
+    EnumContractTaxType:
       type: string
       description: |
         Tipo de Taxa (vide  Enum)
@@ -4244,29 +4200,7 @@ components:
         - NOMINAL
         - EFETIVA
       example: EFETIVA
-    EnumBankBorrowingFinanceChargeType:
-      type: string
-      description: Tipo de encargo avulso
-      enum:
-        - JUROS_REMUNERATORIOS_POR_ATRASO
-        - MULTA_ATRASO_PAGAMENTO
-        - JUROS_MORA_ATRASO
-        - IOF_CONTRATACAO
-        - OUTROS
-      example: JUROS_REMUNERATORIOS_POR_ATRASO
-    EnumBankBorrowingInstalmentPeriodicity:
-      type: string
-      description: Informação relativa à periodicidade regular das parcelas.
-      enum:
-        - SEMANAL
-        - QUINZENAL
-        - MENSAL
-        - BIMESTRAL
-        - TRIMESTRAL
-        - SEMESTRAL
-        - ANUAL
-      example: SEMANAL
-    EnumBankBorrowingWarrantySubType:
+    EnumWarrantySubType:
       type: string
       description: 'Denominação/Identificação do sub tipo da garantia que avaliza a Modalidade da Operação de Crédito contratada (Doc 3040, Anexo 12)'
       maxLength: 100
@@ -4322,7 +4256,7 @@ components:
         - VEICULOS
         - VEICULOS_AUTOMOTORES
       example: NOTAS_PROMISSORIAS_OUTROS_DIREITOS_CREDITO
-    EnumBankBorrowingWarrantyType:
+    EnumWarrantyType:
       type: string
       description: 'Denominação/Identificação do tipo da garantia que avaliza a Modalidade da Operação de Crédito contratada  (Doc 3040, Anexo 12)'
       maxLength: 40
@@ -5028,7 +4962,7 @@ components:
         - totalNumberOfInstalments
         - paidInstalments
         - CET
-        - amortizationSchedule
+        - amortizationScheduled
         - interestRates
         - contractedFees
       properties:
@@ -5105,7 +5039,7 @@ components:
           description: Data de vencimento Final da operação. Especificação RFC-3339
           example: '2028-01-15'
         instalmentPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInstalmentPeriodicity'
+          $ref: '#/components/schemas/EnumContractInstalmentPeriodicity'
         firstInstalmentDueDate:
           type: string
           maxLength: 10
@@ -5131,8 +5065,8 @@ components:
             (representação de porcentagem p.ex: 0.1500. Este valor representa 15%. O valor 1 representa 100%)
           maxLength: 19
           example: 0.29
-        amortizationSchedule:
-          $ref: '#/components/schemas/EnumBankBorrowingContractAmortizationSchedule'
+        amortizationScheduled:
+          $ref: '#/components/schemas/EnumContractAmortizationScheduled'
         interestRates:
           type: array
           items:
@@ -5171,9 +5105,9 @@ components:
           description: Sigla identificadora da tarifa pactuada
           example: EXCESSO_CONTA
         feeChargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeChargeType'
+          $ref: '#/components/schemas/EnumContractFeeChargeType'
         feeCharge:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeCharge'
+          $ref: '#/components/schemas/EnumContractFeeCharge'
         feeAmount:
           type: number
           description: |
@@ -5196,9 +5130,9 @@ components:
         - warrantyAmount
       properties:
         warrantyType:
-          $ref: '#/components/schemas/EnumBankBorrowingWarrantyType'
+          $ref: '#/components/schemas/EnumWarrantyType'
         warrantySubType:
-          $ref: '#/components/schemas/EnumBankBorrowingWarrantySubType'
+          $ref: '#/components/schemas/EnumWarrantySubType'
         warrantyAmount:
           type: number
           maxLength: 19
@@ -5220,17 +5154,17 @@ components:
         - additionalInfo
       properties:
         taxType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxType'
+          $ref: '#/components/schemas/EnumContractTaxType'
         interestRateType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInterestRateType'
+          $ref: '#/components/schemas/EnumContractInterestRateType'
         taxPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxPeriodicity'
+          $ref: '#/components/schemas/EnumContractTaxPeriodicity'
         calculation:
-          $ref: '#/components/schemas/EnumBankBorrowingContractCalculation'
+          $ref: '#/components/schemas/EnumContractCalculation'
         referentialRateIndexerType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerType'
         referentialRateIndexerSubType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerSubType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerSubType'
         referentialRateIndexerAdditionalInfo:
           type: string
           description: 'Campo livre de preenchimento obrigatório para complementar a informação relativa ao Tipo de taxa referencial ou indexador, quando selecionada o tipo ou subtipo OUTRO'
@@ -5265,7 +5199,7 @@ components:
         - chargeType
       properties:
         chargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFinanceChargeType'
+          $ref: '#/components/schemas/EnumContractFinanceChargeType'
         chargeAdditionalInfo:
           type: string
           description: Campo de preenchimento obrigatório se selecionada a opção 'OUTROS' em Tipo de encargo pactuado no contrato
@@ -5630,7 +5564,7 @@ components:
         - totalNumberOfInstalments
         - paidInstalments
         - CET
-        - amortizationSchedule
+        - amortizationScheduled
         - interestRates
         - contractedFees
         - contractedFinanceCharges
@@ -5708,7 +5642,7 @@ components:
           description: Data de vencimento Final da operação. Especificação RFC-3339
           example: '2028-01-15'
         instalmentPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInstalmentPeriodicity'
+          $ref: '#/components/schemas/EnumContractInstalmentPeriodicity'
         firstInstalmentDueDate:
           type: string
           maxLength: 10
@@ -5734,8 +5668,8 @@ components:
             (representação de porcentagem p.ex: 0.1500. Este valor representa 15%. O valor 1 representa 100%)
           maxLength: 19
           example: 0.29
-        amortizationSchedule:
-          $ref: '#/components/schemas/EnumBankBorrowingContractAmortizationSchedule'
+        amortizationScheduled:
+          $ref: '#/components/schemas/EnumContractAmortizationScheduled'
         interestRates:
           type: array
           items:
@@ -5832,9 +5766,9 @@ components:
           description: Sigla identificadora da tarifa pactuada
           example: EXCESSO_CONTA
         feeChargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeChargeType'
+          $ref: '#/components/schemas/EnumContractFeeChargeType'
         feeCharge:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeCharge'
+          $ref: '#/components/schemas/EnumContractFeeCharge'
         feeAmount:
           type: number
           description: |
@@ -5857,9 +5791,9 @@ components:
         - warrantyAmount
       properties:
         warrantyType:
-          $ref: '#/components/schemas/EnumBankBorrowingWarrantyType'
+          $ref: '#/components/schemas/EnumWarrantyType'
         warrantySubType:
-          $ref: '#/components/schemas/EnumBankBorrowingWarrantySubType'
+          $ref: '#/components/schemas/EnumWarrantySubType'
         warrantyAmount:
           type: number
           maxLength: 19
@@ -5881,17 +5815,17 @@ components:
         - additionalInfo
       properties:
         taxType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxType'
+          $ref: '#/components/schemas/EnumContractTaxType'
         interestRateType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInterestRateType'
+          $ref: '#/components/schemas/EnumContractInterestRateType'
         taxPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxPeriodicity'
+          $ref: '#/components/schemas/EnumContractTaxPeriodicity'
         calculation:
-          $ref: '#/components/schemas/EnumBankBorrowingContractCalculation'
+          $ref: '#/components/schemas/EnumContractCalculation'
         referentialRateIndexerType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerType'
         referentialRateIndexerSubType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerSubType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerSubType'
         referentialRateIndexerAdditionalInfo:
           type: string
           description: 'Campo livre de preenchimento obrigatório para complementar a informação relativa ao Tipo de taxa referencial ou indexador, quando selecionada o tipo ou subtipo OUTRO'
@@ -5926,7 +5860,7 @@ components:
         - chargeType
       properties:
         chargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFinanceChargeType'
+          $ref: '#/components/schemas/EnumContractFinanceChargeType'
         chargeAdditionalInfo:
           type: string
           description: Campo de preenchimento obrigatório se selecionada a opção 'OUTROS' em Tipo de encargo pactuado no contrato
@@ -6339,7 +6273,7 @@ components:
         - totalNumberOfInstalments
         - paidInstalments
         - CET
-        - amortizationSchedule
+        - amortizationScheduled
         - interestRates
         - contractedFees
         - contractedFinanceCharges
@@ -6417,7 +6351,7 @@ components:
           description: Data de vencimento Final da operação. Especificação RFC-3339
           example: '2028-01-15'
         instalmentPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInstalmentPeriodicity'
+          $ref: '#/components/schemas/EnumContractInstalmentPeriodicity'
         firstInstalmentDueDate:
           type: string
           maxLength: 10
@@ -6443,8 +6377,8 @@ components:
             (representação de porcentagem p.ex: 0.1500. Este valor representa 15%. O valor 1 representa 100%)
           maxLength: 19
           example: 0.29
-        amortizationSchedule:
-          $ref: '#/components/schemas/EnumBankBorrowingContractAmortizationSchedule'
+        amortizationScheduled:
+          $ref: '#/components/schemas/EnumContractAmortizationScheduled'
         interestRates:
           type: array
           items:
@@ -6489,9 +6423,9 @@ components:
           description: Sigla identificadora da tarifa pactuada
           example: EXCESSO_CONTA
         feeChargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeChargeType'
+          $ref: '#/components/schemas/EnumContractFeeChargeType'
         feeCharge:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeCharge'
+          $ref: '#/components/schemas/EnumContractFeeCharge'
         feeAmount:
           type: number
           description: |
@@ -6514,9 +6448,9 @@ components:
         - warrantyAmount
       properties:
         warrantyType:
-          $ref: '#/components/schemas/EnumBankBorrowingWarrantyType'
+          $ref: '#/components/schemas/EnumWarrantyType'
         warrantySubType:
-          $ref: '#/components/schemas/EnumBankBorrowingWarrantySubType'
+          $ref: '#/components/schemas/EnumWarrantySubType'
         warrantyAmount:
           type: number
           maxLength: 19
@@ -6538,17 +6472,17 @@ components:
         - additionalInfo
       properties:
         taxType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxType'
+          $ref: '#/components/schemas/EnumContractTaxType'
         interestRateType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInterestRateType'
+          $ref: '#/components/schemas/EnumContractInterestRateType'
         taxPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxPeriodicity'
+          $ref: '#/components/schemas/EnumContractTaxPeriodicity'
         calculation:
-          $ref: '#/components/schemas/EnumBankBorrowingContractCalculation'
+          $ref: '#/components/schemas/EnumContractCalculation'
         referentialRateIndexerType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerType'
         referentialRateIndexerSubType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerSubType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerSubType'
         referentialRateIndexerAdditionalInfo:
           type: string
           description: 'Campo livre de preenchimento obrigatório para complementar a informação relativa ao Tipo de taxa referencial ou indexador, quando selecionada o tipo ou subtipo OUTRO'
@@ -6583,7 +6517,7 @@ components:
         - chargeType
       properties:
         chargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFinanceChargeType'
+          $ref: '#/components/schemas/EnumContractFinanceChargeType'
         chargeAdditionalInfo:
           type: string
           description: Campo de preenchimento obrigatório se selecionada a opção 'OUTROS' em Tipo de encargo pactuado no contrato
@@ -8082,7 +8016,7 @@ components:
         - totalNumberOfInstalments
         - paidInstalments
         - cet
-        - amortizationSchedule
+        - amortizationScheduled
         - interestRates
         - contractedFees
         - contractedFinancesCharges
@@ -8160,7 +8094,7 @@ components:
           description: Data de vencimento Final da operação. Especificação RFC-3339
           example: '2028-01-15'
         instalmentPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInstalmentPeriodicity'
+          $ref: '#/components/schemas/EnumContractInstalmentPeriodicity'
         firstInstalmentDueDate:
           type: string
           maxLength: 10
@@ -8186,8 +8120,8 @@ components:
             (representação de porcentagem p.ex: 0.1500. Este valor representa 15%. O valor 1 representa 100%)
           maxLength: 19
           example: 0.29
-        amortizationSchedule:
-          $ref: '#/components/schemas/EnumBankBorrowingContractAmortizationSchedule'
+        amortizationScheduled:
+          $ref: '#/components/schemas/EnumContractAmortizationScheduled'
         interestRates:
           type: array
           items:
@@ -8227,9 +8161,9 @@ components:
           description: Sigla identificadora da tarifa pactuada
           example: EXCESSO_CONTA
         feeChargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeChargeType'
+          $ref: '#/components/schemas/EnumContractFeeChargeType'
         feeCharge:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFeeCharge'
+          $ref: '#/components/schemas/EnumContractFeeCharge'
         feeAmount:
           type: number
           description: |
@@ -8257,17 +8191,17 @@ components:
         - additionalInfo
       properties:
         taxType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxType'
+          $ref: '#/components/schemas/EnumContractTaxType'
         interestRateType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractInterestRateType'
+          $ref: '#/components/schemas/EnumContractInterestRateType'
         taxPeriodicity:
-          $ref: '#/components/schemas/EnumBankBorrowingContractTaxPeriodicity'
+          $ref: '#/components/schemas/EnumContractTaxPeriodicity'
         calculation:
-          $ref: '#/components/schemas/EnumBankBorrowingContractCalculation'
+          $ref: '#/components/schemas/EnumContractCalculation'
         referentialRateIndexerType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerType'
         referentialRateIndexerSubType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractReferentialRateIndexerSubType'
+          $ref: '#/components/schemas/EnumContractReferentialRateIndexerSubType'
         referentialRateIndexerAdditionalInfo:
           type: string
           description: 'Campo livre de preenchimento obrigatório para complementar a informação relativa ao Tipo de taxa referencial ou indexador, quando selecionada o tipo ou subtipo OUTRO'
@@ -8354,7 +8288,7 @@ components:
         - chargeRate
       properties:
         chargeType:
-          $ref: '#/components/schemas/EnumBankBorrowingContractFinanceChargeType'
+          $ref: '#/components/schemas/EnumContractFinanceChargeType'
         chargeAdditionalInfo:
           type: string
           description: Campo de preenchimento obrigatório se selecionada a opção 'OUTROS' em Tipo de encargo pactuado no contrato
@@ -8570,9 +8504,9 @@ components:
               - warrantyAmount
             properties:
               warrantyType:
-                $ref: '#/components/schemas/EnumBankBorrowingWarrantyType'
+                $ref: '#/components/schemas/EnumWarrantyType'
               warrantySubType:
-                $ref: '#/components/schemas/EnumBankBorrowingWarrantySubType'
+                $ref: '#/components/schemas/EnumWarrantySubType'
               warrantyAmount:
                 type: number
                 maxLength: 19
