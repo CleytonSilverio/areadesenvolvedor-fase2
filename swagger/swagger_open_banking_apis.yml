@@ -140,9 +140,9 @@ paths:
 
         ### Dicionário de dados
 
-        <a href="dictionary/business_customers_identification.csv" target="_blank">Fazer download do dicionário de dados</a>
+        <a href="dictionary/business_identification.csv" target="_blank">Fazer download do dicionário de dados</a>
 
-        <a href="dictionary/example/examples_business_customers_identification.csv" target="_blank">Fazer download dos exemplos</a>
+        <a href="dictionary/example/examples_business_identification.csv" target="_blank">Fazer download dos exemplos</a>
 
         ### Especificação em OAS 3.0
 
@@ -295,9 +295,9 @@ paths:
 
         ### Dicionário de dados
 
-        <a href="dictionary/business_customers_qualification.csv" target="_blank">Fazer download do dicionário de dados</a>
+        <a href="dictionary/business_qualification.csv" target="_blank">Fazer download do dicionário de dados</a>
 
-        <a href="dictionary/example/examples_business_customers_qualification.csv" target="_blank">Fazer download dos exemplos</a>
+        <a href="dictionary/example/examples_business_qualification.csv" target="_blank">Fazer download dos exemplos</a>
 
 
         ### Especificação em OAS 3.0
@@ -451,9 +451,9 @@ paths:
 
         ### Dicionário de dados
 
-        <a href="dictionary/business_customers_financial_relation.csv" target="_blank">Fazer download do dicionário de dados</a>
+        <a href="dictionary/business_financial_relation.csv" target="_blank">Fazer download do dicionário de dados</a>
 
-        <a href="dictionary/example/examples_business_customers_financial_relation.csv" target="_blank">Fazer download dos exemplos</a>
+        <a href="dictionary/example/examples_business_financial_relation.csv" target="_blank">Fazer download dos exemplos</a>
 
 
         ### Especificação em OAS 3.0
@@ -834,7 +834,7 @@ paths:
 
         <a href='dictionary/credit_cards_accounts_bill.csv' target="_blank">Fazer download do dicionário de dados</a>
 
-        <a href="dictionary/example/examples_credit_cards_billing.csv" target="_blank">Fazer download dos exemplos</a>
+        <a href="dictionary/example/examples_credit_cards_accounts_bill.csv" target="_blank">Fazer download dos exemplos</a>
 
         ### Especificação em OAS 3.0
 
@@ -2511,7 +2511,7 @@ paths:
 
         <img class="lazy" src="images/loading.gif" data-src="images/der/invoice_financings/DER_InvoiceFinancings.png"/>
 
-        <a href="images/der/invoice_financings/DER_InvoiceFinancings_.png" target="_blank">Fazer download do DER Conceitual</a>
+        <a href="images/der/invoice_financings/DER_InvoiceFinancings.png" target="_blank">Fazer download do DER Conceitual</a>
 
         * DER Lógico
 
@@ -4783,9 +4783,9 @@ components:
       type: string
       maxLength: 19
       enum:
-        - REPRESENTANTE_LOCAL
+        - REPRESENTANTE_LEGAL
         - PROCURADOR
-        - NÃO_POSSUI
+        - NAO_POSSUI
       description: |
         Tipo de representante.
         Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
