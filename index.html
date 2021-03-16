@@ -788,7 +788,10 @@
                     <a href="#tocS_EnumOverdraftLimitType" class="toc-h2 toc-link" data-title="EnumOverdraftLimitType">EnumOverdraftLimitType</a>
                   </li>
                   <li>
-                    <a href="#tocS_EnumProcuratorsType" class="toc-h2 toc-link" data-title="EnumProcuratorsType">EnumProcuratorsType</a>
+                    <a href="#tocS_EnumProcuratorsTypeBusiness" class="toc-h2 toc-link" data-title="EnumProcuratorsTypeBusiness">EnumProcuratorsTypeBusiness</a>
+                  </li>
+                  <li>
+                    <a href="#tocS_EnumProcuratorsTypePersonal" class="toc-h2 toc-link" data-title="EnumProcuratorsTypePersonal">EnumProcuratorsTypePersonal</a>
                   </li>
                   <li>
                     <a href="#tocS_EnumProductServiceType" class="toc-h2 toc-link" data-title="EnumProductServiceType">EnumProductServiceType</a>
@@ -14975,7 +14978,7 @@ OpenId ( Scopes: openId invoice-financings )
 </thead><tbody>
 <tr>
 <td>type</td>
-<td><a href="#schemaenumprocuratorstype">EnumProcuratorsType</a></td>
+<td><a href="#schemaenumprocuratorstypebusiness">EnumProcuratorsTypeBusiness</a></td>
 <td>true</td>
 <td>Tipo de representante.<br>Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.<br>Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negócio, mediante autorização escrita do mesmo.</td>
 </tr>
@@ -20205,12 +20208,12 @@ No caso de não ser feminino nem masculino é classificado como &#39;OUTRO&#39;<
 </tr>
 </tbody></table>
 
-<h2 id="tocS_EnumProcuratorsType">EnumProcuratorsType</h2>
+<h2 id="tocS_EnumProcuratorsTypeBusiness">EnumProcuratorsTypeBusiness</h2>
 
-<p><a id="schemaenumprocuratorstype"></a>
-<a id="schema_EnumProcuratorsType"></a>
-<a id="tocSenumprocuratorstype"></a>
-<a id="tocsenumprocuratorstype"></a></p>
+<p><a id="schemaenumprocuratorstypebusiness"></a>
+<a id="schema_EnumProcuratorsTypeBusiness"></a>
+<a id="tocSenumprocuratorstypebusiness"></a>
+<a id="tocsenumprocuratorstypebusiness"></a></p>
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"PROCURADOR"</span><span class="w">
 
@@ -20256,6 +20259,61 @@ Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negóci
 </tr>
 </tbody></table>
 
+<h2 id="tocS_EnumProcuratorsTypePersonal">EnumProcuratorsTypePersonal</h2>
+
+<p><a id="schemaenumprocuratorstypepersonal"></a>
+<a id="schema_EnumProcuratorsTypePersonal"></a>
+<a id="tocSenumprocuratorstypepersonal"></a>
+<a id="tocsenumprocuratorstypepersonal"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="s2">"PROCURADOR"</span><span class="w">
+
+</span></code></pre></div>
+
+<p>Tipo de representante.
+Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
+Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negócio, mediante autorização escrita do mesmo.</p>
+
+<h3 id='propriedades-85'>Propriedades</h3>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Tipo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>string</td>
+<td>false</td>
+<td>Tipo de representante.<br>Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.<br>Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negócio, mediante autorização escrita do mesmo.</td>
+</tr>
+</tbody></table>
+
+<h4 id='enumerated-values-63'>Enumerated Values</h4>
+
+<table><thead>
+<tr>
+<th>Nome</th>
+<th>Código</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>**</td>
+<td>REPRESENTANTE_LEGAL</td>
+</tr>
+<tr>
+<td>**</td>
+<td>PROCURADOR</td>
+</tr>
+<tr>
+<td>**</td>
+<td>NAO_POSSUI</td>
+</tr>
+</tbody></table>
+
 <h2 id="tocS_EnumProductServiceType">EnumProductServiceType</h2>
 
 <p><a id="schemaenumproductservicetype"></a>
@@ -20269,7 +20327,7 @@ Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negóci
 
 <p>Relação dos produtos e serviços com contrato vigente.</p>
 
-<h3 id='propriedades-85'>Propriedades</h3>
+<h3 id='propriedades-86'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20287,7 +20345,7 @@ Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negóci
 </tr>
 </tbody></table>
 
-<h4 id='enumerated-values-63'>Enumerated Values</h4>
+<h4 id='enumerated-values-64'>Enumerated Values</h4>
 
 <table><thead>
 <tr>
@@ -20354,7 +20412,7 @@ Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negóci
 
 <p>Tipo de Transação</p>
 
-<h3 id='propriedades-86'>Propriedades</h3>
+<h3 id='propriedades-87'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20372,7 +20430,7 @@ Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negóci
 </tr>
 </tbody></table>
 
-<h4 id='enumerated-values-64'>Enumerated Values</h4>
+<h4 id='enumerated-values-65'>Enumerated Values</h4>
 
 <table><thead>
 <tr>
@@ -20468,7 +20526,7 @@ Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negóci
 <p>Tipo da modalidade de crédito contratada, conforme circular 4.015 e descrição do DOC3040 do SCR). (Vide Enum)
 Adiantamento a depositantes, Direitos creditórios descontados Empréstimos,  Financiamentos, Financiamentos rurais  e Financiamentos imobiliários</p>
 
-<h3 id='propriedades-87'>Propriedades</h3>
+<h3 id='propriedades-88'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20486,7 +20544,7 @@ Adiantamento a depositantes, Direitos creditórios descontados Empréstimos,  Fi
 </tr>
 </tbody></table>
 
-<h4 id='enumerated-values-65'>Enumerated Values</h4>
+<h4 id='enumerated-values-66'>Enumerated Values</h4>
 
 <table><thead>
 <tr>
@@ -20514,7 +20572,7 @@ Adiantamento a depositantes, Direitos creditórios descontados Empréstimos,  Fi
 <p>Sub tipo da modalidades de crédito contratadas, conforme  circular 4.015 e descrição do DOC3040 do SCR). (Vide Enum)
 Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoal com consignação, Home equity, Microcrédito produtivo orientado, Cheque especial, Conta garantida, Capital de giro com prazo de vencimento até 365 dias, capital de giro com prazo de vencimento superior a 365 dias, Capital de giro com teto rotativo, Desconto de duplicatas, Desconto de cheques,  Antecipação da fatura do cartão de crédito, Outros direitos creditórios descontados, outros títulos descontados, Aquisição de bens veículos automotores, Aquisição de bens de outros bens, Microcrédito, Custeio, Investimento, Industrialização, Comercialização, Financiamento habitacional SFH e Financiamento habitacional exceto SFH</p>
 
-<h3 id='propriedades-88'>Propriedades</h3>
+<h3 id='propriedades-89'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20532,7 +20590,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </tr>
 </tbody></table>
 
-<h4 id='enumerated-values-66'>Enumerated Values</h4>
+<h4 id='enumerated-values-67'>Enumerated Values</h4>
 
 <table><thead>
 <tr>
@@ -20559,7 +20617,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-89'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-90'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -20603,7 +20661,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
 
-<h3 id='propriedades-90'>Propriedades</h3>
+<h3 id='propriedades-91'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20641,7 +20699,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-91'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-92'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -20687,7 +20745,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-92'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-93'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -20770,7 +20828,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de financiamentos</p>
 
-<h3 id='propriedades-93'>Propriedades</h3>
+<h3 id='propriedades-94'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20922,7 +20980,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-94'>Propriedades</h3>
+<h3 id='propriedades-95'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -20987,7 +21045,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-95'>Propriedades</h3>
+<h3 id='propriedades-96'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21040,7 +21098,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-96'>Propriedades</h3>
+<h3 id='propriedades-97'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21129,7 +21187,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito</p>
 
-<h3 id='propriedades-97'>Propriedades</h3>
+<h3 id='propriedades-98'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21185,7 +21243,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às parcelas / prestações da operação de crédito de financiamentos contratada</p>
 
-<h3 id='propriedades-98'>Propriedades</h3>
+<h3 id='propriedades-99'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21255,7 +21313,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-99'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-100'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21342,7 +21400,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações dos pagamentos referentes às operações de crédito de financiamentos contratadas</p>
 
-<h3 id='propriedades-100'>Propriedades</h3>
+<h3 id='propriedades-101'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21420,7 +21478,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-101'>Propriedades</h3>
+<h3 id='propriedades-102'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21470,7 +21528,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-102'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-103'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21528,7 +21586,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito de financiamentos contratada</p>
 
-<h3 id='propriedades-103'>Propriedades</h3>
+<h3 id='propriedades-104'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21580,7 +21638,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações, que correspondem aos valores das coordenadas geográficas em graus decimais, no Sistema de referência WGS84</p>
 
-<h3 id='propriedades-104'>Propriedades</h3>
+<h3 id='propriedades-105'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21620,7 +21678,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
 
-<h3 id='propriedades-105'>Propriedades</h3>
+<h3 id='propriedades-106'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21658,7 +21716,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-106'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-107'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21704,7 +21762,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-107'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-108'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -21786,7 +21844,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de direitos creditórios descontados</p>
 
-<h3 id='propriedades-108'>Propriedades</h3>
+<h3 id='propriedades-109'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -21940,7 +21998,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92792126019929279212650822221989319252576"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-109'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-110'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22006,7 +22064,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-110'>Propriedades</h3>
+<h3 id='propriedades-111'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22071,7 +22129,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-111'>Propriedades</h3>
+<h3 id='propriedades-112'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22125,7 +22183,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-112'>Propriedades</h3>
+<h3 id='propriedades-113'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22212,7 +22270,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito</p>
 
-<h3 id='propriedades-113'>Propriedades</h3>
+<h3 id='propriedades-114'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22268,7 +22326,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às parcelas / prestações da operação de crédito contratada</p>
 
-<h3 id='propriedades-114'>Propriedades</h3>
+<h3 id='propriedades-115'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22365,7 +22423,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito de direitos creditórios descontados contratadas</p>
 
-<h3 id='propriedades-115'>Propriedades</h3>
+<h3 id='propriedades-116'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22424,7 +22482,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações dos pagamentos referentes às operações de direitos creditórios descontados  contratadas</p>
 
-<h3 id='propriedades-116'>Propriedades</h3>
+<h3 id='propriedades-117'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22502,7 +22560,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-117'>Propriedades</h3>
+<h3 id='propriedades-118'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22552,7 +22610,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-118'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-119'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22610,7 +22668,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de direitos creditórios descontados contratada</p>
 
-<h3 id='propriedades-119'>Propriedades</h3>
+<h3 id='propriedades-120'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22665,7 +22723,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Referências para outros recusos da API requisitada.</p>
 
-<h3 id='propriedades-120'>Propriedades</h3>
+<h3 id='propriedades-121'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22727,7 +22785,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações  de contratos de empréstimo mantidos pelo cliente na instituição transmissora e para os quais ele tenha fornecido consentimento</p>
 
-<h3 id='propriedades-121'>Propriedades</h3>
+<h3 id='propriedades-122'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22787,7 +22845,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-122'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-123'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22833,7 +22891,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações de operações de crédito contratadas</p>
 
-<h3 id='propriedades-123'>Propriedades</h3>
+<h3 id='propriedades-124'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -22865,7 +22923,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-124'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-125'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22911,7 +22969,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-125'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-126'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -22994,7 +23052,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de empréstimo</p>
 
-<h3 id='propriedades-126'>Propriedades</h3>
+<h3 id='propriedades-127'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23152,7 +23210,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-127'>Propriedades</h3>
+<h3 id='propriedades-128'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23215,7 +23273,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito contratada</p>
 
-<h3 id='propriedades-128'>Propriedades</h3>
+<h3 id='propriedades-129'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23268,7 +23326,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-129'>Propriedades</h3>
+<h3 id='propriedades-130'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23356,7 +23414,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito</p>
 
-<h3 id='propriedades-130'>Propriedades</h3>
+<h3 id='propriedades-131'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23412,7 +23470,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes ao prazo remanescente e às parcelas de uma operação de crédito de empréstimos</p>
 
-<h3 id='propriedades-131'>Propriedades</h3>
+<h3 id='propriedades-132'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23507,7 +23565,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes aos pagamentos realizados de uma operação de crédito de empréstimos.</p>
 
-<h3 id='propriedades-132'>Propriedades</h3>
+<h3 id='propriedades-133'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23585,7 +23643,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-133'>Propriedades</h3>
+<h3 id='propriedades-134'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23635,7 +23693,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-134'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-135'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23691,7 +23749,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de empréstimo</p>
 
-<h3 id='propriedades-135'>Propriedades</h3>
+<h3 id='propriedades-136'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23743,7 +23801,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Meta informações referente a API requisitada.</p>
 
-<h3 id='propriedades-136'>Propriedades</h3>
+<h3 id='propriedades-137'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23792,7 +23850,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que agrupa informações relativas à nacionalidade da Pessoa Natural</p>
 
-<h3 id='propriedades-137'>Propriedades</h3>
+<h3 id='propriedades-138'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23838,7 +23896,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações específicas para cliente que possue nacionalidade diferente da brasileira</p>
 
-<h3 id='propriedades-138'>Propriedades</h3>
+<h3 id='propriedades-139'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -23875,7 +23933,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"expirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-19"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-139'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-140'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -23927,7 +23985,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista relativa às informações das partes envolvidas, como: sócio e /ou administrador</p>
 
-<h3 id='propriedades-140'>Propriedades</h3>
+<h3 id='propriedades-141'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24017,7 +24075,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto agrupador de informações relativas a Documentos da pessoa natural</p>
 
-<h3 id='propriedades-141'>Propriedades</h3>
+<h3 id='propriedades-142'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24065,7 +24123,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-142'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-143'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24116,7 +24174,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que reúne as informações relativas ao relacionamento do cliente junto à Instituição. Considera-se relacionamento as informações que permitam conhecer desde quando a pessoa consultada é cliente da instituição, bem como um indicador dos produtos e serviços que ela consome atualmente e seus representantes</p>
 
-<h3 id='propriedades-143'>Propriedades</h3>
+<h3 id='propriedades-144'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24258,7 +24316,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas a Identificação ou seja a ação e o efeito de identificar de forma única a pessoa natural através de seus dados cadastrais.</p>
 
-<h3 id='propriedades-144'>Propriedades</h3>
+<h3 id='propriedades-145'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24394,7 +24452,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"expirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-03-19"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-145'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-146'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24454,7 +24512,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"socialName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NA"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-146'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-147'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24465,7 +24523,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 </thead><tbody>
 <tr>
 <td>type</td>
-<td><a href="#schemaenumprocuratorstype">EnumProcuratorsType</a></td>
+<td><a href="#schemaenumprocuratorstypepersonal">EnumProcuratorsTypePersonal</a></td>
 <td>true</td>
 <td>Tipo de representante.<br>Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.<br>Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negócio, mediante autorização escrita do mesmo.</td>
 </tr>
@@ -24514,7 +24572,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas ao processo de qualificação. Considera-se qualificação as informações que permitam as instituições apreciar, avaliar, caracterizar e classificar o cliente com a finalidade de conhecer o seu perfil de risco e sua capacidade econômico-financeira</p>
 
-<h3 id='propriedades-147'>Propriedades</h3>
+<h3 id='propriedades-148'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -24631,7 +24689,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-148'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-149'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24685,7 +24743,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-149'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-150'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24747,7 +24805,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-150'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-151'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24805,7 +24863,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-151'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-152'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24877,7 +24935,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-152'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-153'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -24942,7 +25000,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-153'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-154'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25061,7 +25119,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-154'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-155'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25128,7 +25186,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-155'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-156'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25189,7 +25247,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-156'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-157'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25251,7 +25309,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-157'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-158'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25382,7 +25440,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-158'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-159'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25448,7 +25506,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-159'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-160'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25522,7 +25580,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-160'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-161'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25571,7 +25629,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-161'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-162'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25631,7 +25689,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-162'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-163'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25761,7 +25819,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-163'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-164'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25824,7 +25882,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-164'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-165'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25922,7 +25980,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-165'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-166'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -25985,7 +26043,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-166'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-167'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26044,7 +26102,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-167'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-168'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26122,7 +26180,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-168'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-169'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26183,7 +26241,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-169'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-170'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26242,7 +26300,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-170'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-171'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26340,7 +26398,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-171'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-172'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26403,7 +26461,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-172'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-173'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26481,7 +26539,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-173'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-174'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26540,7 +26598,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-174'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-175'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26637,7 +26695,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-175'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-176'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26696,7 +26754,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-176'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-177'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26759,7 +26817,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-177'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-178'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26837,7 +26895,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-178'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-179'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26898,7 +26956,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-179'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-180'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -26995,7 +27053,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-180'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-181'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27054,7 +27112,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-181'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-182'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27117,7 +27175,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-182'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-183'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27195,7 +27253,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-183'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-184'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27256,7 +27314,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-184'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-185'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27300,7 +27358,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações relativas às parcelas não regulares do contrato da modalidade de crédito consultada</p>
 
-<h3 id='propriedades-185'>Propriedades</h3>
+<h3 id='propriedades-186'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -27338,7 +27396,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-186'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-187'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27384,7 +27442,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"dueAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-187'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-188'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27466,7 +27524,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes à identificação da operação de crédito de adiantamento a depositantes</p>
 
-<h3 id='propriedades-188'>Propriedades</h3>
+<h3 id='propriedades-189'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -27614,7 +27672,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"feeRate"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-189'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-190'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27683,7 +27741,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Objeto que traz o conjunto de informações necessárias para demonstrar a composição das taxas de juros remuneratórios da Modalidade de crédito</p>
 
-<h3 id='propriedades-190'>Propriedades</h3>
+<h3 id='propriedades-191'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -27771,7 +27829,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"contractId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xcjklompowsa279212650822221989319aadrtjk"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-191'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-192'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27829,7 +27887,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"chargeRate"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.07</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-192'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-193'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -27883,7 +27941,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes ao prazo remanescente e às parcelas de uma operação de crédito de adiantamento a depositante</p>
 
-<h3 id='propriedades-193'>Propriedades</h3>
+<h3 id='propriedades-194'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -27978,7 +28036,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes aos pagamentos realizados de uma operação de crédito de adiantamento a depositantes</p>
 
-<h3 id='propriedades-194'>Propriedades</h3>
+<h3 id='propriedades-195'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28056,7 +28114,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Lista dos pagamentos realizados no período</p>
 
-<h3 id='propriedades-195'>Propriedades</h3>
+<h3 id='propriedades-196'>Propriedades</h3>
 
 <table><thead>
 <tr>
@@ -28106,7 +28164,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
   </span><span class="nl">"taxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre></div><h3 id='propriedades-196'>Propriedades</h3>
+</span></code></pre></div><h3 id='propriedades-197'>Propriedades</h3>
 <table><thead>
 <tr>
 <th>Nome</th>
@@ -28164,7 +28222,7 @@ Adiantamento a depositantes, Crédito pessoal sem consignação, Crédito pessoa
 
 <p>Conjunto de informações referentes às garantias que avalizam a operação de crédito de adiantamento a depositantes</p>
 
-<h3 id='propriedades-197'>Propriedades</h3>
+<h3 id='propriedades-198'>Propriedades</h3>
 
 <table><thead>
 <tr>

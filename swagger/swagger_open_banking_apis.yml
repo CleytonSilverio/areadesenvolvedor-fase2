@@ -3306,7 +3306,7 @@ components:
         - socialName
       properties:
         type:
-          $ref: '#/components/schemas/EnumProcuratorsType'
+          $ref: '#/components/schemas/EnumProcuratorsTypeBusiness'
         cnpjCpfNumber:
           type: string
           pattern: '^\d{11}$|^\d{14}$|^NA$'
@@ -4780,12 +4780,24 @@ components:
         - Valor utilizado do limite do cheque especial
         - Saldo a descoberto em conta de depósito à vista (relativo ao excesso do limite de cheque especial ou ao adiantamento a depositante)
       example: VALOR_UTILIZADO_LIMITE
-    EnumProcuratorsType:
+    EnumProcuratorsTypeBusiness:
       type: string
       maxLength: 19
       enum:
         - REPRESENTANTE_LEGAL
         - PROCURADOR
+      description: |
+        Tipo de representante.
+        Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
+        Procurador - é qualquer pessoa que represente a Pessoa Natural em algum negócio, mediante autorização escrita do mesmo.
+      example: PROCURADOR
+    EnumProcuratorsTypePersonal:
+      type: string
+      maxLength: 19
+      enum:
+        - REPRESENTANTE_LEGAL
+        - PROCURADOR
+        - NAO_POSSUI
       description: |
         Tipo de representante.
         Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
@@ -7182,7 +7194,7 @@ components:
         - socialName
       properties:
         type:
-          $ref: '#/components/schemas/EnumProcuratorsType'
+          $ref: '#/components/schemas/EnumProcuratorsTypePersonal'
         cpfNumber:
           type: string
           pattern: '^\d{11}$|^NA$'
