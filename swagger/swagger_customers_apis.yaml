@@ -932,7 +932,6 @@ components:
       enum:
         - REPRESENTANTE_LEGAL
         - PROCURADOR
-        - NAO_POSSUI
       description: |
         Tipo de representante.
         Representante legal - Nome Civil completo da Pessoa Natural que represente uma entidade ou uma empresa e é nomeado em seu ato constitutivo, ou seja, no contrato social ou estatuto social.
