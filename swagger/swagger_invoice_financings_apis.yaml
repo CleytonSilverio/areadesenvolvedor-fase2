@@ -597,7 +597,7 @@ components:
           pattern: \w*\W*
           description: |
             Denominação/Identificação do nome da Modalidade da Operação de Crédito divulgado ao cliente
-          example: AD
+          example: Desconto de Cheques
         productType:
           $ref: '#/components/schemas/EnumContractProductTypeInvoiceFinancings'
         productSubType:
@@ -691,7 +691,7 @@ components:
         contractId: '92792126019929279212650822221989319252576'
         ipocCode: '92792126019929279212650822221989319252576'
         requestDateTime: '2020-01-05T08:30:00Z'
-        productName: AD
+        productName: Desconto de Cheques"
         productType: DIREITOS_CREDITORIOS_DESCONTADOS
         productSubType: DESCONTO_CHEQUES
         contractDate: '2018-01-05'

@@ -654,6 +654,7 @@ components:
               maxLength: 3
               format: CurrencyString
               description: 'Moeda referente ao valor monetário informado, segundo modelo ISO-4217. p.ex. ''BRL''. Todos os valores monetários informados estão representados com a moeda vigente do Brasil'
+              example: BRL
             contractOutstandingBalance:
               type: number
               maxLength: 19
@@ -708,13 +709,13 @@ components:
                     description: Denominação da Tarifa avulsa paga fora da parcela
                     maxLength: 250
                     pattern: \w*\W*
-                    example: reavaliação periódica do bem
+                    example: Saque a descoberto
                   feeCode:
                     type: string
                     description: Sigla identificadora da tarifa avulsa fora da parcela
                     maxLength: 140
                     pattern: \w*\W*
-                    example: aval_bem
+                    example: Saque descoberto
                   feePaidDate:
                     type: string
                     description: Data efetiva do pagamento da tarifa  conforme especificação RFC-3339. p.ex. 2014-03-19
@@ -754,6 +755,7 @@ components:
                     type: string
                     description: Campo de preenchimento obrigatório se selecionada a opção 'OUTROS' em Tipo de encargo pago fora da parcela
                     pattern: \w*\W*
+                    example: ''
                   taxpaidDate:
                     type: string
                     description: 'Traz a data de efetivação do pagamento do encargo pago fora da parcela, conforme especificação RFC-3339'
