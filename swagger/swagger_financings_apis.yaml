@@ -16,11 +16,11 @@ info:
         - GET: **financings.read**
     ### `/contracts/{contractId}`
       - permissions: **financings.read**
-    ### `/contracts/{contractId}/warranties` 
-      - permissions: 
-        - GET: **financings.warranties.read**  
+    ### `/contracts/{contractId}/warranties`
+      - permissions:
+        - GET: **financings.warranties.read**
     ### `/contracts/{contractId}/scheduled-instalments`
-      - permissions: 
+      - permissions:
         - GET: **financings.scheduled-instalments.read**
     ### `/contracts/{contractId}/payments`
       - permissions:
@@ -28,7 +28,7 @@ info:
   version: 1.0.0
   license:
     name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
   contact:
     name: Governança do Open Banking Brasil – Interfaces
     email: gt-interfaces@openbankingbr.org
@@ -97,11 +97,7 @@ paths:
         - $ref: '#/components/parameters/xCustomerUserAgent'
       responses:
         '200':
-          description: Dados do contrato de financiamento identificado por contractId
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseFinancingsContract'
+          $ref: '#/components/responses/OKResponseFinancingsContract'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -118,6 +114,8 @@ paths:
           $ref: '#/components/responses/TooManyRequests'
         '500':
           $ref: '#/components/responses/InternalServerError'
+        default:
+          $ref: '#/components/responses/OKResponseFinancingsContract'
       security:
         - OpenId:
             - openId
@@ -140,11 +138,7 @@ paths:
         - $ref: '#/components/parameters/xCustomerUserAgent'
       responses:
         '200':
-          description: Lista de garantias vinculadas ao contrato de financiamento identificado por contractId
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseFinancingsWarranties'
+          $ref: '#/components/responses/OKResponseFinancingsWarranties'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -161,6 +155,8 @@ paths:
           $ref: '#/components/responses/TooManyRequests'
         '500':
           $ref: '#/components/responses/InternalServerError'
+        default:
+          $ref: '#/components/responses/OKResponseFinancingsWarranties'
       security:
         - OpenId:
             - openId
@@ -183,11 +179,7 @@ paths:
         - $ref: '#/components/parameters/xCustomerUserAgent'
       responses:
         '200':
-          description: Dados do cronograma de parcelas do contrato de financiamento identificado por contractId
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseFinancingsInstalments'
+          $ref: '#/components/responses/OKResponseFinancingsInstalments'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -204,6 +196,8 @@ paths:
           $ref: '#/components/responses/TooManyRequests'
         '500':
           $ref: '#/components/responses/InternalServerError'
+        default:
+          $ref: '#/components/responses/OKResponseFinancingsInstalments'
       security:
         - OpenId:
             - openId
@@ -226,11 +220,7 @@ paths:
         - $ref: '#/components/parameters/xCustomerUserAgent'
       responses:
         '200':
-          description: Dados de pagamentos do contrato de financiamento identificado por contractId
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResponseFinancingsPayments'
+          $ref: '#/components/responses/OKResponseFinancingsPayments'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -247,6 +237,8 @@ paths:
           $ref: '#/components/responses/TooManyRequests'
         '500':
           $ref: '#/components/responses/InternalServerError'
+        default:
+          $ref: '#/components/responses/OKResponseFinancingsPayments'
       security:
         - OpenId:
             - openId
@@ -279,7 +271,12 @@ components:
       example: 21/25
     EnumBankBorrowingContractFeeCharge:
       type: string
-      description: Forma de cobrança relativa a tarifa pactuada no contrato
+      description: |
+        Forma de cobrança relativa a tarifa pactuada no contrato. (Vide Enum)
+        - Mínimo
+        - Máximo
+        - Fixo
+        - Percentual
       maxLength: 10
       enum:
         - MINIMO
@@ -309,7 +306,9 @@ components:
       example: JUROS_REMUNERATORIOS_POR_ATRASO
     EnumBankBorrowingContractInstalmentPeriodicity:
       type: string
-      description: Informação relativa à periodicidade regular das parcelas
+      description: |
+        Informação relativa à periodicidade regular das parcelas. (Vide Enum)
+        sem periodicidade regular, semanal, quinzenal, mensal, bimestral, trimestral, semestral, anual
       maxLength: 24
       enum:
         - SEM_PERIODICIDADE_REGULAR
@@ -401,7 +400,6 @@ components:
       description: 'Denominação/Identificação do sub tipo da garantia que avaliza a Modalidade da Operação de Crédito contratada (Doc 3040, Anexo 12)'
       maxLength: 100
       enum:
-        - SEM_SUB_TIPO_GARANTIA
         - ACOES_DEBENTURES
         - APLICACOES_FINANCEIRAS_RENDA_FIXA
         - APLICACOES_FINANCEIRAS_RENDA_VARIAVEL
@@ -425,7 +423,7 @@ components:
         - FUNDO_GARANTIDOR_AVAL
         - GARANTIA_PRESTADA_FGPC_LEI_9531_ART_37
         - GARANTIA_PRESTADA_FUNDOS_QUAISQUER_OUTROS_MECANISMOS_COBERTURA_RISCO_CREDITO_ART_37
-        - GARANTIA_PRESTADA_TESOURO_NACIONAL_OU_BACEN_ART_37BENS_DIREITOS_INTEGRANTES_PATRIMONIO_AFETACAO
+        - GARANTIA_PRESTADA_TESOURO_NACIONAL_OU_BACEN_ART_37_BENS_DIREITOS_INTEGRANTES_PATRIMONIO_AFETACAO
         - IMOVEIS
         - IMOVEIS_RESIDENCIAIS
         - MITIGADORAS
@@ -472,7 +470,6 @@ components:
         - GARANTIAS_INTERNACIONAIS
         - OPERACOES_GARANTIDAS_OUTRAS_ENTIDADES
         - ACORDOS_COMPENSACAO
-        - NAO_APLICAVEL
       example: CESSAO_DIREITOS_CREDITORIOS
     EnumContractProductSubTypeFinancings:
       type: string
@@ -844,6 +841,11 @@ components:
         - pastDueInstalments
         - balloonPayment
       properties:
+        contractId:
+          type: string
+          description: Um identificador único e imutável usado para identificar o contrato de uma operação de crédito. Este identificador não tem significado para o tomador do crédito
+          maxLength: 100
+          example: '92792126019929279212650822221989319252576'
         requestDateTime:
           type: string
           maxLength: 20
@@ -1315,7 +1317,7 @@ components:
       description: 'Um UID [RFC4122](https://tools.ietf.org/html/rfc4122) usado como um ID de correlação. Se fornecido, o transmissor deve "reproduzir" esse valor no cabeçalho de resposta.'
       required: false
       schema:
-        $ref: '#/components/responses/OKResponseFinancingsContractList/headers/x-fapi-interaction-id/schema'
+        $ref: '#/components/responses/OKResponseFinancingsContract/headers/x-fapi-interaction-id/schema'
   securitySchemes:
     OpenId:
       type: openIdConnect
@@ -1326,6 +1328,16 @@ components:
       headers:
         x-fapi-interaction-id:
           schema:
+            $ref: '#/components/responses/OKResponseFinancingsContract/headers/x-fapi-interaction-id/schema'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseFinancingsContractList'
+    OKResponseFinancingsContract:
+      description: Dados do contrato de financiamento identificado por contractId
+      headers:
+        x-fapi-interaction-id:
+          schema:
             type: string
             pattern: '^[a-zA-Z0-9][a-zA-Z0-9\-]{0,99}$'
             maxLength: 100
@@ -1333,7 +1345,37 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ResponseFinancingsContractList'
+            $ref: '#/components/schemas/ResponseFinancingsContract'
+    OKResponseFinancingsWarranties:
+      description: Lista de garantias vinculadas ao contrato de financiamento identificado por contractId
+      headers:
+        x-fapi-interaction-id:
+          schema:
+            $ref: '#/components/responses/OKResponseFinancingsContract/headers/x-fapi-interaction-id/schema'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseFinancingsWarranties'
+    OKResponseFinancingsInstalments:
+      description: Dados do cronograma de parcelas do contrato de financiamento identificado por contractId
+      headers:
+        x-fapi-interaction-id:
+          schema:
+            $ref: '#/components/responses/OKResponseFinancingsContract/headers/x-fapi-interaction-id/schema'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseFinancingsInstalments'
+    OKResponseFinancingsPayments:
+      description: Dados de pagamentos do contrato de financiamento identificado por contractId
+      headers:
+        x-fapi-interaction-id:
+          schema:
+            $ref: '#/components/responses/OKResponseFinancingsContract/headers/x-fapi-interaction-id/schema'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseFinancingsPayments'
     BadRequest:
       description: 'A requisição foi malformada, omitindo atributos obrigatórios, seja no payload ou através de atributos na URL.'
       content:
